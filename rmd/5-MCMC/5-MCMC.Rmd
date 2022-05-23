@@ -50,11 +50,11 @@ az.style.use('arviz-darkgrid')
 
 # MCMC
 
-* MCMC methods address this type of problems. For simplicity, we show with a single-parameter problem.
+* MCMC methods address this type of problems. For simplicity, we show  a single-parameter problem.
 
 * We do assume the prior $p(\theta)$ and the likelihood $p(D \mid \theta)$ to be given.
 
-* The method does not evaluate the difficult integral in the denominator of Bayes’ rule:
+* The method avoids the direct evaluation of the difficult integral in the denominator of Bayes’ rule:
 
 \begin{align}
 p(\theta \mid D) = \frac{p(\theta) p(D \mid \theta)}{\int p(\theta) p(D \mid \theta) d\theta}
@@ -75,9 +75,9 @@ by returning many samples.
 
 ![Approximating an exact mathematical distribution by a large random sample of representative values](fig71.png)
 
-* We can approximate the exact values by randomly sampling a large number of  values from the distribution
+* we can approximate the exact values by randomly sampling a large number of  values from the distribution;
 
-* Larger sample sizes yield a smoother and more accurate  histogram.
+* larger sample sizes yield a smoother and more accurate  histogram;
 
 * The exact values were obtained from the mathematical formula of the beta distribution. 
 
@@ -101,10 +101,11 @@ $p_{\text{move}} = \frac{p_{\text{proposed}}}{p_{\text{current}}}$
 * In the long run, each  island is visited proportionally to its population!
 
 # Discussion 
-* At each time step, the direction of the proposed move is random; also the acceptance of the proposed move (in case of smaller population of the proposed island) is random. 
+* At each time step, both the chosen direction and its acceptance are random. 
 
 * If the process were started over again, the specific trajectory would be  different. 
-* Yet, in the long run the relative frequency of visits mimics the target distribution.
+
+* Yet, in the long run the relative frequency of visits mimics in any case the target distribution.
 
 # Proposal
 * We are  at position $\theta_{\text{current}}$. 
@@ -128,10 +129,10 @@ $$ p_{\text{move}} = min \left(  \frac {p(\theta_{\text{proposed}})} {p(\theta_{
 
 * The algorithm requires evaluating the ratio 
 $\frac{p(\theta_{\text{proposed}})}{p(\theta_{\text{current}})}$,
-which avoids the normalizing denominator. 
+which does not require computing the normalizing constant (i.e., the denominator) of Bayes rule. 
 
 * It does not require the 
- absolute value of $p(\theta)$.
+ absolute value of $p(\theta)$, but only the ratio between the density in different locations.
 
 * We can thus sample from $p(\theta)p(D|\theta)$ without normalizing it by the (often) untractable marginal likelihood $p(D)$.
  
@@ -180,12 +181,13 @@ p & = \min \left( 1, \frac{P(\theta_{\text{proposed}} \mid D)}{P(\theta_{\text{c
 \end{align*}
 
 # Application 
-* Consider the prior $p(\theta)=beta(1, 1)$
+* Consider the prior $p(\theta)= Beta(1, 1)$
 * The Bernoulli likelihood $\theta^{14} (1-\theta^{6})$ corresponding to 20 tosses and 14 tails.
 * The three columns use three different $\sigma$ in the proposal distribution. 
 
 # Results
 ![Approximating an exact mathematical distribution by a large random sample of representative values](fig74.png)
+
 * The probability of accepting a jump is  $\frac{N_{\text{acc}}} {N_{\text{pro}}}$
 
 * It decreases when $\sigma$ gets larger.
@@ -194,7 +196,7 @@ p & = \min \left( 1, \frac{P(\theta_{\text{proposed}} \mid D)}{P(\theta_{\text{c
 
 * These are not 50,000 independent samples of the posterior. 
 
-* The *effective samples size* is “Eff.Sz. = 11723.9.” This is the equivalent number of values if they were sampled independently of each other.
+* The *effective samples size* is  11723.9. This is the equivalent number of samples if they were sampled independently of each other (as the sampling is a sequential process, some auto-correlation in the samples is generally present).
 
 # Left column (small $\sigma$)
 

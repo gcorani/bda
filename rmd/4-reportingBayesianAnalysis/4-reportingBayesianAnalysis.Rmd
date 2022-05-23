@@ -47,7 +47,7 @@ az.style.use('arviz-darkgrid')
 
 * The uncertainty decreases when the number of experiments is greater.
 
-# The impact of the orior 
+# The impact of the prior 
 * Given a _sufficient_ amount of data, the posterior will be practically the same  with any prior.
 
 * Given a limited amount of data, the posterior obtained by different priors can be significantly different; it makes sense to repeat the analysis with different prior if you are unsure.
@@ -60,24 +60,24 @@ az.style.use('arviz-darkgrid')
 # Discussion
 * Priors and likelihood are based on assumptions and are  part of the model.
 
-* Uninformative priors (flat) provide the least possible amount of information and therefore have the least possible impact on the analysis. 
-
 * *Slightly informative*  priors are recommended.
 In many problems we know at least something about the possible values that our parameters can take, for example that they can only be positive, or that they are restricted to sum to 1 or the approximate range, etc. 
 
-* For instance even a Beta(1,1) prior is flat but  limits the  possible values of $\theta$ between 0 and 1.
+* A Beta(1,1) prior is flat but  limits the   values of $\theta$ between 0 and 1.
 
-* If we had more than one reasonable prior, we could perform a sensitivity analysis, that is, evaluate how the results change with the priors, we could conclude that for a wide range of priors, the results do not vary!
+* If we had more than one reasonable prior, we could perform a sensitivity analysis, that is, evaluate if the results significantly change with the priors, or instead the data are strong enough to overwhelm the prior.
 
 # Summarizing the posterior
 *  Different measures can be used to summarize the a priori:
-  * the mean of the posterior distribution
+  * the mean (or the mode, or the median) of the posterior distribution
   * the  probability of $\theta$ belonging to a certain interval
   * the HPD, also called the *credibility* interval. 
   
-# Example
+# Example: inference on the bias $\theta$ of the coin
 
-* Let us consider the uniform prior, $y$=8, $n$=18
+
+* Let us consider a uniform prior, Beta(1,1)
+* Let us assume the data are $y$=8 heads out of  $n$=18 tosses.
 ```{python, echo=FALSE, fig.height=1, fig.align='center'}
 plt.figure(figsize=(10, 3))
 x = np.linspace(0, 1, 200)
@@ -106,10 +106,10 @@ for ind, (a, b) in enumerate([(1, 1)]):
     plt.title('Beta(%s+%s , %s+%s)' % (a,heads,b,tails))
 ```
 
-$$ p_{\text{post}} = 0.45 \leq \theta \leq 0.55 = \int_{0.45}^{0.55} p_{\text{post}}(\theta) d\theta $$
+$$ p_{\text{post}} = 0.49 \leq \theta \leq 0.51 = \int_{0.49}^{0.51} p_{\text{post}}(\theta) d\theta $$
 ```{python, echo=TRUE, fig.align='center'}
 from scipy.stats import beta
-beta.cdf(0.55, 9, 19) - beta.cdf(0.45, 9, 11)
+beta.cdf(0.51, 9, 19) - beta.cdf(0.49, 9, 11)
 ```
 
 
@@ -123,12 +123,7 @@ beta.cdf(0.55, 9, 19) - beta.cdf(0.45, 9, 11)
 
 * Any point within this interval has a higher density than any point outside the interval. For a unimodal distribution, the HDI 95 is  the interval between the 2.5th and 97.5th percentiles.
 
-# HDI and HPD
-
-* HDI: high density interval
-* HPD: high posterior density.
-* The two terms are practically equivalent.
-* However, in principle HPD refers to a *posterior* distribution.
+* The HDI is also referred to as HPD (high posterior density) in some books. 
 
 
 # HDI   of unimodal distributions
@@ -136,17 +131,18 @@ beta.cdf(0.55, 9, 19) - beta.cdf(0.45, 9, 11)
 ```{r, out.width='45%', fig.align='center', echo=FALSE}
 knitr::include_graphics('HPD-unimodal.png')
 ```
-* The height of the horizontal arrow marks the minimal density exceeded by all $x$ values inside the 95% HDP
+
+* The height of the horizontal arrow marks the minimal density exceeded by all $x$ values inside the 95% HDI
 
 
-# HPD of bimodal distribution
+# HDI of bimodal distribution
 ```{r, out.width='45%', fig.align='center', echo=FALSE}
 knitr::include_graphics('HPD_bimodal.png')
 ```
 
-* The HPD is split into two sub-intervals, one for each mode of the distribution. 
+* The HDI is split into two sub-intervals, one for each mode of the distribution. 
 
-* The  characteristics are  before: 
+* The  characteristics are as before: 
   * The shaded area has total area of 0.95.
   * Any $x$ within such limits has higher probability density than any $x$ outside the limits.
 
@@ -165,21 +161,20 @@ knitr::include_graphics('HPD_bimodal.png')
 <!-- ``` -->
 
 
-# Evaluating the model via predictive test of the posterior
+# Posterior Predictive Checks
 
-* The _a posteriori_ is used to generate data $\tilde{y}$, that is, predicted data conditioned by the estimated values of $\theta$ and by the already observed data $y$.
+* The  posterior is used to generate data $\tilde{y}$ that are compared to the already observed data $y$.
 
 $$
 p(\tilde{y} \mid y) = \int p(\tilde{y} \mid \theta) p(\theta \mid y) d\theta
 $$
 
-* This represents  data tht are expected to be seen in a future experiment.
+* This represents  data that are expected to be seen in a future experiment.
 
 * The test consists of comparing the observed data with the data predicted from the posterior, to assess the consistency of the model.
 
-* Try to understand  systematic discrepancies between simulated and observed data, and  revise the model accordingly.
+* We will see examples of posterior predictive checks  later in the course.
 
-# EXPAND MORE THE predictive test of the posterior??
 
 # Conclusions
 * We have a finite sample of data, on which we perform a Bayesian inference obtaining a posterior distribution.
