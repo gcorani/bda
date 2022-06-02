@@ -19,7 +19,7 @@ fontsize: 14pt
 
 ```{r setup, include=FALSE }
 library(reticulate)
-use_condaenv("r-reticulate")
+use_condaenv("bda")
 ```
 
 ```{python, echo=FALSE}
