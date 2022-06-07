@@ -1,0 +1,3 @@
+conda create --name bda python=3.9 # note: problems with python 3.10 and reticulate on windows
+conda install numpy scipy pandas matplotlib seaborn arviz
+pip install scikit-learn
