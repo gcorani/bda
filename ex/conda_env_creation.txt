@@ -1,3 +1,10 @@
 conda create --name bda python=3.9 # note: problems with python 3.10 and reticulate on windows
 conda install numpy scipy pandas matplotlib seaborn arviz
 pip install scikit-learn
+conda install pymc # now it is called pymc, version 4.0
+conda install jupyter
+conda install pymc3
+
+# alternative installation, with new pymc (4.0)
+conda create -c conda-forge -n pymc_env pymc
+conda install jupyter
