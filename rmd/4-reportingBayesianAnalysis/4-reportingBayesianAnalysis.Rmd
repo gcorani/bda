@@ -3,8 +3,6 @@ title: "Reporting the results of a Bayesian analysis"
 author: "Giorgio Corani"
 date: ''
 output:
-  slidy_presentation:
-    highlight: tango
   beamer_presentation:
     latex_engine: xelatex
     fig_width: 7
@@ -13,6 +11,8 @@ output:
     theme: metropolis
     includes:
       in_header: header.tex
+  slidy_presentation:
+    highlight: tango
   ioslides_presentation:
     highlight: tango
 fontsize: 13pt

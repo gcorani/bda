@@ -3,36 +3,38 @@ title: "Bayes' rule"
 author: "Giorgio Corani"
 date: ''
 output:
-  slidy_presentation:
-    highlight: tango
   beamer_presentation:
     latex_engine: xelatex
-    fig_width: 7
-    fig_height: 3.5
+    fig_width: 6
+    fig_height: 3
     highlight: tango
     theme: metropolis
     includes:
       in_header: header.tex
+  slidy_presentation:
+    highlight: tango
+  ioslides_presentation:
+    highlight: tango
 fontsize: 14pt
 ---
 
 
-```{r setup, include=FALSE }
-library(reticulate)
-use_condaenv("bda")
-```
-
-```{python, echo=FALSE}
-import numpy as np
-import pandas as pd
-import arviz as az
-import scipy.stats as stats
-from matplotlib import pyplot as plt
-```
-
-```{python, echo=FALSE}
-az.style.use('arviz-darkgrid')
-```
+# ```{r setup, include=FALSE }
+# library(reticulate)
+# use_condaenv("bda")
+# ```
+# 
+# ```{python, echo=FALSE}
+# import numpy as np
+# import pandas as pd
+# import arviz as az
+# import scipy.stats as stats
+# from matplotlib import pyplot as plt
+# ```
+# 
+# ```{python, echo=FALSE}
+# az.style.use('arviz-darkgrid')
+# ```
 
 ## Objectives
 

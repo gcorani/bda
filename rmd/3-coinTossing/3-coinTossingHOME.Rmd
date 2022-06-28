@@ -4,7 +4,7 @@ author: "Giorgio Corani"
 date: 'Bayesian Data Analysis and Probabilistic Programming'
 output:
   beamer_presentation:
-    latex_engine: pdflatex
+    latex_engine: xelatex
     fig_width: 7
     fig_height: 3.5
     highlight: tango
@@ -19,17 +19,17 @@ fontsize: 13pt
 ---
 
 
-
 ```{r setup, include=FALSE}
 library(reticulate)
+use_condaenv("r-reticulate")
 ```
 
 ```{python, echo=FALSE}
 import numpy as np
+from scipy.stats import beta
 import pandas as pd
 import arviz as az
 import scipy.stats as stats
-from scipy.stats import beta 
 from matplotlib import pyplot as plt
 import seaborn as sns
 sns.set_theme()
@@ -40,14 +40,7 @@ plt.rcParams.update({
 az.style.use('arviz-darkgrid')
 ```
 
-
-# References
-* Kruschke
-* The Beta-Binomial model: Ch. 3 of `Bayes Rules! An Introduction to Applied Bayesian Modeling`
-  * https://www.bayesrulesbook.com/chapter-3.html#chapter-3
-  * Alicia A. Johnson, Miles Q. Ott, Mine Dogucu
-
-# Estimating the bias $\theta$ of a coin
+# The coin problem
 * A coin falls tails with probability $\theta \in [0,1]$ 
 * $\theta$ is  the *bias*  of the coin
   * $\theta$ =0: it always lands tails
@@ -58,14 +51,12 @@ az.style.use('arviz-darkgrid')
 
 # The coin problem
 
-* The coin  stands in for many real-world applications, such as estimating the success probability of a drug,
-the proportion of supporters of a political party or the click-through rate of an online advertisement.
+* The coin  stands in for a real-world application, such as estimating the success probability of a drug, the probability of a person being left handed, etc
 
 **Assumptions**
 
-* Each observation takes a binary value (head or tail; also referred to as *success* and *insuccess*)
-* The *success* usually refer to the rarer event among the two.
-* The flips are independent: the probability of  *heads* at the next flip does not depend on the outcome of the previous flips.
+* Each observation can take only binary values (success / insuccess)
+* Each observation is independent from the others: the probability of getting *heads* at the next flip does not depend on the outcome of the previous flip
 * $\theta$ is constant in all flips.
 
 
@@ -75,36 +66,24 @@ A single flip takes:
 * *heads* with probability $\theta$
 * *tails* with probability $1-\theta$
 
-* Assuming a constant $\theta$ and the independence of the flips, the probability of the sequence:
+* Under the previous assumptions, the probability of the sequence:
 $$H \quad T  \quad T \quad H \quad H$$
 
-* is 
-$$ \theta (1-\theta) (1-\theta) \theta \theta = \theta^2 (1-\theta)^3$$
-* The probability  of $y$ heads in  $n$ flips is: 
+* is $\theta^2 (1-\theta)^3$
+* A sequence of length $n$, containing $y$ heads, has probability 
 $$\theta^y (1-\theta)^{n-y}$$
 
-# Binomial likelihood 
+# Binomial Likelihood function for a set of binary flips
 
 $$p(y \mid \theta) = \theta^y (1 − \theta)^{1−y}$$
-* This is probability of the observing $y$ tails within $n$ flips, given a fixed value of  $\theta$. 
-* This a *likelihood* function if we:
-  * keep the  observation $y$  fixed
-  * the above probability is a function of $\theta$.
-* The likelihood function shows how the probability of the observed data varies with $\theta$.
 
+* This is probability of the observing $y$ tails given  $\theta$. 
+* Different values of $\theta$ yield different probabilities of the observed data.
+* The observation $y$ is fixed, while $\theta$ is a continuous unknown variable.
+* Seen as a function of $\theta$, this a *likelihood* function.
+  * The likelihood function is not a probability distribution and it does not integrate to 1 if we integrate it over $\theta$
+  * This a probability distribution if we assume $\theta$ fixed, the probability to vary as a function of $y$ and we integrate the function over the possible observations $y$.
 
-# The Beta prior
-* We need a  continuous prior probability model for $\theta$, i.e., a probability density function (pdf).
-* It  specifies all possible values of $\theta$ and the relative plausibility of each. 
-  * What values can $\theta$ take and which are more plausible than others? 
-  * Accounting for all possible outcomes of $\theta$, the pdf integrates to or has an area of 1, much like a discrete pmf sums to 1.
-  
-# The Beta prior
-* It is possible that $f(\theta)>1$, thus a continuous pdf cannot be interpreted as a probability.
-* Probabilities are obtained by integrating the pdf, i.e.:
-$$
-P(c<\theta<d)=\int_c^d f(\theta) d\theta 
-$$
 
 # The prior $p(\theta)$
 * We need to define the prior probability of each value of $\theta$ in $[0, 1]$.
