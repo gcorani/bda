@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  26 JUN 2022 21:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  28 JUN 2022 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2446,19 +2446,6 @@ Requested font "lmbsy5" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
 [10
 
-] [11
-
-] [12
-
-]
-\openout4 = `4-reportingBayesianAnalysis.vrb'.
-
-(./4-reportingBayesianAnalysis.vrb)
-Overfull \vbox (16.68594pt too high) detected at line 430
- []
-
-[13
-
 ]
 \tf@nav=\write6
 \openout6 = `4-reportingBayesianAnalysis.nav'.
@@ -2471,12 +2458,12 @@ Overfull \vbox (16.68594pt too high) detected at line 430
 
 (./4-reportingBayesianAnalysis.aux) ) 
 Here is how much of TeX's memory you used:
- 36563 strings out of 476919
- 763906 string characters out of 5821840
- 1261383 words of memory out of 5000000
- 55689 multiletter control sequences out of 15000+600000
+ 36555 strings out of 476919
+ 763794 string characters out of 5821840
+ 1259215 words of memory out of 5000000
+ 55683 multiletter control sequences out of 15000+600000
  445474 words of font info for 164 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,14n,140p,1828b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 4-reportingBayesianAnalysis.pdf (13 pages).
+Output written on 4-reportingBayesianAnalysis.pdf (10 pages).
