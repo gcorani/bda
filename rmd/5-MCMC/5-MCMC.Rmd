@@ -3,11 +3,7 @@ title: "Marcov Chain Monte Carlo (MCMC) (based on Krushke, Chapter 7) "
 author: "Giorgio Corani"
 date: ''
 output:
-  slidy_presentation:
-    highlight: tango
-  ioslides_presentation:
-    highlight: tango
-  beamer_presentation:
+    beamer_presentation:
     latex_engine: xelatex
     fig_width: 7
     fig_height: 3.5

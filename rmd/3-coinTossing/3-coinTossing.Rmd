@@ -4,7 +4,7 @@ author: "Giorgio Corani"
 date: 'Bayesian Data Analysis and Probabilistic Programming'
 output:
   beamer_presentation:
-    latex_engine: pdflatex
+    latex_engine: xelatex
     fig_width: 7
     fig_height: 3.5
     highlight: tango
@@ -42,7 +42,6 @@ az.style.use('arviz-darkgrid')
 
 
 # References
-* Kruschke
 * The Beta-Binomial model: Ch. 3 of `Bayes Rules! An Introduction to Applied Bayesian Modeling`
   * https://www.bayesrulesbook.com/chapter-3.html#chapter-3
   * Alicia A. Johnson, Miles Q. Ott, Mine Dogucu
@@ -54,78 +53,115 @@ az.style.use('arviz-darkgrid')
   * $\theta$ =1: it always lands heads
  
 * We  flip the coin $n$ times and we measure the number of heads $y$. 
-* Which is the posterior distribution $p(\theta \mid y)$?
+* Let us start with a prior distribution $f(\theta)$ and update it with the data, to obtain a posterior distribution $p(\theta \mid y)$.
 
 # The coin problem
 
-* The coin  stands in for many real-world applications, such as estimating the success probability of a drug,
+* The coin  stands in for many real-world applications, such as estimating 
 the proportion of supporters of a political party or the click-through rate of an online advertisement.
 
 **Assumptions**
 
 * Each observation takes a binary value (head or tail; also referred to as *success* and *insuccess*)
+
 * The *success* usually refer to the rarer event among the two.
+
 * The flips are independent: the probability of  *heads* at the next flip does not depend on the outcome of the previous flips.
+
 * $\theta$ is constant in all flips.
 
 
 # The coin problem
+
 A single flip takes:
 
 * *heads* with probability $\theta$
 * *tails* with probability $1-\theta$
 
-* Assuming a constant $\theta$ and the independence of the flips, the probability of the sequence:
-$$H \quad T  \quad T \quad H \quad H$$
+* Assuming a constant $\theta$ and the independence of the flips, the  sequence
+$H \quad T  \quad T \quad H \quad H$
+has probability
+$ \theta (1-\theta) (1-\theta) \theta \theta = \theta^2 (1-\theta)^3$
 
-* is 
-$$ \theta (1-\theta) (1-\theta) \theta \theta = \theta^2 (1-\theta)^3$$
-* The probability  of $y$ heads in  $n$ flips is: 
-$$\theta^y (1-\theta)^{n-y}$$
+* The probability  of any sequence containing $y$ heads in  $n$ flips is: 
+$\theta^y (1-\theta)^{n-y}$
 
 # Binomial likelihood 
 
-$$p(y \mid \theta) = \theta^y (1 − \theta)^{1−y}$$
+* We can get $\binom{n}{y} = \frac{n!}{k!(n-y)!}$ sequences containing $y$ successes in $n$ trials.
+
+* The probability of observing  $y$ successes in $n$ trials is:
+$$p(y \mid \theta) = \binom{n}{y} \theta^y (1 − \theta)^{1−y}$$
+
 * This is probability of the observing $y$ tails within $n$ flips, given a fixed value of  $\theta$. 
-* This a *likelihood* function if we:
-  * keep the  observation $y$  fixed
-  * the above probability is a function of $\theta$.
+
+# Binomial likelihood 
+$$p(y \mid \theta) = \binom{n}{y} \theta^y (1 − \theta)^{1−y}$$
+* This a *likelihood* function if interpreted in this way:
+  * the  probability is a function of $\theta$.
+  * the  observation $y$ are  fixed
 * The likelihood function shows how the probability of the observed data varies with $\theta$.
 
 
 # The Beta prior
-* We need a  continuous prior probability model for $\theta$, i.e., a probability density function (pdf).
+* We need a  continuous prior $f(\theta)$ for $\theta$, i.e., a probability density function (pdf).
+
 * It  specifies all possible values of $\theta$ and the relative plausibility of each. 
-  * What values can $\theta$ take and which are more plausible than others? 
-  * Accounting for all possible outcomes of $\theta$, the pdf integrates to or has an area of 1, much like a discrete pmf sums to 1.
-  
-# The Beta prior
-* It is possible that $f(\theta)>1$, thus a continuous pdf cannot be interpreted as a probability.
-* Probabilities are obtained by integrating the pdf, i.e.:
-$$
-P(c<\theta<d)=\int_c^d f(\theta) d\theta 
-$$
 
-# The prior $p(\theta)$
-* We need to define the prior probability of each value of $\theta$ in $[0, 1]$.
+* It has to be limited on (0,1)
 
-* The beta distribution, denoted by $\text{Beta}(a, b)$, is a suitable prior for   variables restricted to the $[0, 1]$ interval. 
+* It  integrates to  1, much like a discrete pmf sums to 1.
+
+# The Beta distribution
+
+* $\text{Beta}(a, b)$, is a suitable prior for  variables restricted to the $[0, 1]$ interval. 
+
+* Its parameters are $a >0$ and $b>0$. Parameters used in prior models are referred to as 
+ *hyperparameters*.
 
 * The density function  is:
 
 \begin{align*}
-p(\theta) & = 
+f(\theta) & = 
 \frac{1} {\underbrace{B(a,b)}_{\text{normalizing constant}}}   
 \theta^{a-1}(1-\theta)^ {b-1}
 \propto \theta^{a-1}(1-\theta)^ {b-1} \qquad \qquad a,b>0 
 \end{align*}
 
-* Let us ignore the normalizing constant. 
+* In the following we ignore the normalizing constant. 
 
 Note that:
 
 *  $\theta$ is raised to the power of $a−1$  (not  $a$)
 *  $1-\theta$ is raised to the power of $b−1$  (not  $b$)
+
+
+  
+# Density function
+* The density $f(\theta)$ evaluated for a specific value $\theta$ is not a probability.
+
+* Probabilities are obtained by integrating the pdf over an interval i.e.:
+$$
+P(c<\theta<d)=\int_c^d f(\theta) d\theta 
+$$
+
+* It is possible that $f(\theta)>1$ even though the density integrates to 1.
+
+# The prior $p(\theta)$
+
+* The mean captures the average value of $\theta$:
+$$E[\theta] = \int_x x \cdot f(x) dx $$
+  *  each possible $\theta$ value is weighted by its corresponding pdf value
+
+* The mode is the value of $\theta$ at which the pdf f($\theta$) is maximized.
+  * Mode($\theta = \arg_{max} f(\theta)$)
+
+\begin{equation}
+\begin{split}
+E(\theta) & = \frac{\alpha}{\alpha + \beta} \\
+\text{Mode}(\theta) & = \frac{\alpha - 1}{\alpha + \beta - 2} \;\;\; \text{ when } \; \alpha, \beta > 1. \\
+\end{split}
+\end{equation}
 
 # Beta distribution
 * Expectation (i.e., mean): 
@@ -133,14 +169,15 @@ $$E(\theta)= \frac{a}{a+b} $$
 * Variance: 
 $$\operatorname{VAR}(\theta)= \frac{ab}{(a+b)^2(a+b+1)} $$
 
-* Higher $a$:  the bulk of the distribution moves rightward
-* Higher $b$: the bulk of the distribution moves leftward 
-* Higher $a$ and $b$:  the  distribution gets more concentrated.
+* Higher $a$:  the expected value increases, the bulk of the distribution moves rightwards (vice versa for higher $b$)
+* $a = b$ implies a symmetric distribution with expected value 0.5.
+* Higher $a$ and $b$:  the  distribution gets more concentrated around the mean.
+
 
 # Beta distribution with $a = b = 1$
 
 \begin{align*}
-p(\theta) & \propto \theta^{a-1}(1-\theta)^ {b-1} \\
+f(\theta) & \propto \theta^{a-1}(1-\theta)^ {b-1} \\
 & =   \theta^{0}(1-\theta)^ {0} \\
 & = 1
 \end{align*}
@@ -164,7 +201,7 @@ for ind, (a, b) in enumerate([(1, 1)]):
 
 * If we increase $a$ and $b$ together, the prior becomes more concentrated around the expected value $\theta=0.5$ 
 
-* We can thus represent  more confident beliefs  about  the coin being fair
+* This corresponds to be more confident that the coin is fair ($\theta$=0.5).
 
 ```{python, echo=FALSE, fig.height=2, fig.align="center"}
 plt.figure(figsize=(10, 3))
@@ -197,21 +234,35 @@ for ind, (a, b) in enumerate([(7, 3), (28, 12), (70, 30)]):
     plt.legend(fontsize=12)
 ```
 
+# Tuning the beta
+* mode is shown by the dashed line
+* mode is shown by the dashed line
+```{r foo, out.width="80%", fig.cap="The beta pdf under a variety of settings."}
+knitr::include_graphics("beta-tuning-1.png")
+```
+
+
 # Choice of  $a$ and $b$
-* The choice of $a$ and $b$ can be fine-tuned if you have an idea about the quantiles of your prior beliefs, not only the expected value.
+* The choice of $a$ and $b$ can be fine-tuned considering also the quantiles of your prior beliefs.
+* You might expect a drug to heal some 70% of the patients, but with which uncertainty?
 * This is how the 10-the and the 90-th percentile vary with $a$ and $b$:
 
-```{python, echo=TRUE, fig.height=3, cache=TRUE, fig.align="center"}
-for (a, b) in  [(7, 3), (28, 12), (70, 30)]:
-    quantiles=[0.10, 0.90]
-    q = beta.ppf(quantiles, a=a, b=b)
-    print("a=", a , " b=", b, ", q10=", q[0], ", q90=", q[1])
-```
+| (a,b)          	| (7, 3) 	| (28, 12) 	| (70, 30) 	|
+|----------------	|-------:	|---------:	|---------:	|
+| 5-th quantile  	|   0.45 	|     0.58 	|     0.62 	|
+| 95-th quantile 	|   0.90 	|     0.81 	|     0.77 	|
+
+
+#```{python, echo=TRUE, fig.height=3, cache=TRUE, fig.align="center"}
+#for (a, b) in  [(7, 3), (28, 12), (70, 30)]:
+#    quantiles=[0.05, 0.95]
+#    q = beta.ppf(quantiles, a=a, b=b)
+#    print("a=", a , " b=", b, ", q10=", q[0], ", q90=", q[1])
+#```
 
 # We suspect the coin to be rigged but we do not in which direction
 
 * $a<1, b<1$ yield a convex distribution
-* As they get closer to 0, the distribution becomes even more  convex: we are now modelling the opinion that  the coin is  unlikely to be fair
 
 ```{python, echo=FALSE, fig.height=3, cache=TRUE, , fig.align="center"}
 plt.figure(figsize=(10, 3))
@@ -287,23 +338,6 @@ $$
 * Historically, problems in Bayesian statistics were restricted to the use of  conjugate priors, because of  mathematical tractability.
 
 * However modern computational techniques allow obtaining posteriors even when conjugacy does not hold,  allowing the resurgence of Bayesian statistics in recent years. 
-
-# Representing the Beta-binomial model
-We represent the model as:
-\begin{align*}
-\theta & \sim \operatorname{Beta}(a,b)\\
-y & \sim \operatorname{Bin}(n,\theta)
-\end{align*}
-
-The symbol $\sim$ shows the distribution followed by a certain variable.
-
-# Kruschke diagram of the beta binomial model
-
-* In the top level we show the prior, below  the likelihood, and finally the data. 
-
-```{r, echo=FALSE, fig.height=2, fig.align='center'}
-knitr::include_graphics("coin_model.png")
-```
 
 # Exercise: grid sampling (DISCUTERE CON MARCO)
 
