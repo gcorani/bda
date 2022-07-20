@@ -1,8 +1,9 @@
-conda create --name bda python=3.9 # note: problems with python 3.10 and reticulate on windows
+# note: problems with python 3.10 and reticulate on windows
 conda install numpy scipy pandas matplotlib seaborn arviz
 pip install scikit-learn
 conda install jupyter
 conda install pymc3
+conda install rise
 
 # alternative installation, with new pymc (4.0). Not working for me...
 conda create -c conda-forge -n pymc_env pymc
