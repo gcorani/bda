@@ -11,10 +11,6 @@ output:
     theme: metropolis
     includes:
       in_header: header.tex
-  slidy_presentation:
-    highlight: tango
-  ioslides_presentation:
-    highlight: tango
 fontsize: 13pt
 ---
 # Credits

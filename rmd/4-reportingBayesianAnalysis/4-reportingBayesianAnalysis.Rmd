@@ -41,36 +41,72 @@ az.style.use('arviz-darkgrid')
 
 # Analysis of the results - 1
 
+* Assume you want to make inference about parameter $\theta$.
+
+\bigskip
+
 * The result of the Bayesian analysis is the posterior  distribution of $\theta$,  **not** a single value.
 
-* The dispersion of the posterior distribution (posterior variance) is a measure of  uncertainty.
+\bigskip
 
-* The uncertainty decreases when the number of experiments is greater.
+* The dispersion of the posterior distribution (posterior variance) quantifies our  uncertainty.
+
+\bigskip
+
+* Uncertainty decreases when we have more data.
 
 # The impact of the prior 
-* Given a _sufficient_ amount of data, the posterior will be practically the same  with any prior.
 
-* Given a limited amount of data, the posterior obtained by different priors can be significantly different; it makes sense to repeat the analysis with different prior if you are unsure.
+* Given  many of data, the posterior will be practically the same  regardless the prior. 
 
-* The priors impact the results of our calculations. This makes  sense, since  we  use the prior to encode our previous knowledge and different experts have different opinions. 
+\bigskip
 
-* How much data is needed for the prior effect to be negligible varies with the problem.
+* But how many data are needed for the likelihood to *overwhelm* the prior? That is not know in advance. 
+
+
+
+# The impact of the prior 
+
+* With few  data, the posterior might be different using different priors; it makes sense to repeat the analysis with different priors (analysis of *sensitivity* to the prior).
+
+\bigskip
+
+* The priors impact our  results. This makes  sense, since the prior  encodes  previous knowledge and different experts have different opinions. 
+
 
 
 # Discussion
-* Priors and likelihood are based on assumptions and are  part of the model.
+* Priors and likelihood are based on assumptions which should be justified.
 
-* *Slightly informative*  priors are recommended.
-In many problems we know at least something about the possible values that our parameters can take, for example that they can only be positive, or that they are restricted to sum to 1 or the approximate range, etc. 
+\bigskip
+
+* There is no single right prior, but many reasonable priors.
+
+\bigskip
+
+* *Slightly informative*  priors are recommended, for instance limiting the parameter values only to the positive range, or to a certain order or magnitude, etc. 
+
+\bigskip
 
 * A Beta(1,1) prior is flat but  limits the   values of $\theta$ between 0 and 1.
 
-* If we had more than one reasonable prior, we could perform a sensitivity analysis, that is, evaluate if the results significantly change with the priors, or instead the data are strong enough to overwhelm the prior.
+\bigskip
+
+* Sensitivity analysis: evaluate if the results significantly change with the priors, or instead the data are strong enough to overwhelm the prior.
 
 # Summarizing the posterior
+
 *  Different measures can be used to summarize the a priori:
+
+\bigskip
+
   * the mean (or the mode, or the median) of the posterior distribution
+  
+\bigskip
+
   * the  probability of $\theta$ belonging to a certain interval
+  
+\bigskip
   * the HPD, also called the *credibility* interval. 
   
 # Example: inference on the bias $\theta$ of the coin
@@ -125,6 +161,17 @@ beta.cdf(0.51, 9, 19) - beta.cdf(0.49, 9, 11)
 
 * The HDI is also referred to as HPD (high posterior density) in some books. 
 
+# HDI   of unimodal distributions
+
+* (1-$\alpha$) is the coverage of the HDI. 
+
+\bigskip
+
+* If the distribution is unimodal, the HDI lies between the quantile $\alpha/2$ and $1-\alpha/2$.
+
+\bigskip
+
+* For instance, the 95% HDI lies between quantiles 0.025 and 0.975
 
 # HDI   of unimodal distributions
 
@@ -145,3 +192,5 @@ knitr::include_graphics('HPD_bimodal.png')
 * The  characteristics are as before: 
   * The shaded area has total area of 0.95.
   * Any $x$ within such limits has higher probability density than any $x$ outside the limits.
+  
+* In this case  you can use the numerical procedure of arviz in order to compute the HDI.
