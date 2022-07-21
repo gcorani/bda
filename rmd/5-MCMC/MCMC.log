@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  21 JUL 2022 10:23
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  21 JUL 2022 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2362,7 +2362,13 @@ Requested font "lmbsy7" at 6.0pt
 
 ] [21
 
-] [22
+]
+Overfull \vbox (9.55232pt too high) detected at line 729
+ []
+
+[22
+
+] [23
 
 ]
 \tf@nav=\write5
@@ -2376,12 +2382,12 @@ Requested font "lmbsy7" at 6.0pt
 
 (./MCMC.aux) ) 
 Here is how much of TeX's memory you used:
- 36109 strings out of 476919
- 756673 string characters out of 5821840
- 1250885 words of memory out of 5000000
- 55245 multiletter control sequences out of 15000+600000
+ 36111 strings out of 476919
+ 756689 string characters out of 5821840
+ 1250941 words of memory out of 5000000
+ 55247 multiletter control sequences out of 15000+600000
  431815 words of font info for 141 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,15n,140p,1805b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on MCMC.pdf (22 pages).
+Output written on MCMC.pdf (23 pages).

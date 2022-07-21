@@ -274,6 +274,25 @@ p & = \min \left( 1, \frac{P(\theta_{\text{proposed}} \mid D)}{P(\theta_{\text{c
 
 * Advanced implementations of the Metropolis algorithm  automatically  adjust the width of the proposal distribution.
 
+# Exercise 7.4 from Bayesrulebook - Tuning the Metropolis-Hastings) 
+
+**rivedi**
+
+* Tune a Uniform proposal model with half-width $w$ for a Metropolis-Hastings algorithm.
+
+* Draw a trace plot for a tour where the Uniform proposal model uses a very small $w$
+
+* Why is it problematic if w
+is too small, and hence defines the neighborhood around the current chain value too narrowly?
+
+*Draw a trace plot for a tour where the Uniform proposal model uses a very large $w$. Why is it problematic if w
+is too large, and hence defines the neighborhood too widely?
+
+* Draw a trace plot for a tour where the Uniform proposal model uses a w
+that is neither too small or too large.
+* Describe how you would go about finding an appropriate half-width w
+for a Uniform proposal model.
+
 # Exercises 
 
 * Implement the island hopping algorithm? vedi codice in scripts
