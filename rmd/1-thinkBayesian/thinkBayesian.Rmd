@@ -1,0 +1,122 @@
+---
+title: "Think Bayesian"
+author: "Giorgio Corani - giorgio.corani@idsia.ch"
+date: ' Bayesian Data analysis and Probabilistic Programming'
+output:
+  beamer_presentation:
+    latex_engine: xelatex
+    fig_width: 6
+    fig_height: 3
+    highlight: tango
+    theme: metropolis
+    includes:
+      in_header: header.texfontsize: 13pt
+---
+# Credits
+
+* Chap. 1 of *Bayes Rules! An Introduction to Applied Bayesian Modeling*
+  * https://www.bayesrulesbook.com/chapter-1.html
+
+
+# The big picture
+
+* We continuously update our knowledge about the world as we accumulate  experience or collect data. 
+
+\bigskip
+
+
+* The Bayesian probability is a rigorous framework for modeling the knowledge-building process, using data to update your knowledge. 
+
+
+# Changing opinion based on experience
+
+
+* Suppose there’s a new restaurant with high online rating.
+
+\bigskip
+
+* Prior to enter the restaurant, you expect that it will be  delicious.  
+
+\bigskip
+
+* On your first visit, the pasta is poorly cooked.   
+
+\bigskip
+
+* You weigh the high online rating against  your poor meal (which might have just been a fluke), and you update your opinion knowledge: this is a medium, not an excellent restaurant. 
+  
+# Changing opinion based on experience
+
+*   In your second meal at the restaurant you’re pleased with your dinner and increase your personal restaurant’s rating to good.
+
+\bigskip
+
+* You continue to visit the restaurant, collecting edible data and updating your knowledge each time.
+
+\bigskip
+
+* After enough visits, you have your own informed opinion.
+
+# Building knowledge 
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics("restaurant_diagram.png")
+```
+
+* We can apply this same Bayesian process to rigorous research inquiries. 
+
+
+# Building knowledge 
+
+* An environmental scientist analyses of the human role in climate change. 
+
+\bigskip
+
+* He carries a degree of incoming or prior information based on previous research and experience. 
+
+\bigskip
+
+* In light of this information he interprets new data, considering both to develop an updated understanding (posterior information). 
+
+\bigskip
+
+* He continues to refine this information as he gathers new evidence.
+
+# Building knowledge 
+
+```{r, echo=FALSE, out.width = '80%'}
+knitr::include_graphics("bayes_diagram.png")
+```
+
+# Thinking  Bayesian
+
+* When flipping a fair coin, we say that “the probability of flipping Heads is 0.5.” How do you interpret this probability? 
+
+\bigskip
+
+  * If I flip this coin over and over, roughly 50% will be Heads.
+  
+  \bigskip
+  
+  *  Heads and Tails are equally plausible.
+  
+# Thinking  Bayesian
+
+ * According to both Bayesian and frequentist probability,  the probability of observing Heads on a fair coin flip is 1/2. The difference is in their interpretation:
+
+\bigskip
+
+  * Bayesian: a probability measures the relative plausibility of an event.
+    The frequentist philosophy is so named for its interpretation of probability as the long-run relative frequency of a repeatable event
+
+# Thinking  Bayesian
+
+* An election is coming up and a pollster claims that candidate A has a 0.9 probability of winning. How do you interpret this probability?
+
+  \bigskip
+
+  * If we observe the election over and over, candidate A will win roughly 90% of the time.
+  
+  \bigskip
+  
+  * Candidate A is much more likely to win than to lose.
