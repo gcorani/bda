@@ -5,6 +5,10 @@ conda install jupyter
 conda install pymc3
 conda install rise
 
-# alternative installation, with new pymc (4.0). Not working for me...
-conda create -c conda-forge -n pymc_env pymc
+# alternative installation, with new pymc (4.0). To be tested
+conda create --name bda4 -c conda-forge python=3.10
+conda activate bda4
+conda install -c conda-forge mamba
+mamba install -c conda-forge "pymc>=4.0.0"
 conda install jupyter
+...
