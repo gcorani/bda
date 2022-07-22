@@ -1,0 +1,390 @@
+---
+title: "The normal-normal model"
+author: "Giorgio Corani"
+date: 'Bayesian Data Analysis and Probabilistic Programming'
+output:
+  beamer_presentation:
+    latex_engine: xelatex
+    fig_width: 7
+    fig_height: 3.5
+    highlight: tango
+    theme: metropolis
+    includes:
+      in_header: header.tex
+  slidy_presentation:
+    highlight: tango
+  ioslides_presentation:
+    highlight: tango
+fontsize: 13pt
+---
+
+```{r setup, include=FALSE}
+library(reticulate)
+```
+
+```{python, echo=FALSE}
+import numpy as np
+import pandas as pd
+import arviz as az
+import scipy.stats as stats
+from matplotlib import pyplot as plt
+from scipy.stats import norm
+from scipy.stats import halfnorm
+import seaborn as sns
+sns.set_theme()
+plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "sans-serif",
+    "font.sans-serif": ["Helvetica"]})
+az.style.use('arviz-darkgrid')
+```
+
+# Credits
+
+* Chap. 5 of *Bayes Rules! An Introduction to Applied Bayesian Modeling*
+  * https://www.bayesrulesbook.com/chapter-5.html
+
+
+
+# The Normal model
+
+* Let $Y$  be a continuous random variable which can take  values in (−$\infty$,$\infty$)  
+
+\bigskip
+
+* The variability of Y might be well represented by a Normal model 
+ $$Y ∼ N(\mu,\sigma^2)$$
+
+
+# The Normal model
+
+* The Normal pdf is 
+
+$$ f(y) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y-\mu)^2}{2\sigma^2}}\bigg] $$
+\bigskip
+* It  has the following features:
+
+\begin{align*}
+E(Y) &= Mode(Y)=μ \\
+Var(Y) &= \sigma^2 \\
+SD(Y) &= \sigma
+\end{align*}
+
+# Standard deviation $\sigma$
+
+* $\sigma$ provides a sense of scale for $Y$. 
+
+\bigskip
+
+* Roughly 95% of $Y$ values are within 2 standard deviations of $\mu$:
+$$\mu \pm 2 \sigma$$
+
+* Roughly 99% of $Y$ values are within 3 standard deviations of $\mu$:
+$$\mu \pm 3 \sigma$$
+
+# The normal model
+
+* The Normal model is bell-shaped and symmetric around $\mu$. 
+
+\bigskip
+
+* As σ gets larger, the pdf becomes more spread out.
+
+\bigskip
+* Though a Normal variable is defined in (−∞, ∞), the   plausibility of values that are more than 3 standard deviations σ from the mean $\mu$ is negligible.
+
+```{r figurename, echo=FALSE, out.width = '75%'}
+knitr::include_graphics("normal-tuning.png")
+```
+
+# Example
+
+
+* Assume we are interested in $\mu$, the average volume (in cubic centimeters) of a specific part of the brain: the hippocampus. This is often researched in studies about the effect of concussions.
+
+\bigskip
+
+* In the general population, both halves of the hippocampus have a volume between 3.0 and 3.5 cubic centimeters.
+
+\bigskip
+
+* Thus, the total hippocampal volume of both sides of the brain is between 6 and 7 $cm^3$.
+
+
+
+# Prior
+
+* Assuming it to be symmetrically distributed, we can summarize this information in our prior:
+
+$$p(\mu) = N(6.5, 0.4)$$
+or equivalently:
+$$\mu \sim N(6.5, 0.4)$$
+
+
+* We have set the mean of the normal at the midpoint of the interval (6-7).
+
+* To tune the SD, we keep the $\mu \pm 2 \sigma$ slightly larger than the our prior interval; this is a conservative choice and it is a good practice. 
+
+# Prior
+
+$$p(\mu) = N(6.5, 0.4)$$
+
+* According to our prior information, $\mu$ (the mean volume in the population) is 6.5; our uncertainty is that however $\mu$ can generally lie in the interval 6.5 $\pm$ 2 \times 0.4.
+
+\bigskip
+
+* We are assuming that our prior beliefs are appropriately represented by a Normal distribution.
+
+\bigskip
+
+* There is no single right prior, but multiple reasonable priors!
+
+# Likelihood
+
+* Suppose that now we measure the hippocampal volumes of $n$=25 subjects.
+
+\bigskip
+
+* We make a *second* assumption of normality.
+
+\bigskip
+
+* The hippocampal volumes of our subjects  $y_1,y_2,…,y_n$, are independent and Normally distributed around the mean volume $\mu$ with standard deviation $\sigma$.
+
+
+# Likelihood
+
+* $\sigma$ expresses the spread of the hippocampal volumes within the population.
+
+\bigskip
+
+* Further research shows that most people have hippocampal volumes within 1.2 $cm^3$ of the average.
+
+\bigskip
+* We thus  set $\sigma$= 0.6.
+
+# Likelihood
+
+* For the moment we fix $\sigma$ to a specific value.
+Later we will see how to set a prior also on  $\sigma$.
+
+\bigskip
+
+
+* The dependence of $y_i$ on the unknown mean $\mu$ is:
+$$y_i \mid \mu ∼ N(\mu,\sigma^2)$$
+
+* The Normal model  assumes that each subject’s hippocampal volume can range from −∞ to ∞. However, we’re not too worried: it will put negligible weight on unreasonable values of hippocampal volume. 
+
+# Likelihood
+
+The joint pdf which describes the collective randomness in our n=25 subjects’ hippocampal volumes, ($y_1,y_2,…,y_n$), is the product of the unique Normal pdfs $f(y_i \mid \mu)$:
+
+$$
+f(\vec{y} | \mu) = \prod_{i=1}^{n}f(y_i|\mu) = \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg]  .
+$$
+
+# The Normal-Normal Bayesian model
+
+* Let $\mu$ be the unknown mean parameter and $(y_1,y_2,…,y_n$ be an independent $N(\mu, \sigma^2)$ sample, where $\sigma$ is  known. 
+
+* The prior pdf of $\mu$ is also normal with fixed variance $\tau^2$.
+
+\begin{align*}
+\mu & \sim N(\theta, \tau^2) \\
+y_i | \mu & \stackrel{ind}{\sim} N(\mu, \sigma^2) \\
+\end{align*}
+
+
+# The Normal-Normal Bayesian model
+
+* Upon observing data →$y_1,y_2,…,y_n$
+with mean $\bar{y}$, the posterior mean of $\mu$ is also
+ Normal with updated parameters:
+
+$$
+\mu|\vec{y} \; \sim \;  N\bigg(\theta\frac{\sigma^2}{n\tau^2+\sigma^2} + \bar{y}\frac{n\tau^2}{n\tau^2+\sigma^2}, \; \frac{\tau^2\sigma^2}{n\tau^2+\sigma^2}\bigg)  .
+$$
+
+
+# The Normal-Normal Bayesian model
+
+* The posterior mean is a weighted average of the prior mean E(μ)=θ and the sample mean $\bar{y}$.
+
+\bigskip
+
+* The posterior variance is informed by the prior variability τ and variability in the data σ.
+
+\bigskip
+
+* As $n$ increases, the posterior mean places less weight on the prior mean and more weight on sample mean.
+
+\bigskip
+
+* As $n$ increases, the posterior variance decreases.
+
+# The Normal-Normal Bayesian model
+
+* Assume that the sample of $n$ measures has mean $\bar{y}=6.7$.
+
+* The posterior pdf of $\mu$ is:
+
+**conti da rifare**
+$$
+\mu | \vec{y} \; \sim \; N\bigg(6.5\cdot\frac{0.5^2}{25\cdot0.4^2+0.5^2} + 5.735\cdot\frac{25\cdot 0.4^2}{25 \cdot 0.4^2+0.5^2}, \; \frac{0.4^2\cdot0.5^2}{25\cdot0.4^2+0.5^2}\bigg).
+$$
+
+#  What if $\sigma$ is unknown?
+
+
+# Prior distribution of $\sigma$
+
+*  $\sigma$ is strictly positive; a suitable prior is the *half-normal* distribution.
+
+\bigskip
+
+* The half-normal is  a Gaussian  restricted to positive values.
+
+\bigskip
+* You sample from a half-normal by sampling from a normal distribution and rejecting the negative values (or applying the absolute value to the  sampled values).
+
+
+# The half-normal distribution
+
+* The half-normal prior is a suitable choice for the standard deviation.
+
+
+```{r, echo=FALSE, out.width = '75%', fig.cap= "from wikipedia"}
+knitr::include_graphics("half_normal.png")
+```
+
+
+# The half-normal distribution
+
+* The half-normal pdf is characterized by a scale parameter.
+
+```{python, echo=FALSE, fig.height=2, fig.align="center"}
+plt.figure(figsize=(10, 3))
+
+
+x = np.linspace(-2,5, 100)
+
+#at each x we plot the pdf of the halfnorm with different scales
+plt.plot(x, halfnorm.pdf(x, scale=1), 'r-', lw=3, alpha=0.6, label='scale=1')
+plt.plot(x, halfnorm.pdf(x, scale=3), 'b-', lw=3, alpha=0.6, label='scale=3');
+plt.plot(x, halfnorm.pdf(x, scale=3), 'b-', lw=3, alpha=0.6, label='scale=5');
+plt.legend()
+
+```
+
+
+
+
+# Tuning the half-normal distribution
+
+* You can tune the HN prior distribution by matching its median with a plausible value of $\sigma$
+
+\bigskip
+
+* For instance  we think a plausible value for the standard deviation of the noise is 7.5.
+
+\bigskip
+
+  * with 95% probability the measures are lie in an interval of +- 15 around the mean.
+
+\bigskip
+
+* Of course, we are uncertain about this statament.
+
+\bigskip
+
+* Perhaps, with 95% probability the measures lie in an interval of +- 30, 
+in which case the standard deviation of the noise is around 10.
+
+# Tuning the half-normal distribution
+
+
+\bigskip
+
+* The HN pdf is asymmetric right-skewed pdf; it has long tails which are much larger than the median.
+
+\bigskip
+
+* It thus offer a broad range of plausible values.
+
+* The prior should cover a wide range of plausible values for $\sigma$, leaving out however values that make no sense.
+
+
+# Tuning the half-normal distribution
+
+* The halfnormal distribution  has been obtained by trying different scale parameters.
+
+\bigskip    
+
+* Notice the long tails of the distribution, which allows to model to correct if our prior median guess (7.5) is underestimated.  
+
+```{python, echo=TRUE, fig.height=2, fig.align="center"}
+pd.DataFrame(halfnorm.rvs(size=1000, scale=11)).describe()
+```
+# The probabilistic model
+
+\begin{align*}
+\mu &\sim N(\mu_{\mu}, \sigma_{\mu}) && \text{prior beliefs about } \mu\\ 
+\sigma &\sim \text{Half-Normal}(\sigma_{\sigma}) && \text{prior beliefs about } \sigma \\
+y & \sim \mathcal{N}(\mu, \sigma) && \text{the observation are  affected by a noise with standard deviation } \sigma\\
+\end{align*}
+
+* We cannot treat this model analytically, as the prior are no longer conjugates.
+
+\bigskip
+
+* We will implement it later via probabilistic programming.
+
+# Conceptual exercise
+
+* Try to define the priors of a probabilistic model which  represents the distribution of height of adult males in Switzerland 
+
+# Population of Swiss adult males: $p(\mu)$
+
+
+* The mean height of the population could  be 175, though this is uncertain. Keeping our prior broad,  the mean height of the population lies with 99% probability between 160 and 190 cm.
+  
+  \bigskip
+  
+  * $\mu \sim \mathcal{N}(175, 5)$ 
+  
+# Population of Swiss adult males: $p(\sigma)$
+
+* We shall now assign a prior to $\sigma$. We assume that within the whole population the height  varies with 99% probability between 100 and 250. 
+
+\bigskip
+
+  * Hence the corresponding value of the standard deviation is (250-100)/6 = 25.
+    
+    \bigskip
+    
+  * Notice the broad but sensible range.
+  
+  \bigskip
+    
+  * A half-normal distribution with scale 35 has roughly this median:
+  
+      * $\sigma \sim \text{Half-Normal}(35)$
+
+# Population of Swiss adult males: $p(\sigma)$
+
+```{python, echo=TRUE, fig.height=2, fig.align="center"}
+pd.DataFrame(halfnorm.rvs(size=1000, scale=35)).describe()
+```
+
+# Likelihood
+
+* The likelihood  $y  \sim \mathcal{N}(\mu, \sigma)$ requires no parameter specification. 
+
+\bigskip
+
+* We are assuming that the measures are normally distributed around the mean.
+
+\bigskip
+
+* Moreover we assume that the measures are i.i.d.
