@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  20 JUL 2022 15:43
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  2 AUG 2022 17:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2719,72 +2719,72 @@ Requested font "lmbsy5" at 2.7375pt
 
 ] [40
 
+] [41
+
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 899.
+(Font)              scaled to size 7.0pt on input line 926.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 899.
+(Font)              scaled to size 5.0pt on input line 926.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
-[41
+[42
 
-] [42
+] [43
 
 ]
 File: betaBinomial_files/figure-beamer/unnamed-chunk-7-1.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-7-1.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 937--937
- [] 
- []
-
-[43
-
-]
-File: betaBinomial_files/figure-beamer/unnamed-chunk-8-3.pdf Graphic file (type
- pdf)
-<use betaBinomial_files/figure-beamer/unnamed-chunk-8-3.pdf>
-
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 943--943
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 964--964
  [] 
  []
 
 [44
 
 ]
-File: betaBinomial_files/figure-beamer/unnamed-chunk-9-5.pdf Graphic file (type
+File: betaBinomial_files/figure-beamer/unnamed-chunk-8-3.pdf Graphic file (type
  pdf)
-<use betaBinomial_files/figure-beamer/unnamed-chunk-9-5.pdf>
+<use betaBinomial_files/figure-beamer/unnamed-chunk-8-3.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 949--949
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 970--970
  [] 
  []
 
 [45
 
 ]
-File: betaBinomial_files/figure-beamer/unnamed-chunk-10-7.pdf Graphic file (typ
-e pdf)
-<use betaBinomial_files/figure-beamer/unnamed-chunk-10-7.pdf>
+File: betaBinomial_files/figure-beamer/unnamed-chunk-9-5.pdf Graphic file (type
+ pdf)
+<use betaBinomial_files/figure-beamer/unnamed-chunk-9-5.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 969--969
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 976--976
  [] 
- []
-
-
-Overfull \vbox (7.59532pt too high) detected at line 969
  []
 
 [46
 
-] [47
+]
+File: betaBinomial_files/figure-beamer/unnamed-chunk-10-7.pdf Graphic file (typ
+e pdf)
+<use betaBinomial_files/figure-beamer/unnamed-chunk-10-7.pdf>
+
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 996--996
+ [] 
+ []
+
+
+Overfull \vbox (7.59532pt too high) detected at line 996
+ []
+
+[47
 
 ] [48
 

@@ -225,7 +225,7 @@ both $A=a$ and $B=b$.
 # Joint probability 
 
 \begin{align*}
-  P(\text{fake}, \text{~ !}) & = P(\text{fake}) P(\text{~ !} \mid \text{fake}) \\
+  P(\text{fake}, \sim\text{!}) & = P(\text{fake}) P(\sim\text{!} \mid \text{fake}) \\
   & = 0.4 \cdot (1 - 0.2667) = 0.2933
 \end{align*}
 
@@ -276,7 +276,7 @@ both $A=a$ and $B=b$.
 * The marginal distribution of $A$ is {fake=0.4; real=0.6}. 
 \bigskip
 
-* Moreover, $$P(A= \text{fake}) = P(\text{fake},!) + P(\text{fake},~!)$$.  
+* Moreover, $$P(A= \text{fake}) = P(\text{fake},!) + P(\text{fake}, \sim !)$$.  
 
 
 # Marginal distribution and marginal probability
@@ -364,10 +364,12 @@ Requires:
 
 * $p(A \mid b)$ represents the distribution of the possible outcome $A$  given $B=b$.
 
+\bigskip
+
 * When we have a specific observation $b$, we get the function $p(a|b)$,  the likelihood. 
 
-* The likelihood is a function of $h$ since $y$is fixed to the observed value.
- 
+\bigskip
+
 * The likelihood is not a probability distribution; it does not sum to one. 
 
 # Marginal likelihood 
@@ -412,7 +414,7 @@ Assume the conditional probability of the test outcome, given an healthy person,
 
 |  | test negative | test positive |
 | :-: | :-: | :-: |
-$P( T \mid \text{healthy})$ | infected | .975 | .025  |
+$P( T \mid \text{healthy})$ |.975 | .025  |
 
 * Thus the probability of a negative test for a healthy  patient, 97.5%  
 
@@ -459,7 +461,7 @@ P(\text{infected})
 # Posterior
 
 \begin{align*}
-P(\text{infected}|\text{positive}) & = \frac{P(\text{infected}) P(\text{positive} \mid {infected})}{P(\text{positive})} \\
+P(\text{infected}|\text{positive}) & = \frac{P(\text{infected}) P(\text{positive} \mid \text{infected})}{P(\text{positive})} \\
 & = \frac{ 0.1 \times 0.875}{0.11} \\
 & = 0.795
 \end{align*}

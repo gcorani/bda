@@ -47,7 +47,7 @@ az.style.use('arviz-darkgrid')
   * Alicia A. Johnson, Miles Q. Ott, Mine Dogucu
 
 # The bias $\theta$ of a coin
-* A coin falls tails with probability $\theta \in [0,1]$ 
+* A coin falls tails with probability $\theta \in (0,1)$ 
 \bigskip
 
 * $\theta$ is  the *bias*  of the coin
@@ -394,7 +394,7 @@ $$p(y \mid \theta) = \binom{n}{y} \theta^y (1 − \theta)^{1−y}$$
 y | \theta & \sim \text{Bin}(n, \theta) \\
 \end{align*}
 
-* This model has vast applications, applying to any setting where parameter  $\theta$ lies in [0,1] \bigskip
+* This model applies to any setting where parameter  $\theta$ lies in [0,1] \bigskip
   *  requires tuning of a Beta prior 
   *  assumes data $y$ to be the number of “successes” in $n$ fixed, independent trials with constant probability of success $\theta$.
 
@@ -488,6 +488,23 @@ $$
 \bigskip
 
 * The weight of the observed proportion increases with $n$; the weight of the prior mean  increases with $a$ and $b$.
+
+# The posterior is a compromise of prior and likelihood
+
+
+$$
+\underbrace{\frac{a + y}{a+ b + n}}_{\text{posterior}} =
+\underbrace{\frac{y}{n}}_{\text{observed proportion}}
+\underbrace{\frac{n}{n+a+b}}_{\text{weight}} +
+\underbrace{\frac{a}{a+b}}_{\text{prior mean of $\theta$}}
+\underbrace{\frac{a+b}{n+a+b}}_{\text{weight of the prior}}
+$$
+
+* We can interpret the prior as representing an imaginary sample, containing $a$ successes and $b$ insuccesses.
+
+\bigskip
+
+* The larger $a$ and $b$, the larger the imaginary sample; thus our confidence in the prior increases.
 
 # Test yourself!
 

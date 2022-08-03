@@ -61,8 +61,10 @@ az.style.use('arviz-darkgrid')
 * The Normal pdf is 
 
 $$ f(y) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y-\mu)^2}{2\sigma^2}}\bigg] $$
+
 \bigskip
-* It  has the following features:
+
+* With:
 
 \begin{align*}
 E(Y) &= Mode(Y)=μ \\
@@ -78,6 +80,8 @@ SD(Y) &= \sigma
 
 * Roughly 95% of $Y$ values are within 2 standard deviations of $\mu$:
 $$\mu \pm 2 \sigma$$
+
+\bigskip 
 
 * Roughly 99% of $Y$ values are within 3 standard deviations of $\mu$:
 $$\mu \pm 3 \sigma$$
@@ -100,7 +104,7 @@ knitr::include_graphics("normal-tuning.png")
 # Example
 
 
-* Assume we are interested in $\mu$, the average volume (in cubic centimeters) of a specific part of the brain: the hippocampus. This is often researched in studies about the effect of concussions.
+* The  volume (in cubic centimeters) the hippocampus (a part of the brain)  is often researched in studies about the effect of concussions.
 
 \bigskip
 
@@ -108,112 +112,122 @@ knitr::include_graphics("normal-tuning.png")
 
 \bigskip
 
-* Thus, the total hippocampal volume of both sides of the brain is between 6 and 7 $cm^3$.
-
-
-
-# Prior
-
-* Assuming it to be symmetrically distributed, we can summarize this information in our prior:
-
-$$p(\mu) = N(6.5, 0.4)$$
-or equivalently:
-$$\mu \sim N(6.5, 0.4)$$
-
-
-* We have set the mean of the normal at the midpoint of the interval (6-7).
-
-* To tune the SD, we keep the $\mu \pm 2 \sigma$ slightly larger than the our prior interval; this is a conservative choice and it is a good practice. 
-
-# Prior
-
-$$p(\mu) = N(6.5, 0.4)$$
-
-* According to our prior information, $\mu$ (the mean volume in the population) is 6.5; our uncertainty is that however $\mu$ can generally lie in the interval 6.5 $\pm$ 2 \times 0.4.
+* Thus, the  hippocampal volume is thought to vary, within the population,  between 6 and 7 cm$^3$.
 
 \bigskip
 
-* We are assuming that our prior beliefs are appropriately represented by a Normal distribution.
+* The average volume $\mu$ is thought to be between 6.4  and 6.6 cm$^3$.
+
+
+# Prior
+
+* Assuming a symmetric distribution, we can formalize our  prior information about $\mu$ as:
+
+\begin{align*}
+\mu & \sim N(6.5, 0.05)\\
+\mu & \sim N(6.5, \sigma_{\mu})\\
+\end{align*}
+
+
+
+* According to this prior, there is about 95% probability of $\mu$ lying in (6.4, 6.6). 
+
+\bigskip
+
+* Parameter $\sigma_{\mu}$ represents our prior uncertainty on the value of $\mu$. 
+
+
+\bigskip
+
+* This prior expresses information about the value of  $\mu$, the average hyppocampal volume within the population.
 
 \bigskip
 
 * There is no single right prior, but multiple reasonable priors!
 
+
 # Likelihood
 
-* Suppose that now we measure the hippocampal volumes of $n$=25 subjects.
+* We now provide a model for the distribution of 
+ the hippocampal volumes, assuming to measure $n$ subjects.
 
 \bigskip
+
 
 * We make a *second* assumption of normality.
 
 \bigskip
 
-* The hippocampal volumes of our subjects  $y_1,y_2,…,y_n$, are independent and Normally distributed around the mean volume $\mu$ with standard deviation $\sigma$.
+* The measured hippocampal volumes $y_1,y_2,…,y_n$, are independent and normally distributed around  $\mu$, with standard deviation $\sigma$.
 
 
-# Likelihood
 
 * $\sigma$ expresses the spread of the hippocampal volumes within the population.
 
 \bigskip
 
-* Further research shows that most people have hippocampal volumes within 1.2 $cm^3$ of the average.
-
-\bigskip
-* We thus  set $\sigma$= 0.6.
-
-# Likelihood
-
-* For the moment we fix $\sigma$ to a specific value.
-Later we will see how to set a prior also on  $\sigma$.
+* As we expect the volume to vary between roughly 6 and 7, we  set $\sigma$=0.25 (we interpret the interval as $\mu \pm 2\sigma$, hence it has length of 4$\sigma$).
 
 \bigskip
 
+* Have clear the difference between $\sigma$ and $\sigma_{\mu}$!
 
-* The dependence of $y_i$ on the unknown mean $\mu$ is:
-$$y_i \mid \mu ∼ N(\mu,\sigma^2)$$
-
-* The Normal model  assumes that each subject’s hippocampal volume can range from −∞ to ∞. However, we’re not too worried: it will put negligible weight on unreasonable values of hippocampal volume. 
 
 # Likelihood
 
-The joint pdf which describes the collective randomness in our n=25 subjects’ hippocampal volumes, ($y_1,y_2,…,y_n$), is the product of the unique Normal pdfs $f(y_i \mid \mu)$:
+
+<!-- \bigskip -->
+
+
+<!-- * The dependence of $y_i$ on the unknown mean $\mu$ is: -->
+<!-- $$y_i \mid \mu ∼ N(\mu,\sigma)$$ -->
+
+<!-- \bigksip -->
+
+<!-- * The Normal model let  each subject’s hippocampal volume  range from $-\infty$ to $\infty$. However, we’re not worried: it  puts negligible weight on unreasonable values. -->
+
+# Likelihood
+
+The joint pdf which describes the collective randomness in our $n$ subjects’ hippocampal volumes, ($y_1,y_2,…,y_n$), is the product of the unique Normal pdfs $f(y_i \mid \mu)$:
 
 $$
 f(\vec{y} | \mu) = \prod_{i=1}^{n}f(y_i|\mu) = \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg]  .
 $$
+\bigskip
 
-# The Normal-Normal Bayesian model
+* where $\vec{y}$ is the vector containing the measures $y_1,....y_n$.
 
-* Let $\mu$ be the unknown mean parameter and $(y_1,y_2,…,y_n$ be an independent $N(\mu, \sigma^2)$ sample, where $\sigma$ is  known. 
+* The Normal model let  each subject’s hippocampal volume  range from $-\infty$ to $\infty$. However, we’re not worried: it  puts negligible weight on unreasonable values.
 
-* The prior pdf of $\mu$ is also normal with fixed variance $\tau^2$.
+# The Normal-Normal  model
 
 \begin{align*}
-\mu & \sim N(\theta, \tau^2) \\
-y_i | \mu & \stackrel{ind}{\sim} N(\mu, \sigma^2) \\
+\mu & \sim N(\mu', \sigma_{\mu}) \\
+\vec{y} & \sim N(\mu, \sigma) \\
 \end{align*}
 
-
-# The Normal-Normal Bayesian model
-
-* Upon observing data →$y_1,y_2,…,y_n$
-with mean $\bar{y}$, the posterior mean of $\mu$ is also
- Normal with updated parameters:
-
-$$
-\mu|\vec{y} \; \sim \;  N\bigg(\theta\frac{\sigma^2}{n\tau^2+\sigma^2} + \bar{y}\frac{n\tau^2}{n\tau^2+\sigma^2}, \; \frac{\tau^2\sigma^2}{n\tau^2+\sigma^2}\bigg)  .
-$$
+* For the moment we assume $\sigma$ to be known and fixed. Later we will express our uncertainty also about it. 
 
 
-# The Normal-Normal Bayesian model
 
-* The posterior mean is a weighted average of the prior mean E(μ)=θ and the sample mean $\bar{y}$.
+# Conjugacy model
+
+* Denote the sample mean as  $\bar{y} = \frac{1}{n} \sum_i y_i$.
 
 \bigskip
 
-* The posterior variance is informed by the prior variability τ and variability in the data σ.
+* The posterior density of $\mu$ is 
+ normal with updated parameters:
+
+$$
+\mu|\vec{y} \; \sim \;  N\bigg(\mu'\frac{\sigma^2}{n\sigma_{\mu}^2+\sigma^2} + \bar{y}\frac{n\sigma_{\mu}^2}{n\sigma_{\mu}^2+\sigma^2}, \; \frac{\sigma_{\mu}^2\sigma^2}{n\sigma_{\mu}^2+\sigma^2}\bigg)  .
+$$
+* where $\theta$ denotes
+
+# The Normal-Normal Bayesian model
+
+* The posterior mean is a weighted average of the prior mean $\mu'$ and the sample mean $\bar{y}$.
+
 
 \bigskip
 
@@ -236,6 +250,11 @@ $$
 
 #  What if $\sigma$ is unknown?
 
+*  A more sophisticated approach is to assign a prior to $\sigma$ and to make inference about it, rather than fixing it to a value.
+
+\bigskip
+
+* In this case there is no more closed-form expression of the posterior.
 
 # Prior distribution of $\sigma$
 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  22 JUL 2022 19:50
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  3 AUG 2022 12:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2329,37 +2329,37 @@ Requested font "lmmi8" at 8.0pt
 Requested font "lmmi6" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 273.
+(Font)              scaled to size 12.00128pt on input line 287.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 12.001
 28pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 273.
+(Font)              scaled to size 8.00085pt on input line 287.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 8.00085pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 273.
+(Font)              scaled to size 6.00064pt on input line 287.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 6.00064pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 273.
+(Font)              scaled to size 11.99872pt on input line 287.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 11.998
 72pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 273.
+(Font)              scaled to size 7.99915pt on input line 287.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.99915pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 273.
+(Font)              scaled to size 5.99936pt on input line 287.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.99936pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2409,9 +2409,17 @@ File: normal-tuning.png Graphic file (type bmp)
 
 ] [7
 
-] [8
+]
+Overfull \vbox (13.3901pt too high) detected at line 401
+ []
 
-] [9
+[8
+
+]
+Overfull \vbox (12.85333pt too high) detected at line 449
+ []
+
+[9
 
 ] [10
 
@@ -2423,40 +2431,36 @@ File: normal-tuning.png Graphic file (type bmp)
 
 ] [14
 
-] [15
-
-] [16
-
 ]
-Overfull \hbox (23.3458pt too wide) detected at line 552
+Overfull \hbox (23.3458pt too wide) detected at line 551
 [][][]  []  [][][][][] [] [] [] [][][][][] [] [][]  [][][]
  []
 
-[17
+[15
 
-] [18
+] [16
 
-] [19
+] [17
 
 ]
 File: half_normal.png Graphic file (type bmp)
 <half_normal.png>
-[20
+[18
 
 ]
 File: normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic file (typ
 e pdf)
 <use normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 608--608
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 621--621
  [] 
  []
 
-[21
+[19
 
-] [22
+] [20
 
-] [23
+] [21
 
 ]
 \openout4 = `normal-normal.vrb'.
@@ -2475,32 +2479,32 @@ Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 9.30
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
 eCodePro-Bold.otf
 )
-Overfull \vbox (24.69524pt too high) detected at line 712
+Overfull \vbox (24.69524pt too high) detected at line 725
  []
 
-[24
+[22
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 736.
+(Font)              scaled to size 7.665pt on input line 749.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 736.
+(Font)              scaled to size 5.475pt on input line 749.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 
-Overfull \hbox (74.51476pt too wide) detected at line 736
+Overfull \hbox (74.51476pt too wide) detected at line 749
 []
  []
 
-[25
+[23
 
-] [26
+] [24
 
 ]
 Requested font "[lmroman10-regular]:mapping=tex-text;" at 10.0pt
@@ -2512,29 +2516,29 @@ r.otf
 Requested font "[lmroman5-regular]:mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regula
 r.otf
-[27
+[25
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 800.
+(Font)              scaled to size 7.0pt on input line 813.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 800.
+(Font)              scaled to size 5.0pt on input line 813.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
-[28
+[26
 
 ]
 \openout4 = `normal-normal.vrb'.
 
-(./normal-normal.vrb) [29
+(./normal-normal.vrb) [27
 
-] [30
+] [28
 
 ]
 \tf@nav=\write6
@@ -2548,12 +2552,12 @@ Regular.ttf
 
 (./normal-normal.aux) ) 
 Here is how much of TeX's memory you used:
- 36706 strings out of 476919
- 767314 string characters out of 5821840
- 1262068 words of memory out of 5000000
- 55808 multiletter control sequences out of 15000+600000
+ 36702 strings out of 476919
+ 767282 string characters out of 5821840
+ 1261956 words of memory out of 5000000
+ 55804 multiletter control sequences out of 15000+600000
  445554 words of font info for 174 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,14n,140p,1814b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on normal-normal.pdf (30 pages).
+Output written on normal-normal.pdf (28 pages).

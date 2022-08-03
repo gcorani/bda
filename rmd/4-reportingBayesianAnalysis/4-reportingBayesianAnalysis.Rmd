@@ -57,7 +57,7 @@ az.style.use('arviz-darkgrid')
 
 # The impact of the prior 
 
-* Given  many of data, the posterior will be practically the same  regardless the prior. 
+* If many data are available, the posterior is the same  regardless the prior. 
 
 \bigskip
 
@@ -187,7 +187,7 @@ knitr::include_graphics('HPD-unimodal.png')
 knitr::include_graphics('HPD_bimodal.png')
 ```
 
-* The HDI is split into two sub-intervals, one for each mode of the distribution. 
+* The HDI could (not always) be split into two sub-intervals, one for each mode of the distribution. 
 
 * The  characteristics are as before: 
   * The shaded area has total area of 0.95.
