@@ -276,6 +276,31 @@ $$
 
 *  Which is the posterior mean,  if we did  35 measures with $\bar{y}=6.7$?
 
+
+
+# Your turn
+
+* Let $\mu$ be the average 3 p.m. temperature in Lugano.
+
+\bigskip
+
+* Your friend’s prior understanding is that $\mu$ is around 15 degrees Celsius, though might be anywhere between 5 and 25 degrees. 
+
+\bigskip
+
+
+* To learn about $\mu$, he will analyze 1000 days of temperature data. 
+
+\bigskip
+
+* Letting $y_i$ denote the 3 p.m. temperature on day $i$, they’ll assume that daily temperatures vary Normally around $\mu$ with a standard deviation of 5 degrees.
+
+\bigskip
+
+* Formalize a  normal-normal model.
+
+
+
 #  Treating $\sigma$ as a parameter
 
 *  A more sophisticated approach is to treat $\sigma$ as a parameter.

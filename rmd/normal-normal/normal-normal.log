@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  4 AUG 2022 10:51
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  4 AUG 2022 12:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2450,6 +2450,8 @@ Overfull \vbox (1.23337pt too high) detected at line 401
 
 ] [19
 
+] [20
+
 ]
 Requested font "[lmroman10-regular]:mapping=tex-text;" at 10.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regul
@@ -2461,34 +2463,34 @@ Requested font "[lmroman5-regular]:mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regula
 r.otf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 694.
+(Font)              scaled to size 10.0pt on input line 738.
 Requested font "[Carlito-Italic.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;m
 apping=tex-text;" at 10.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Italic.ttf
-[20
+[21
 
 ]
 File: half_normal.png Graphic file (type bmp)
 <half_normal.png>
 
-Overfull \vbox (5.4878pt too high) detected at line 717
+Overfull \vbox (5.4878pt too high) detected at line 761
  []
 
-[21
+[22
 
 ]
 File: normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic file (typ
 e pdf)
 <use normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 729--729
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 773--773
  [] 
  []
 
-[22
+[23
 
-] [23
+] [24
 
 ]
 \openout4 = `normal-normal.vrb'.
@@ -2507,12 +2509,10 @@ Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 9.30
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
 eCodePro-Bold.otf
 )
-Overfull \vbox (9.05531pt too high) detected at line 802
+Overfull \vbox (9.05531pt too high) detected at line 846
  []
 
-[24
-
-] [25
+[25
 
 ] [26
 
@@ -2520,16 +2520,18 @@ Overfull \vbox (9.05531pt too high) detected at line 802
 
 ] [28
 
+] [29
+
 ]
 \openout4 = `normal-normal.vrb'.
 
-(./normal-normal.vrb) [29
-
-] [30
+(./normal-normal.vrb) [30
 
 ] [31
 
 ] [32
+
+] [33
 
 ]
 \openout4 = `normal-normal.vrb'.
@@ -2562,12 +2564,12 @@ Overfull \hbox (6.8126pt too wide) in paragraph at lines 24--24
  []
 
 )
-Overfull \vbox (13.51947pt too high) detected at line 976
+Overfull \vbox (13.51947pt too high) detected at line 1020
  []
 
-[33
+[34
 
-] [34
+] [35
 
 ]
 \tf@nav=\write6
@@ -2581,12 +2583,12 @@ Overfull \vbox (13.51947pt too high) detected at line 976
 
 (./normal-normal.aux) ) 
 Here is how much of TeX's memory you used:
- 36729 strings out of 476919
- 768014 string characters out of 5821840
- 1262292 words of memory out of 5000000
- 55826 multiletter control sequences out of 15000+600000
+ 36731 strings out of 476919
+ 768030 string characters out of 5821840
+ 1262348 words of memory out of 5000000
+ 55828 multiletter control sequences out of 15000+600000
  445570 words of font info for 176 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,14n,140p,1814b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on normal-normal.pdf (34 pages).
+Output written on normal-normal.pdf (35 pages).
