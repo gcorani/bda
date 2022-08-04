@@ -104,11 +104,11 @@ knitr::include_graphics("normal-tuning.png")
 # Example
 
 
-* The  volume (in cubic centimeters) the hippocampus (a part of the brain)  is often researched in studies about the effect of concussions.
+* The  volume of the hippocampus (a part of the brain)  is  researched in studies about the effect of concussions.
 
 \bigskip
 
-* In the general population, both halves of the hippocampus have a volume between 3.0 and 3.5 cubic centimeters.
+* In the general population, both halves of the hippocampus have a volume between 3.0 and 3.5 cm$^3$.
 
 \bigskip
 
@@ -119,37 +119,34 @@ knitr::include_graphics("normal-tuning.png")
 * The average volume $\mu$ is thought to be between 6.4  and 6.6 cm$^3$.
 
 
-# Prior
+# Normal prior
 
-* Assuming a symmetric distribution, we can formalize our  prior information about $\mu$ as:
+* Assuming  symmetry, we  formalize our  prior information about $\mu$ as:
 
 \begin{align*}
+\mu & \sim N(\mu', \sigma_{\mu})\\
 \mu & \sim N(6.5, 0.05)\\
-\mu & \sim N(6.5, \sigma_{\mu})\\
 \end{align*}
 
+*  $\sigma_{\mu}$ represents our prior uncertainty on the value of $\mu$.
 
+\bigskip
+
+*  $\mu'$ is our prior guess on the value of $\mu$.
+
+\bigskip
 
 * According to this prior, there is about 95% probability of $\mu$ lying in (6.4, 6.6). 
 
 \bigskip
 
-* Parameter $\sigma_{\mu}$ represents our prior uncertainty on the value of $\mu$. 
+* There is generally no single right prior, but multiple reasonable priors.
 
 
-\bigskip
+# Normal likelihood
 
-* This prior expresses information about the value of  $\mu$, the average hyppocampal volume within the population.
-
-\bigskip
-
-* There is no single right prior, but multiple reasonable priors!
-
-
-# Likelihood
-
-* We now provide a model for the distribution of 
- the hippocampal volumes, assuming to measure $n$ subjects.
+* We now define a model for the distribution of 
+ the observations.
 
 \bigskip
 
@@ -158,46 +155,36 @@ knitr::include_graphics("normal-tuning.png")
 
 \bigskip
 
-* The measured hippocampal volumes $y_1,y_2,…,y_n$, are independent and normally distributed around  $\mu$, with standard deviation $\sigma$.
+* The observed volumes $y_1,y_2,…,y_n$, are independent and normally distributed around  $\mu$, with standard deviation $\sigma$.
 
 
+\bigskip
 
 * $\sigma$ expresses the spread of the hippocampal volumes within the population.
 
 \bigskip
 
-* As we expect the volume to vary between roughly 6 and 7, we  set $\sigma$=0.25 (we interpret the interval as $\mu \pm 2\sigma$, hence it has length of 4$\sigma$).
-
-\bigskip
-
-* Have clear the difference between $\sigma$ and $\sigma_{\mu}$!
+* As we expect $y$ to vary between roughly 6 and 7, we  set $\sigma$=0.25 (we interpret the interval as $\mu \pm 2\sigma$, hence it has length of 4$\sigma$).
 
 
-# Likelihood
+# Independence 
 
-
-<!-- \bigskip -->
-
-
-<!-- * The dependence of $y_i$ on the unknown mean $\mu$ is: -->
-<!-- $$y_i \mid \mu ∼ N(\mu,\sigma)$$ -->
-
-<!-- \bigksip -->
-
-<!-- * The Normal model let  each subject’s hippocampal volume  range from $-\infty$ to $\infty$. However, we’re not worried: it  puts negligible weight on unreasonable values. -->
+* We assume the observations $y_1, ..., y_n$ to be *independent* samples from $N(\mu, \sigma)$.
 
 # Likelihood
 
-The joint pdf which describes the collective randomness in our $n$ subjects’ hippocampal volumes, ($y_1,y_2,…,y_n$), is the product of the unique Normal pdfs $f(y_i \mid \mu)$:
+Assuming independence, the joint pdf of the $n$ measures ($y_1,y_2,…,y_n$), is the product of the unique Normal pdfs $f(y_i \mid \mu)$:
 
 $$
 f(\vec{y} | \mu) = \prod_{i=1}^{n}f(y_i|\mu) = \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg]  .
 $$
 \bigskip
 
-* where $\vec{y}$ is the vector containing the measures $y_1,....y_n$.
+*  $\vec{y}$ is the vector containing the measures $y_1,....y_n$.
 
-* The Normal model let  each subject’s hippocampal volume  range from $-\infty$ to $\infty$. However, we’re not worried: it  puts negligible weight on unreasonable values.
+\bigskip
+
+* Theoretically, the normal model lets  each  hippocampal volume  range from $-\infty$ to $\infty$. However it will assign negligible weight to values which are beyond $\mu \pm 3 \sigma$.
 
 # The Normal-Normal  model
 
@@ -206,11 +193,11 @@ $$
 \vec{y} & \sim N(\mu, \sigma) \\
 \end{align*}
 
-* For the moment we assume $\sigma$ to be known and fixed. Later we will express our uncertainty also about it. 
+* For the moment we assume $\sigma$ to be known and fixed. Later we will express our prior uncertainty also about it. 
 
 
 
-# Conjugacy model
+# Conjugacy 
 
 * Denote the sample mean as  $\bar{y} = \frac{1}{n} \sum_i y_i$.
 
@@ -222,39 +209,39 @@ $$
 $$
 \mu|\vec{y} \; \sim \;  N\bigg(\mu'\frac{\sigma^2}{n\sigma_{\mu}^2+\sigma^2} + \bar{y}\frac{n\sigma_{\mu}^2}{n\sigma_{\mu}^2+\sigma^2}, \; \frac{\sigma_{\mu}^2\sigma^2}{n\sigma_{\mu}^2+\sigma^2}\bigg)  .
 $$
-* where $\theta$ denotes
 
-# The Normal-Normal Bayesian model
+# Posterior mean
+
+$$
+\mu|\vec{y} \; \sim \;  N\bigg(\mu'\frac{\sigma^2}{n\sigma_{\mu}^2+\sigma^2} + \bar{y}\frac{n\sigma_{\mu}^2}{n\sigma_{\mu}^2+\sigma^2}, \; \frac{\sigma_{\mu}^2\sigma^2}{n\sigma_{\mu}^2+\sigma^2}\bigg)  .
+$$
 
 * The posterior mean is a weighted average of the prior mean $\mu'$ and the sample mean $\bar{y}$.
 
 
 \bigskip
 
-* As $n$ increases, the posterior mean places less weight on the prior mean and more weight on sample mean.
+* As $n$ increases, the posterior mean converges to $\bar{y}$.
 
 \bigskip
 
 * As $n$ increases, the posterior variance decreases.
 
-# The Normal-Normal Bayesian model
+# Your turn
 
 * Assume that the sample of $n$ measures has mean $\bar{y}=6.7$.
 
-* The posterior pdf of $\mu$ is:
+\bigskip
 
-**conti da rifare**
-$$
-\mu | \vec{y} \; \sim \; N\bigg(6.5\cdot\frac{0.5^2}{25\cdot0.4^2+0.5^2} + 5.735\cdot\frac{25\cdot 0.4^2}{25 \cdot 0.4^2+0.5^2}, \; \frac{0.4^2\cdot0.5^2}{25\cdot0.4^2+0.5^2}\bigg).
-$$
+* Which is the posterior mean?  
 
 #  What if $\sigma$ is unknown?
 
-*  A more sophisticated approach is to assign a prior to $\sigma$ and to make inference about it, rather than fixing it to a value.
+*  A more sophisticated approach is to treat $\sigma$ as a parameter, by assigning a prior to it and make inference about it, rather than keeping it fixed.
 
 \bigskip
 
-* In this case there is no more closed-form expression of the posterior.
+* In this case there is no closed-form expression of the posterior.
 
 # Prior distribution of $\sigma$
 
@@ -265,12 +252,26 @@ $$
 * The half-normal is  a Gaussian  restricted to positive values.
 
 \bigskip
-* You sample from a half-normal by sampling from a normal distribution and rejecting the negative values (or applying the absolute value to the  sampled values).
+
+* You sample from a half-normal by:
+  * sampling from a normal distribution 
+  * applying the absolute value to the  sampled values.
 
 
 # The half-normal distribution
 
-* The half-normal prior is a suitable choice for the standard deviation.
+* The HN pdf is asymmetric and right-skewed pdf.
+
+\bigskip
+
+
+* It has long tails which are much larger than the median.
+
+\bigskip
+
+* The prior should cover a wide range of plausible values for $\sigma$, leaving out however values that make no sense.
+
+
 
 
 ```{r, echo=FALSE, out.width = '75%', fig.cap= "from wikipedia"}
@@ -289,9 +290,9 @@ plt.figure(figsize=(10, 3))
 x = np.linspace(-2,5, 100)
 
 #at each x we plot the pdf of the halfnorm with different scales
-plt.plot(x, halfnorm.pdf(x, scale=1), 'r-', lw=3, alpha=0.6, label='scale=1')
-plt.plot(x, halfnorm.pdf(x, scale=3), 'b-', lw=3, alpha=0.6, label='scale=3');
-plt.plot(x, halfnorm.pdf(x, scale=3), 'b-', lw=3, alpha=0.6, label='scale=5');
+plt.plot(x, halfnorm.pdf(x, scale=1), 'r-', lw=3, alpha=0.6, label='scale 1')
+plt.plot(x, halfnorm.pdf(x, scale=3), 'b-', lw=3, alpha=0.6, label='scale 3');
+plt.plot(x, halfnorm.pdf(x, scale=6), 'g-', lw=3, alpha=0.6, label='scale 6');
 plt.legend()
 
 ```
@@ -324,14 +325,6 @@ in which case the standard deviation of the noise is around 10.
 
 
 \bigskip
-
-* The HN pdf is asymmetric right-skewed pdf; it has long tails which are much larger than the median.
-
-\bigskip
-
-* It thus offer a broad range of plausible values.
-
-* The prior should cover a wide range of plausible values for $\sigma$, leaving out however values that make no sense.
 
 
 # Tuning the half-normal distribution

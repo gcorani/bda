@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  3 AUG 2022 12:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  3 AUG 2022 14:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2409,17 +2409,9 @@ File: normal-tuning.png Graphic file (type bmp)
 
 ] [7
 
-]
-Overfull \vbox (13.3901pt too high) detected at line 401
- []
+] [8
 
-[8
-
-]
-Overfull \vbox (12.85333pt too high) detected at line 449
- []
-
-[9
+] [9
 
 ] [10
 
@@ -2431,12 +2423,7 @@ Overfull \vbox (12.85333pt too high) detected at line 449
 
 ] [14
 
-]
-Overfull \hbox (23.3458pt too wide) detected at line 551
-[][][]  []  [][][][][] [] [] [] [][][][][] [] [][]  [][][]
- []
-
-[15
+] [15
 
 ] [16
 
@@ -2445,6 +2432,10 @@ Overfull \hbox (23.3458pt too wide) detected at line 551
 ]
 File: half_normal.png Graphic file (type bmp)
 <half_normal.png>
+
+Overfull \vbox (36.76764pt too high) detected at line 649
+ []
+
 [18
 
 ]
@@ -2452,7 +2443,7 @@ File: normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic file (typ
 e pdf)
 <use normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 621--621
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 660--660
  [] 
  []
 
@@ -2479,26 +2470,26 @@ Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 9.30
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
 eCodePro-Bold.otf
 )
-Overfull \vbox (24.69524pt too high) detected at line 725
+Overfull \vbox (24.69524pt too high) detected at line 747
  []
 
 [22
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 749.
+(Font)              scaled to size 7.665pt on input line 771.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 749.
+(Font)              scaled to size 5.475pt on input line 771.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 
-Overfull \hbox (74.51476pt too wide) detected at line 749
+Overfull \hbox (74.51476pt too wide) detected at line 771
 []
  []
 
@@ -2520,13 +2511,13 @@ r.otf
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 813.
+(Font)              scaled to size 7.0pt on input line 835.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 813.
+(Font)              scaled to size 5.0pt on input line 835.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
