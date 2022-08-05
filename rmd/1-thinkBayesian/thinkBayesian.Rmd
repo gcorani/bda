@@ -138,7 +138,24 @@ knitr::include_graphics("bayes_diagram.png")
 
   * Candidate A is much more likely to win than to lose.
 
-# Asking questions
+# Your turn
+
+*  Identify a topic that you know about (e.g., a sport, a school subject, music).
+
+\bigskip
+
+*  Identify a hypothesis about this subject.
+
+\bigskip
+
+*  How would your current expertise inform your conclusion about this hypothesis?
+
+\bigskip
+
+* Which framework are you employing here, Bayesian or frequentist?
+
+
+# Testing hypothesis: frequentist vs Bayesian
 
 * Imagine that you tested positive for a disease; you can make a single  question to the doctor.
 
@@ -189,6 +206,8 @@ knitr::include_graphics("bayes_diagram.png")
 \bigskip
 
 * Thus, a frequentist analysis  asks: If I don’t actually have the disease, what’s the chance that I would’ve tested positive?
+
+# Probability of testing positive, given that I do not have the disease
 
 *  Since only 9 of the 96 people without the disease tested positive, there’s a roughly 10% (9/96) chance that you would’ve tested positive even if you didn’t have the disease. 
 
