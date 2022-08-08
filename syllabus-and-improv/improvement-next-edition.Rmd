@@ -1,0 +1,19 @@
+---
+title: "Improvement for next edition"
+output: pdf_document
+date: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Code and notebooks
+
+* Switch to pymc v4, and check that code compiles.
+
+* Port some notebooks in rmarkdown
+
+# Projects of best student
+
+* Invite the best students of previous year to show their projects

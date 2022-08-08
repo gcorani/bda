@@ -27,13 +27,17 @@ fontsize: 13pt
 \bigskip
 
 
-* The Bayesian probability is a rigorous framework for modeling the knowledge-building process, using data to update your knowledge. 
+* The Bayesian approach rigorously  models the knowledge-building process, in which you update your knowledge on the basis of new  data.
+
+\bigskip
+
+* Knowledge (or ignorance) is expressed by means of a probability distribution on the variables of interest.
 
 
 # Changing opinion based on experience
 
 
-* Suppose there’s a new restaurant with high online rating.
+* Suppose there’s a new restaurant with 5-star online rating.
 
 \bigskip
 
@@ -65,7 +69,6 @@ fontsize: 13pt
 knitr::include_graphics("restaurant_diagram.png")
 ```
 
-* We can apply this same Bayesian process to rigorous research inquiries.
 
 
 # Building knowledge
@@ -84,34 +87,46 @@ knitr::include_graphics("restaurant_diagram.png")
 
 * He continues to refine this information as he gathers new evidence.
 
-# Building knowledge
+# Building knowledge as a Bayesian process
 
 ```{r, echo=FALSE, out.width = '80%'}
 knitr::include_graphics("bayes_diagram.png")
 ```
 
-# Thinking  Bayesian
+# Your turn
 
-* When flipping a fair coin, we say that “the probability of flipping Heads is 0.5.” How do you interpret this probability?
+ * Think of a recent situation in which you changed your mind. 
+ 
+ \bigskip
+ 
+ * As with the Italian restaurant example, make a diagram that includes your prior information, your new data that helped you change your mind, and your posterior conclusion. 
+
+#   Bayesian interpretation of probability
+
+* The probability of a coin landing  Heads is 0.5. 
+  * How do you interpret this probability?
 
 \bigskip
 
-  * If I flip this coin over and over, roughly 50% will be Heads.
+  * If I flip this coin over and over, roughly 50% will be Heads (*frequentist* interpretation).
 
   \bigskip
 
-  *  Heads and Tails are equally plausible.
+  *  Heads and Tails are equally plausible in the next flip (*Bayesian* interpretation).
 
-# Thinking  Bayesian
+# Bayesian vs frequentist probability
 
  * According to both Bayesian and frequentist probability,  the probability of observing Heads on a fair coin flip is 1/2. The difference is in their interpretation:
 
 \bigskip
 
-  * Bayesian: a probability measures the relative plausibility of an event.
-    The frequentist philosophy is so named for its interpretation of probability as the long-run relative frequency of a repeatable event
+  * Bayesian:  probability measures the relative plausibility of an event.
 
-# Thinking  Bayesian
+\bigskip
+
+  * The frequentist interpretation of probability is the long-run relative frequency of a repeatable event.
+
+# Bayesian vs frequentist intepretation
 
 * An election is coming up and a pollster claims that candidate A has a 0.9 probability of winning. How do you interpret this probability?
 
@@ -122,3 +137,84 @@ knitr::include_graphics("bayes_diagram.png")
   \bigskip
 
   * Candidate A is much more likely to win than to lose.
+
+# Your turn
+
+*  Identify a topic that you know about (e.g., a sport, a school subject, music).
+
+\bigskip
+
+*  Identify a hypothesis about this subject.
+
+\bigskip
+
+*  How would your current expertise inform your conclusion about this hypothesis?
+
+\bigskip
+
+* Which framework are you employing here, Bayesian or frequentist?
+
+
+# Testing hypothesis: frequentist vs Bayesian
+
+* Imagine that you tested positive for a disease; you can make a single  question to the doctor.
+
+\bigskip
+
+  * 1) what’s the probability that I  have the disease?
+
+  \bigskip
+
+  * 2) if I do not have the disease, what’s the chance that I would’ve gotten the positive result?
+
+# Asking questions
+
+* Bayesian analysis would answer the first question, by  assessing the uncertainty of the hypothesis, in light of the data.
+
+\bigskip
+
+* A  frequentist analysis would answer the second question, by assesssin the uncertainty of the  data in light of an assumed hypothesis.
+
+# Probability of having the disease, given the positive test
+
+|  |  | test pos | test neg | total |
+|---|---|---:|---:|---:|
+| disease |  | 3 | 1 | 4 |
+| no disease |  | 9 | 87 | 96 |
+| total |  | 12 | 88 | 100 |
+
+* Only 3 of the 12 people that tested positive have the disease; there’s only a 25% chance that you have the disease. 
+
+\bigskip
+
+* This is the Bayesian answer: it measures the uncertainty of an hypothesis, given the observed data.
+
+# Probability of testing positive, given that I do not have the disease
+
+|  |  | test pos | test neg | total |
+|---|---|---:|---:|---:|
+| disease |  | 3 | 1 | 4 |
+| no disease |  | 9 | 87 | 96 |
+| total |  | 12 | 88 | 100 |
+
+* From the frequentist standpoint, since disease status isn’t repeatable, the probability you have the disease is either 1 or 0 – you have it or you don’t. 
+
+\bigskip
+
+* Medical testing is repeatable. You can get tested for the disease over and over and over. 
+
+\bigskip
+
+* Thus, a frequentist analysis  asks: If I don’t actually have the disease, what’s the chance that I would’ve tested positive?
+
+# Probability of testing positive, given that I do not have the disease
+
+*  Since only 9 of the 96 people without the disease tested positive, there’s a roughly 10% (9/96) chance that you would’ve tested positive even if you didn’t have the disease. 
+
+\bigskip
+
+* This computation is similar in spirit to the p-value of traditional hypothesis testing.
+
+
+
+

@@ -125,22 +125,31 @@ knitr::include_graphics("normal-tuning.png")
 
 \begin{align*}
 \mu & \sim N(\mu', \sigma_{\mu})\\
+\text{which in this example yields :} \\
 \mu & \sim N(6.5, 0.05)\\
 \end{align*}
 
-*  $\sigma_{\mu}$ represents our prior uncertainty on the value of $\mu$.
-
-\bigskip
 
 *  $\mu'$ is our prior guess on the value of $\mu$.
 
 \bigskip
 
-* According to this prior, there is about 95% probability of $\mu$ lying in (6.4, 6.6). 
+*  $\sigma_{\mu}$ represents our uncertainty on the guess $\mu'$.
+
 
 \bigskip
 
-* There is generally no single right prior, but multiple reasonable priors.
+* According to this prior, $\mu$ lies with 95% probability in (6.4, 6.6). 
+
+\bigskip
+ 
+* We allow the volume to range over ($-\infty, \infty$), but values  beyond $\mu \pm 3 \sigma$ are given negligible probability.
+
+# Normal prior
+
+\bigskip
+
+* There is no single right prior, but different reasonable priors.
 
 
 # Normal likelihood
@@ -155,25 +164,37 @@ knitr::include_graphics("normal-tuning.png")
 
 \bigskip
 
-* The observed volumes $y_1,y_2,…,y_n$, are independent and normally distributed around  $\mu$, with standard deviation $\sigma$.
+* The hyppocampal volumes observed in $n$ subjects ($y_1,y_2,…,y_n$) are  normally distributed $N(\mu, \sigma)$.
+
+# Normal likelihood
+
+* $\mu$ is the mean volume in the population.
 
 
 \bigskip
 
-* $\sigma$ expresses the spread of the hippocampal volumes within the population.
+* $\sigma$ expresses the spread of the measures within the population.
 
 \bigskip
 
-* As we expect $y$ to vary between roughly 6 and 7, we  set $\sigma$=0.25 (we interpret the interval as $\mu \pm 2\sigma$, hence it has length of 4$\sigma$).
+* We expect $y$ to vary in (6-7); we interpret this interval as $\mu \pm 2\sigma$, hence it has length of 4$\sigma$.
+
+\bigskip
+
+* We thus set $\sigma$=0.25.
 
 
 # Independence 
 
-* We assume the observations $y_1, ..., y_n$ to be *independent* samples from $N(\mu, \sigma)$.
+* We morever assume the observations $y_1, ..., y_n$ to be *independent* samples from $N(\mu, \sigma)$.
+
+\bigskip
+
+* This is realistic: the measure $y_i$ tells us nothing about  the measure $y_{i+1}$ (assuming they refer to different subjects)
 
 # Likelihood
 
-Assuming independence, the joint pdf of the $n$ measures ($y_1,y_2,…,y_n$), is the product of the unique Normal pdfs $f(y_i \mid \mu)$:
+Assuming independence, the joint pdf of the $n$ measures ($y_1,y_2,…,y_n$) is the product of the unique Normal pdfs $f(y_i \mid \mu)$:
 
 $$
 f(\vec{y} | \mu) = \prod_{i=1}^{n}f(y_i|\mu) = \prod_{i=1}^{n}\frac{1}{\sqrt{2\pi\sigma^2}} \exp\bigg[{-\frac{(y_i-\mu)^2}{2\sigma^2}}\bigg]  .
@@ -182,9 +203,7 @@ $$
 
 *  $\vec{y}$ is the vector containing the measures $y_1,....y_n$.
 
-\bigskip
 
-* Theoretically, the normal model lets  each  hippocampal volume  range from $-\infty$ to $\infty$. However it will assign negligible weight to values which are beyond $\mu \pm 3 \sigma$.
 
 # The Normal-Normal  model
 
@@ -193,11 +212,28 @@ $$
 \vec{y} & \sim N(\mu, \sigma) \\
 \end{align*}
 
-* For the moment we assume $\sigma$ to be known and fixed. Later we will express our prior uncertainty also about it. 
+* We treat $\mu'$, $\sigma_{\mu}$ and $\sigma$ as fixed numbers. 
+
+\bigskip
+
+* The only parameter of the model is  $\mu$. 
+
+\bigskip
+
+* Later we will treat also $\sigma$ as a parameter. 
+
+# Your turn: normal likelihood functions
+
+* For a Normal random sample $y_i \sim N(μ,σ)$ with $\sigma$=10 we observe:  
+
+$$y_1,y_2,y_3=(−4.3, 0.7, −19.4)$$ 
+
+
+* Specify and plot the corresponding likelihood function of $\mu$.
 
 
 
-# Conjugacy 
+# Conjugacy of the normal-normal model
 
 * Denote the sample mean as  $\bar{y} = \frac{1}{n} \sum_i y_i$.
 
@@ -207,7 +243,11 @@ $$
  normal with updated parameters:
 
 $$
-\mu|\vec{y} \; \sim \;  N\bigg(\mu'\frac{\sigma^2}{n\sigma_{\mu}^2+\sigma^2} + \bar{y}\frac{n\sigma_{\mu}^2}{n\sigma_{\mu}^2+\sigma^2}, \; \frac{\sigma_{\mu}^2\sigma^2}{n\sigma_{\mu}^2+\sigma^2}\bigg)  .
+\mu|\vec{y} \; \sim \;  N\bigg(
+\underbrace{
+\mu'\frac{\sigma^2}{n\sigma_{\mu}^2+\sigma^2} + \bar{y}\frac{n\sigma_{\mu}^2}{n\sigma_{\mu}^2+\sigma^2}}_{\text{posterior mean}}, 
+\underbrace{
+\; \frac{\sigma_{\mu}^2\sigma^2}{n\sigma_{\mu}^2+\sigma^2}\bigg)}_{\text{posterior variance}}  .
 $$
 
 # Posterior mean
@@ -215,6 +255,7 @@ $$
 $$
 \mu|\vec{y} \; \sim \;  N\bigg(\mu'\frac{\sigma^2}{n\sigma_{\mu}^2+\sigma^2} + \bar{y}\frac{n\sigma_{\mu}^2}{n\sigma_{\mu}^2+\sigma^2}, \; \frac{\sigma_{\mu}^2\sigma^2}{n\sigma_{\mu}^2+\sigma^2}\bigg)  .
 $$
+\bigskip
 
 * The posterior mean is a weighted average of the prior mean $\mu'$ and the sample mean $\bar{y}$.
 
@@ -229,21 +270,50 @@ $$
 
 # Your turn
 
-* Assume that the sample of $n$ measures has mean $\bar{y}=6.7$.
+*  Which is the posterior mean,  if we did  5 measures with $\bar{y}=6.7$?
 
 \bigskip
 
-* Which is the posterior mean?  
+*  Which is the posterior mean,  if we did  35 measures with $\bar{y}=6.7$?
 
-#  What if $\sigma$ is unknown?
 
-*  A more sophisticated approach is to treat $\sigma$ as a parameter, by assigning a prior to it and make inference about it, rather than keeping it fixed.
+
+# Your turn
+
+* Let $\mu$ be the average 3 p.m. temperature in Lugano.
+
+\bigskip
+
+* Your friend’s prior understanding is that $\mu$ is around 15 degrees Celsius, though might be anywhere between 5 and 25 degrees. 
+
+\bigskip
+
+
+* To learn about $\mu$, he will analyze 1000 days of temperature data. 
+
+\bigskip
+
+* Letting $y_i$ denote the 3 p.m. temperature on day $i$, they’ll assume that daily temperatures vary Normally around $\mu$ with a standard deviation of 5 degrees.
+
+\bigskip
+
+* Formalize a  normal-normal model.
+
+
+
+#  Treating $\sigma$ as a parameter
+
+*  A more sophisticated approach is to treat $\sigma$ as a parameter.
+
+\bigskip
+
+* We assigning a prior to it; it should cover a wide range of plausible values for $\sigma$, leaving out however values that make no sense.
 
 \bigskip
 
 * In this case there is no closed-form expression of the posterior.
 
-# Prior distribution of $\sigma$
+# Half-normal distribution 
 
 *  $\sigma$ is strictly positive; a suitable prior is the *half-normal* distribution.
 
@@ -253,14 +323,15 @@ $$
 
 \bigskip
 
-* You sample from a half-normal by:
+* Sample $s$ from a half-normal are obtained by:
   * sampling from a normal distribution 
-  * applying the absolute value to the  sampled values.
+  * applying the absolute value to the  sampled values
+  * $s \sim |N(0, \xi)|$, where $\xi$ is the standard deviation of the underlying normal. It is referred to as the *scale* of the half-normal.
 
 
 # The half-normal distribution
 
-* The HN pdf is asymmetric and right-skewed pdf.
+* The HN pdf is asymmetric and right-skewed.
 
 \bigskip
 
@@ -269,7 +340,6 @@ $$
 
 \bigskip
 
-* The prior should cover a wide range of plausible values for $\sigma$, leaving out however values that make no sense.
 
 
 
@@ -279,9 +349,9 @@ knitr::include_graphics("half_normal.png")
 ```
 
 
-# The half-normal distribution
+# Effect of the scale parameter
 
-* The half-normal pdf is characterized by a scale parameter.
+* The half-normal pdf is characterized by a scale parameter (the standard deviation of the underlying normal).
 
 ```{python, echo=FALSE, fig.height=2, fig.align="center"}
 plt.figure(figsize=(10, 3))
@@ -290,9 +360,9 @@ plt.figure(figsize=(10, 3))
 x = np.linspace(-2,5, 100)
 
 #at each x we plot the pdf of the halfnorm with different scales
-plt.plot(x, halfnorm.pdf(x, scale=1), 'r-', lw=3, alpha=0.6, label='scale 1')
-plt.plot(x, halfnorm.pdf(x, scale=3), 'b-', lw=3, alpha=0.6, label='scale 3');
-plt.plot(x, halfnorm.pdf(x, scale=6), 'g-', lw=3, alpha=0.6, label='scale 6');
+plt.plot(x, halfnorm.pdf(x, scale=1), 'r-', lw=3, alpha=0.6, label='scale: 1')
+plt.plot(x, halfnorm.pdf(x, scale=3), 'b-', lw=3, alpha=0.6, label='scale: 3');
+plt.plot(x, halfnorm.pdf(x, scale=6), 'g-', lw=3, alpha=0.6, label='scale: 6');
 plt.legend()
 
 ```
@@ -302,34 +372,26 @@ plt.legend()
 
 # Tuning the half-normal distribution
 
-* You can tune the HN prior distribution by matching its median with a plausible value of $\sigma$
+* You can tune the scale of the HN by considering  a plausible value of $\sigma$, and choose the scale so that it is close to the median of the HN.
 
 \bigskip
 
-* For instance  we think a plausible value for the standard deviation of the noise is 7.5.
+* E.g., assume  a plausible value of $\sigma$  is 7.5.
 
 \bigskip
 
-  * with 95% probability the measures are lie in an interval of +- 15 around the mean.
+  * With 95% probability the measures are lie in an interval of $\pm 15$ around the mean.
 
 \bigskip
 
-* Of course, we are uncertain about this statament.
-
-\bigskip
-
-* Perhaps, with 95% probability the measures lie in an interval of +- 30, 
-in which case the standard deviation of the noise is around 10.
-
-# Tuning the half-normal distribution
+  * But we are uncertain about this statement, as the interval could be well of $\pm 30$ .
 
 
-\bigskip
 
 
 # Tuning the half-normal distribution
 
-* The halfnormal distribution  has been obtained by trying different scale parameters.
+* We try different scales, until the median is about 7.5.
 
 \bigskip    
 
@@ -338,13 +400,14 @@ in which case the standard deviation of the noise is around 10.
 ```{python, echo=TRUE, fig.height=2, fig.align="center"}
 pd.DataFrame(halfnorm.rvs(size=1000, scale=11)).describe()
 ```
-# The probabilistic model
+# Probabilistic model with $\sigma$ as parameter
 
 \begin{align*}
 \mu &\sim N(\mu_{\mu}, \sigma_{\mu}) && \text{prior beliefs about } \mu\\ 
 \sigma &\sim \text{Half-Normal}(\sigma_{\sigma}) && \text{prior beliefs about } \sigma \\
-y & \sim \mathcal{N}(\mu, \sigma) && \text{the observation are  affected by a noise with standard deviation } \sigma\\
+y & \sim N(\mu, \sigma) && \text{the observation are  normally distributed} \sigma\\
 \end{align*}
+
 
 * We cannot treat this model analytically, as the prior are no longer conjugates.
 
@@ -354,49 +417,95 @@ y & \sim \mathcal{N}(\mu, \sigma) && \text{the observation are  affected by a no
 
 # Conceptual exercise
 
-* Try to define the priors of a probabilistic model which  represents the distribution of height of adult males in Switzerland 
+* Try to define  a probabilistic model of the distribution of height of adult males in Switzerland 
 
-# Population of Swiss adult males: $p(\mu)$
+# Prior for  $\mu$
 
 
-* The mean height of the population could  be 175, though this is uncertain. Keeping our prior broad,  the mean height of the population lies with 99% probability between 160 and 190 cm.
+* The mean height of the population could  be 175. 
+
+\bigskip 
+
+* Keeping our prior broad,  we state the mean height of the population to lie with 99% probability between 160 and 190 cm (the 99% interval roughly corresponds to $\mu \pm 3 \sigma$).
   
   \bigskip
   
-  * $\mu \sim \mathcal{N}(175, 5)$ 
+  * $\mu \sim N(175, 5)$ 
   
-# Population of Swiss adult males: $p(\sigma)$
+# Prior for $\sigma$
 
-* We shall now assign a prior to $\sigma$. We assume that within the whole population the height  varies with 99% probability between 100 and 250. 
+
+* We shall now assign a prior to $\sigma$. Within the  population, we assume the height   to lie with 99% probability between 100 and 250 (broad but realistic range). 
 
 \bigskip
 
   * Hence the corresponding value of the standard deviation is (250-100)/6 = 25.
     
-    \bigskip
-    
-  * Notice the broad but sensible range.
   
   \bigskip
     
-  * A half-normal distribution with scale 35 has roughly this median:
   
-      * $\sigma \sim \text{Half-Normal}(35)$
+# Tuning the half-normal
 
-# Population of Swiss adult males: $p(\sigma)$
+* A half-normal distribution with scale 35 has roughly  median 25:
+
 
 ```{python, echo=TRUE, fig.height=2, fig.align="center"}
 pd.DataFrame(halfnorm.rvs(size=1000, scale=35)).describe()
 ```
 
-# Likelihood
+# Likelihood (distribution of the data)
 
-* The likelihood  $y  \sim \mathcal{N}(\mu, \sigma)$ requires no parameter specification. 
-
-\bigskip
-
-* We are assuming that the measures are normally distributed around the mean.
+* Under the assumption of normality and independence, the likelihood is:
+$$y  \sim \mathcal{N}(\mu, \sigma)$$
 
 \bigskip
 
-* Moreover we assume that the measures are i.i.d.
+* No further specification is required. 
+
+
+# The resulting model
+
+\begin{align*}
+\mu & \sim N(175, 5) \\
+\sigma & \sim \text{half-normal}(35) \\
+\vec{y} & \sim N(\mu, \sigma) \\
+\end{align*}
+
+
+# Solution for the exercise on normal likelihood functions
+
+* Compute the likelihood as a function of $\mu$ for a normal  sample  with $\sigma$=10, given the observations:  
+
+$$y_1,y_2,y_3=(−4.3, 0.7, −19.4)$$ 
+
+# Solution
+
+\tiny
+
+```{python, echo=TRUE, fig.height=2, fig.align="center", cache=TRUE}
+#based on the observations, plausible values of mu
+#range between -30 and 20.
+mu = np.arange(-30, 20, 0.5)
+sigma = 10
+
+#a likelihood value for each value of mu
+lik = norm.pdf(-4.3, loc=mu, scale=sigma)
+
+#under independence, the likelihood of each observation multiplies
+lik = lik * norm.pdf(0.7, loc=mu, scale=sigma)
+lik = lik * norm.pdf(-19.4, loc=mu, scale=sigma)
+
+plt.figure(figsize=(10, 3))
+plt.plot(mu, lik)
+```
+
+# Solution
+
+* The values in the previous slide are numerically small. With more data, and more likelihood multiplication, it will become numerically untractable.
+
+\bigskip
+
+* For this reason it is numerically better to work with the log of the likelihood (log-likelihood).
+
+

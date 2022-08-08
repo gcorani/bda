@@ -343,7 +343,6 @@ Requires:
 
 * Given $B=b$, the posterior   of $A$ is: \bigskip
 
-**RIVEDI**
 
 \begin{align*}
  p(A|b) & = \frac{p(A)p(A \mid b)}{p(b)} = 

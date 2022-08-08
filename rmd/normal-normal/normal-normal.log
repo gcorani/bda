@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  3 AUG 2022 14:23
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  5 AUG 2022 09:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2409,7 +2409,24 @@ File: normal-tuning.png Graphic file (type bmp)
 
 ] [7
 
-] [8
+]
+LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
+(Font)              scaled to size 7.665pt on input line 401.
+Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
+mapping=tex-text;" at 7.665pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Regular.ttf
+LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
+(Font)              scaled to size 5.475pt on input line 401.
+Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
+mapping=tex-text;" at 5.475pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Regular.ttf
+
+Overfull \vbox (1.23337pt too high) detected at line 401
+ []
+
+[8
 
 ] [9
 
@@ -2429,73 +2446,11 @@ File: normal-tuning.png Graphic file (type bmp)
 
 ] [17
 
-]
-File: half_normal.png Graphic file (type bmp)
-<half_normal.png>
+] [18
 
-Overfull \vbox (36.76764pt too high) detected at line 649
- []
-
-[18
-
-]
-File: normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic file (typ
-e pdf)
-<use normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf>
-
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 660--660
- [] 
- []
-
-[19
+] [19
 
 ] [20
-
-] [21
-
-]
-\openout4 = `normal-normal.vrb'.
-
-(./normal-normal.vrb
-LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 20.
-Requested font "[SourceCodePro-Regular.otf]/OT:script=latn;language=dflt;" at 9
-.30756pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
-eCodePro-Regular.otf
-LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/b/n' will be
-(Font)              scaled to size 9.30756pt on input line 21.
-Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 9.30
-756pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
-eCodePro-Bold.otf
-)
-Overfull \vbox (24.69524pt too high) detected at line 747
- []
-
-[22
-
-]
-LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 771.
-Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
-mapping=tex-text;" at 7.665pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Regular.ttf
-LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 771.
-Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
-mapping=tex-text;" at 5.475pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Regular.ttf
-
-Overfull \hbox (74.51476pt too wide) detected at line 771
-[]
- []
-
-[23
-
-] [24
 
 ]
 Requested font "[lmroman10-regular]:mapping=tex-text;" at 10.0pt
@@ -2507,29 +2462,114 @@ r.otf
 Requested font "[lmroman5-regular]:mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regula
 r.otf
-[25
+LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
+(Font)              scaled to size 10.0pt on input line 738.
+Requested font "[Carlito-Italic.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;m
+apping=tex-text;" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Italic.ttf
+[21
 
 ]
-LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 835.
-Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
-mapping=tex-text;" at 7.0pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Regular.ttf
-LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 835.
-Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
-mapping=tex-text;" at 5.0pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Regular.ttf
-[26
+File: half_normal.png Graphic file (type bmp)
+<half_normal.png>
+
+Overfull \vbox (5.4878pt too high) detected at line 761
+ []
+
+[22
+
+]
+File: normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic file (typ
+e pdf)
+<use normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf>
+
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 773--773
+ [] 
+ []
+
+[23
+
+] [24
 
 ]
 \openout4 = `normal-normal.vrb'.
 
-(./normal-normal.vrb) [27
+(./normal-normal.vrb
+LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
+(Font)              scaled to size 9.30756pt on input line 19.
+Requested font "[SourceCodePro-Regular.otf]/OT:script=latn;language=dflt;" at 9
+.30756pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
+eCodePro-Regular.otf
+LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/b/n' will be
+(Font)              scaled to size 9.30756pt on input line 20.
+Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 9.30
+756pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
+eCodePro-Bold.otf
+)
+Overfull \vbox (9.05531pt too high) detected at line 846
+ []
+
+[25
+
+] [26
+
+] [27
 
 ] [28
+
+] [29
+
+]
+\openout4 = `normal-normal.vrb'.
+
+(./normal-normal.vrb) [30
+
+] [31
+
+] [32
+
+] [33
+
+]
+\openout4 = `normal-normal.vrb'.
+
+(./normal-normal.vrb
+LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
+(Font)              scaled to size 5.10004pt on input line 6.
+Requested font "[SourceCodePro-Regular.otf]/OT:script=latn;language=dflt;" at 5
+.10004pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
+eCodePro-Regular.otf
+LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/it' will be
+(Font)              scaled to size 5.10004pt on input line 7.
+Requested font "[SourceCodePro-RegularIt.otf]/OT:script=latn;language=dflt;" at
+ 5.10004pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
+eCodePro-RegularIt.otf
+LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/b/n' will be
+(Font)              scaled to size 5.10004pt on input line 9.
+Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 5.10
+004pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
+eCodePro-Bold.otf
+File: normal-normal_files/figure-beamer/unnamed-chunk-6-3.pdf Graphic file (typ
+e pdf)
+<use normal-normal_files/figure-beamer/unnamed-chunk-6-3.pdf>
+
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 24--24
+ [] 
+ []
+
+)
+Overfull \vbox (13.51947pt too high) detected at line 1020
+ []
+
+[34
+
+] [35
 
 ]
 \tf@nav=\write6
@@ -2543,12 +2583,12 @@ Regular.ttf
 
 (./normal-normal.aux) ) 
 Here is how much of TeX's memory you used:
- 36702 strings out of 476919
- 767282 string characters out of 5821840
- 1261956 words of memory out of 5000000
- 55804 multiletter control sequences out of 15000+600000
- 445554 words of font info for 174 fonts, out of 8000000 for 9000
+ 36731 strings out of 476919
+ 768030 string characters out of 5821840
+ 1262348 words of memory out of 5000000
+ 55828 multiletter control sequences out of 15000+600000
+ 445570 words of font info for 176 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,14n,140p,1814b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on normal-normal.pdf (28 pages).
+Output written on normal-normal.pdf (35 pages).
