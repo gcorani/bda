@@ -128,5 +128,12 @@ ui-tests/playwright-report
 
 # VSCode
 .vscode
-scripts/.DS_Store
+
+# R and RStudio
+.Rhistory
 scripts/R/spotify.csv
+
+
+# MAC
+.DS_Store
+scripts/.DS_Store
