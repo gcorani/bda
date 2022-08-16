@@ -703,6 +703,69 @@ but how much data is needed varies with the problem. \bigskip
 
 * For instance a Beta(1,1) prior is flat but limits the  possible values of $\theta$ between 0 and 1.
 
+# Priors need  a broad support
+
+* In the following slides we discuss some problem which arise if the support of the prior is too small.
+
+\bigskip
+
+* The *support* of a pdf is the set of points where the pdf is \textgreater 0.
+
+
+# Priors need  a broad support
+
+*  Bayesian analysis looses its benefits is the prior pdf has a too small support, i.e. it assigns a prior probability of zero also to plausible parameter values.
+
+\bigskip
+
+*  For instance a priori we assume $\pi$ to  equally likely  be anywhere between 0 and 0.25 and that surely it doesn’t exceed 0.25:
+$$ \pi \sim \text{Unif} (0, 025)$$
+
+\bigskip
+
+* And assume to observe $y$=8 successes in $n$=10 trials.
+
+# Priors need  a broad support
+
+* The prior pdf, the scaled likelihood and the posterior are shown below. Which is correct plot?
+
+```{r, out.width="95%", echo=FALSE, cache=TRUE}
+knitr::include_graphics("prior-support.png")
+```
+
+# Priors need  a broad support
+
+* The correct plot is the third.
+
+\bigskip
+
+```{r, out.width="80%", echo=FALSE, cache=TRUE}
+knitr::include_graphics("prior-support.png")
+```
+
+* The support of the posterior is inherited from the support of the prior.
+
+\bigskip 
+
+* Thus both  prior and posterior  assigns zero probability to any $\pi$ \textgreater 0.25.
+the posterior model must also assign zero probability to any value in that range.
+
+\bigskip
+
+*  No matter how much evidence we will collect, the posterior pdf will be truncated  beyond the 0.25 cap.
+
+# How to avoid a regrettable prior 
+
+* Let $\pi$ be the parameter of interest. 
+
+\bigskip
+
+* Be sure to assign non-0 pdf to every *possible* value of $\pi$.
+
+\bigskip 
+
+* For example, if $\pi$ is a proportion which can range from 0 to 1, the prior model should  be defined on this range.
+
 # Conclusions
 
 * We have seen  how Bayesian inference works when Bayes’ rule can be solved analytically (conjugacy). \bigskip
