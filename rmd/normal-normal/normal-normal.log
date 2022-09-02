@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  5 AUG 2022 09:23
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  2 SEP 2022 10:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2585,7 +2585,7 @@ Overfull \vbox (13.51947pt too high) detected at line 1020
 Here is how much of TeX's memory you used:
  36731 strings out of 476919
  768030 string characters out of 5821840
- 1262348 words of memory out of 5000000
+ 1262599 words of memory out of 5000000
  55828 multiletter control sequences out of 15000+600000
  445570 words of font info for 176 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

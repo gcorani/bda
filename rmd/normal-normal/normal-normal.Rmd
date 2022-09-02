@@ -1,6 +1,6 @@
 ---
 title: "The normal-normal model"
-author: "Giorgio Corani"
+author: "Giorgio Corani - (IDSIA, SUPSI)"
 date: 'Bayesian Data Analysis and Probabilistic Programming'
 output:
   beamer_presentation:
@@ -125,7 +125,7 @@ knitr::include_graphics("normal-tuning.png")
 
 \begin{align*}
 \mu & \sim N(\mu', \sigma_{\mu})\\
-\text{which in this example yields :} \\
+& \text{which in this example is :} \\
 \mu & \sim N(6.5, 0.05)\\
 \end{align*}
 
@@ -268,6 +268,10 @@ $$
 
 * As $n$ increases, the posterior variance decreases.
 
+\bigskip
+
+* The normal-normal is a *conjugate* model, since the posterior density is normal like the prior.
+
 # Your turn
 
 *  Which is the posterior mean,  if we did  5 measures with $\bar{y}=6.7$?
@@ -331,7 +335,7 @@ $$
 
 # The half-normal distribution
 
-* The HN pdf is asymmetric and right-skewed.
+* It is asymmetric and right-skewed.
 
 \bigskip
 
@@ -473,13 +477,13 @@ $$y  \sim \mathcal{N}(\mu, \sigma)$$
 \end{align*}
 
 
-# Solution for the exercise on normal likelihood functions
+# Solution of the likelihood exercise  
 
 * Compute the likelihood as a function of $\mu$ for a normal  sample  with $\sigma$=10, given the observations:  
 
 $$y_1,y_2,y_3=(−4.3, 0.7, −19.4)$$ 
 
-# Solution
+# Solution of the likelihood exercise
 
 \tiny
 
@@ -506,6 +510,10 @@ plt.plot(mu, lik)
 
 \bigskip
 
-* For this reason it is numerically better to work with the log of the likelihood (log-likelihood).
+* For this reason it is numerically better to work with the log of the likelihood (log-likelihood) and exponentiate back the results.
+
+\bigskip
+
+* You will see how do this in the labs.
 
 

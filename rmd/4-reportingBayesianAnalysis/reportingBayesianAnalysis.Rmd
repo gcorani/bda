@@ -1,6 +1,6 @@
 ---
 title: "Reporting the results of a Bayesian analysis"
-author: "Giorgio Corani"
+author: "Giorgio Corani  - (IDSIA, SUPSI)"
 date: ''
 output:
   beamer_presentation:
@@ -39,13 +39,13 @@ plt.rcParams.update({
 az.style.use('arviz-darkgrid')
 ```
 
-# Analysis of the results - 1
+# Analysis of the posterior
 
 * Assume you want to make inference about parameter $\theta$.
 
 \bigskip
 
-* The result of the Bayesian analysis is the posterior  distribution of $\theta$,  **not** a single value.
+* The result of the Bayesian analysis is the whole posterior  of $\theta$,  **not** a single value.
 
 \bigskip
 
@@ -84,7 +84,7 @@ az.style.use('arviz-darkgrid')
 
 \bigskip
 
-* *Slightly informative*  priors are recommended, for instance limiting the parameter values only to the positive range, or to a certain order or magnitude, etc. 
+* *Weakly informative*  priors are recommended, which for instance limit the parameter values only to the positive range, or to a certain order or magnitude, etc. 
 
 \bigskip
 
@@ -96,24 +96,24 @@ az.style.use('arviz-darkgrid')
 
 # Summarizing the posterior
 
-*  Different measures can be used to summarize the a priori:
+*  Different measures can be used to summarize the posterior:
 
 \bigskip
 
-  * the mean (or the mode, or the median) of the posterior distribution
+  * the mean (or the mode, or the median) 
   
 \bigskip
 
   * the  probability of $\theta$ belonging to a certain interval
   
 \bigskip
-  * the HPD, also called the *credibility* interval. 
+  * the 95% (or 90%, 99%, etc) *credibility* interval (HDI: highest density interval) 
   
 # Example: inference on the bias $\theta$ of the coin
 
 
-* Let us consider a uniform prior, Beta(1,1)
-* Let us assume the data are $y$=8 heads out of  $n$=18 tosses.
+* Consider a uniform prior, Beta(1,1)
+* Data: $y$=8 heads in  $n$=18 tosses.
 ```{python, echo=FALSE, fig.height=1, fig.align='center'}
 plt.figure(figsize=(10, 3))
 x = np.linspace(0, 1, 200)
@@ -153,13 +153,15 @@ beta.cdf(0.51, 9, 19) - beta.cdf(0.49, 9, 11)
 
 # Highest Density Interval (HDI)   
 
-* The HDI indicates which points of a distribution are most credible. 
+* The  HDI is the shortest interval that contains a given portion of  probability , usually 95% (or 90% or 50% are common). 
 
-* The  HDI is the shortest interval that contains a chosen portion of the probability density, usually 95% (although other values such as 90% or 50% are common). 
+\bigskip 
+* It shows the most credible  points of the distribution. 
 
-* Any point within this interval has a higher density than any point outside the interval. For a unimodal distribution, the HDI 95 is  the interval between the 2.5th and 97.5th percentiles.
+\bigskip
 
-* The HDI is also referred to as HPD (high posterior density) in some books. 
+* Any point within the HDI has  higher density than any point outside the interval. 
+
 
 # HDI   of unimodal distributions
 
@@ -179,7 +181,7 @@ beta.cdf(0.51, 9, 19) - beta.cdf(0.49, 9, 11)
 knitr::include_graphics('HPD-unimodal.png')
 ```
 
-* The height of the horizontal arrow marks the minimal density exceeded by all $x$ values inside the 95% HDI
+* Any $x$ value inside the HDI has higher density than any point outside the interval. 
 
 
 # HDI of bimodal distribution
@@ -187,10 +189,10 @@ knitr::include_graphics('HPD-unimodal.png')
 knitr::include_graphics('HPD_bimodal.png')
 ```
 
-* The HDI could (not always) be split into two sub-intervals, one for each mode of the distribution. 
+* The HDI can become split into two sub-intervals, one for each mode of the distribution. 
 
 * The  characteristics are as before: 
   * The shaded area has total area of 0.95.
   * Any $x$ within such limits has higher probability density than any $x$ outside the limits.
   
-* In this case  you can use the numerical procedure of arviz in order to compute the HDI.
+* Numerical procedures might be needed in order to compute such interval.

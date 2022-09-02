@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  5 AUG 2022 10:14
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  2 SEP 2022 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2270,12 +2270,99 @@ File: bayes_diagram.png Graphic file (type bmp)
 
 ] [14
 
-] [15
+]
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
+t 7.665pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
+t 5.475pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+Requested font "lmmi10" at 10.95pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+Requested font "lmmi8" at 7.665pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi8.tfm
+Requested font "lmmi5" at 5.475pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.95116pt on input line 511.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.951
+16pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.6658pt on input line 511.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
+t 7.6658pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.47559pt on input line 511.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
+t 5.47559pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 10.94882pt on input line 511.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.948
+82pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 7.66417pt on input line 511.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
+t 7.66417pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 5.47441pt on input line 511.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
+t 5.47441pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+Requested font "msam10" at 10.95pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10
+.tfm
+Requested font "msam7" at 7.665pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.
+tfm
+Requested font "msam5" at 5.475pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.
+tfm
+Requested font "msbm10" at 10.95pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10
+.tfm
+Requested font "msbm7" at 7.665pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.
+tfm
+Requested font "msbm5" at 5.475pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.
+tfm
+Requested font "rm-lmbx10" at 10.95pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
+Requested font "rm-lmbx8" at 7.665pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
+Requested font "rm-lmbx5" at 5.475pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
+Requested font "lmmib10" at 10.95pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+Requested font "lmmib7" at 7.665pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
+Requested font "lmmib5" at 5.475pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib5.tfm
+Requested font "lmbsy10" at 10.95pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+Requested font "lmbsy7" at 7.665pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
+Requested font "lmbsy5" at 5.475pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
+[15
 
 ] [16
 
 ]
-Overfull \vbox (7.1417pt too high) detected at line 587
+Overfull \vbox (7.1417pt too high) detected at line 582
  []
 
 [17
@@ -2294,11 +2381,11 @@ Overfull \vbox (7.1417pt too high) detected at line 587
 
 (./thinkBayesian.aux) ) 
 Here is how much of TeX's memory you used:
- 37369 strings out of 476919
- 778488 string characters out of 5821840
- 1277154 words of memory out of 5000000
- 56522 multiletter control sequences out of 15000+600000
- 418125 words of font info for 107 fonts, out of 8000000 for 9000
+ 37425 strings out of 476919
+ 780177 string characters out of 5821840
+ 1277289 words of memory out of 5000000
+ 56568 multiletter control sequences out of 15000+600000
+ 431750 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,14n,140p,1814b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 

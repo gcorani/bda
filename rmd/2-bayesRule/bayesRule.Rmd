@@ -1,6 +1,6 @@
 ---
 title: "Bayes' rule"
-author: "Giorgio Corani - SUPSI"
+author: "Giorgio Corani - (IDSIA, SUPSI)"
 date: ' Bayesian Data analysis and Probabilistic Programming'
 output:
   beamer_presentation:
@@ -25,9 +25,9 @@ fontsize: 13pt
 
 * Examples of events and probabilities related to a fair dice: \bigskip
 
-  * $E_1$: it lands 4 ($P$=1/6)
-  * $E_2$: it lands odd: 1 or 3 or 5.  ($P$=1/2)
-  * $E_3$: it lands 2 or 4.  ($P$=1/3)
+  * $E_1$: the dice lands 4 ($P$=1/6)
+  * $E_2$: the dice lands odd: 1 or 3 or 5.  ($P$=1/2)
+  * $E_3$: the dice lands 2 or 4.  ($P$=1/3)
 
 # Conditional vs unconditional probability
 
@@ -36,7 +36,7 @@ fontsize: 13pt
 * $P(A)$:  unconditional probability of $A$. It measures the probability of observing A, without any knowledge of B. 
 \bigskip
 
-* $P(A|B)$:  conditional probability of $A$ given $B$: probability of observing $A$ since $B$ occurred.
+* $P(A|B)$:  conditional probability of $A$ given $B$: probability of observing $A$ once $B$ occurred (probability of $A$ *given* $B$).
 
 # Conditional probability
 
@@ -69,23 +69,23 @@ $$ P(\text{puppy} \; | \; \text{adorable}) < 1 $$
 
 # $P(B|A)>P(B)$ or $P(B|A)<P(B)$?
 
-* $A$ = you just finished reading a book from a certain author and you enjoyed it.
+* $B$ = you just finished reading a book from a certain author and you enjoyed it.
 \bigskip
 
-* $B$ = you will also enjoy the newest novel from the same author.
+* $A$ = you will also enjoy the newest novel from the same author.
 
 
 # $P(B|A)>P(B)$ or $P(B|A)<P(B)$?
 
-* $A$ = it’s 0 degrees Celsius tonight. \bigskip
-* $B$ = tomorrow it will be very warm.
+* $B$ = it’s 0 degrees Celsius tonight. \bigskip
+* $A$ = tomorrow it will be very warm.
 
 # $P(B|A)>P(B)$ or $P(B|A)<P(B)$?
 
 Consider a woman who is  mother of two children. \bigskip
 
-* $A$ = the first child is a boy \bigskip
-* $B$ = the first child is a girl
+* $B$ = the first child is a boy \bigskip
+* $A$ = the second child will be a girl
 
 
 # Independent events
@@ -93,11 +93,16 @@ Consider a woman who is  mother of two children. \bigskip
 * $A$ and $B$ are independent if  the occurrence of $B$ doesn’t tell us anything about the occurrence of $A$:
 $$P(A|B)=P(A)$$
 
-  
+\bigskip
+
+* Marginal and conditional probability are identical.
+
+\bigskip  
+
 * For instance:
   * event $A$:  rider Q wins the next motoGP race
   * event $B$: my coin lands tails
-  * Since the coin does not affect the performance of rider Q, the two probabilities are the same.
+  * Since the coin does not affect the performance of rider Q, $P(A|B)=P(A)$.
 
 
 
@@ -120,15 +125,21 @@ $$P(A|B)=P(A)$$
 ![](fake_news_diagram.png)
 
 
-# Notation for random variables
+# Notation 
 * We denote random variable with uppercase letters and their specific values by lowercase letters.
+
+\bigskip
+
+* Let us consider discrete variables, which have a finite set of possible outcomes.
+
+\bigskip
 
 * $P(Y)$:  probability distribution for variable  $Y$, i.e,  a table containing as many elements as the possible values of $Y$. \bigskip
 
   * If $Y$ is discrete, the distribution is also called a probability mass function (pmf). 
 \bigskip
 
-# Notation for random variables
+# Notation 
 
 * Specific values are denote by lowercase; for instance, $y$. \bigskip
 
@@ -140,6 +151,8 @@ $$P(A|B)=P(A)$$
 # Prior probability 
 
 * From now we will deal with random variables, not event.
+
+\bigskip
 
 * Consider the random variable $A$ (article) with possible states {*real*, *fake*}. \bigskip
 
@@ -330,23 +343,29 @@ $$P(\text{fake} \mid !) = \frac{P(\text{fake}) P(! \mid \text{fake})}{P(!)} = \f
 
 #  Bayes'  theorem - recap
 
-* Unobserved variable $A$ \bigskip
+* Unobserved variable $A$, whose set of possible states is denoted by $\mathcal{A}$.
 
-* Observable variable $B$ \bigskip
+\bigskip
+
+* Observable variable $B$ 
+
+\bigskip
 
 
 Requires:
 
-  * the prior  $P(A)$ \bigskip
+  *  prior distribution  $P(A)$ \bigskip
   
-  * the conditional distribution $P(B|A)$ \bigskip
+  *  conditional distribution $P(B|A)$ \bigskip
 
-* Given $B=b$, the posterior   of $A$ is: \bigskip
+* Given $B=b$, the posterior distribution  of $A$ is: 
+
+\bigskip
 
 
 \begin{align*}
  p(A|b) & = \frac{p(A)p(A \mid b)}{p(b)} = 
-\frac{p(A)p(y \mid H)}{\sum_a p(a,b)} \\
+\frac{p(A)p(A \mid b)}{\sum_{a \in \mathcal{A}} p(a,b)} \\
 & p(b)>0
 \end{align*}
 
@@ -365,7 +384,7 @@ Requires:
 
 \bigskip
 
-* When we have a specific observation $b$, we get the function $p(a|b)$,  the likelihood. 
+* When we have a specific observation $b$, we get the likelihood $p(a|b)$ for each $a \in \mathcal{A}$. 
 
 \bigskip
 
@@ -373,6 +392,8 @@ Requires:
 
 # Marginal likelihood 
 * The denominator of Bayes' rule is a normalizing constant,  referred to as the marginal likelihood.
+s
+\bigskip
 
 * It  marginalizes the likelihood over the states of the unobserved variable $A$:
 $$p(b)=\sum_{a}p(a)p(b \mid a) = \sum_{a} p(a,b)$$

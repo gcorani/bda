@@ -197,8 +197,10 @@ without computing the normalizing constant (i.e., the denominator) of Bayes rule
 $$ p_{\text{move}} = min \left(  \frac {p(\theta_{\text{proposed}})} {p(\theta_{\text{current}})}, 1 \right) $$
 
 #  Metropolis algorithm applied to Bernoulli likelihood and beta prior
+
 $p(\theta \mid D) \propto p(D \mid \theta) p(\theta) = \theta^{a+y} (1-\theta)^{b+n-y}$
 
+\bigskip
 *  $\theta$ is a continuous parameter 
 
 \bigskip
@@ -258,8 +260,17 @@ p & = \min \left( 1, \frac{P(\theta_{\text{proposed}} \mid D)}{P(\theta_{\text{c
 # Left column (small $\sigma$)
 
 *  The left column uses a the small $\sigma$ = 0.02.
+
+\bigskip
+
 * The successive steps in the chain make small moves
+
+\bigskip
+
 * This requires a very long chain to  explore the posterior distribution.
+
+\bigskip
+
 * The effective size of this 50,000 step chain is only 468.9.
 
 # Right column (large $\sigma$)
@@ -276,27 +287,41 @@ p & = \min \left( 1, \frac{P(\theta_{\text{proposed}} \mid D)}{P(\theta_{\text{c
 
 * Advanced implementations of the Metropolis algorithm  automatically  adjust the width of the proposal distribution.
 
-# Exercise 7.4 from Bayesrulebook - Tuning the Metropolis-Hastings) 
+# Possible exercise - 1
 
-**rivedi**
+* Tune a Uniform proposal model with half-width $w$ for a Metropolis algorithm.
 
-* Tune a Uniform proposal model with half-width $w$ for a Metropolis-Hastings algorithm.
+\bigskip
 
 * Draw a trace plot for a tour where the Uniform proposal model uses a very small $w$
+
+\bigskip
 
 * Why is it problematic if w
 is too small, and hence defines the neighborhood around the current chain value too narrowly?
 
+
+# Possible exercise - 2
+
 *Draw a trace plot for a tour where the Uniform proposal model uses a very large $w$. Why is it problematic if w
 is too large, and hence defines the neighborhood too widely?
 
+\bigskip
+
 * Draw a trace plot for a tour where the Uniform proposal model uses a w
 that is neither too small or too large.
-* Describe how you would go about finding an appropriate half-width w
-for a Uniform proposal model.
 
-# Exercises 
+\bigskip
 
-* Implement the island hopping algorithm? vedi codice in scripts
+* Describe how you would go about finding an appropriate half-width w for a Uniform proposal model.
+
+# Further exercises 
+
+* Implement the island hopping algorithm? 
+
+\bigskip
+
 * Replicate the experiment about sampling the posterior beta.
-* Replicate the experiment with a non-conjugate prior (triangular??).
+
+\bigskip
+* Replicate the experiment with a non-conjugate prior (e.g.,m a triangular one).

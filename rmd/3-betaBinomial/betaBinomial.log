@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  16 AUG 2022 18:22
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  2 SEP 2022 10:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -973,69 +973,84 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
+\FV@CodeLineNo=\count363
+\FV@InFile=\read3
+\FV@TabBox=\box80
+\c@FancyVerbLine=\count364
+\FV@StepNumber=\count365
+\FV@OutFile=\write5
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip76
+\fb@frw=\dimen305
+\fb@frh=\dimen306
+\FrameRule=\dimen307
+\FrameSep=\dimen308
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
-\LTleft=\skip76
-\LTright=\skip77
-\LTpre=\skip78
-\LTpost=\skip79
-\LTchunksize=\count363
-\LTcapwidth=\dimen305
-\LT@head=\box80
-\LT@firsthead=\box81
-\LT@foot=\box82
-\LT@lastfoot=\box83
-\LT@cols=\count364
-\LT@rows=\count365
-\c@LT@tables=\count366
-\c@LT@chunks=\count367
+\LTleft=\skip77
+\LTright=\skip78
+\LTpre=\skip79
+\LTpost=\skip80
+\LTchunksize=\count366
+\LTcapwidth=\dimen309
+\LT@head=\box81
+\LT@firsthead=\box82
+\LT@foot=\box83
+\LT@lastfoot=\box84
+\LT@cols=\count367
+\LT@rows=\count368
+\c@LT@tables=\count369
+\c@LT@chunks=\count370
 \LT@p@ftn=\toks49
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen306
-\lightrulewidth=\dimen307
-\cmidrulewidth=\dimen308
-\belowrulesep=\dimen309
-\belowbottomsep=\dimen310
-\aboverulesep=\dimen311
-\abovetopsep=\dimen312
-\cmidrulesep=\dimen313
-\cmidrulekern=\dimen314
-\defaultaddspace=\dimen315
-\@cmidla=\count368
-\@cmidlb=\count369
-\@aboverulesep=\dimen316
-\@belowrulesep=\dimen317
-\@thisruleclass=\count370
-\@lastruleclass=\count371
-\@thisrulewidth=\dimen318
+\heavyrulewidth=\dimen310
+\lightrulewidth=\dimen311
+\cmidrulewidth=\dimen312
+\belowrulesep=\dimen313
+\belowbottomsep=\dimen314
+\aboverulesep=\dimen315
+\abovetopsep=\dimen316
+\cmidrulesep=\dimen317
+\cmidrulekern=\dimen318
+\defaultaddspace=\dimen319
+\@cmidla=\count371
+\@cmidlb=\count372
+\@aboverulesep=\dimen320
+\@belowrulesep=\dimen321
+\@thisruleclass=\count373
+\@lastruleclass=\count374
+\@thisrulewidth=\dimen322
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
 Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
-\col@sep=\dimen319
-\ar@mcellbox=\box84
-\extrarowheight=\dimen320
+\col@sep=\dimen323
+\ar@mcellbox=\box85
+\extrarowheight=\dimen324
 \NC@list=\toks50
-\extratabsurround=\skip80
-\backup@length=\skip81
-\ar@cellbox=\box85
+\extratabsurround=\skip81
+\backup@length=\skip82
+\ar@cellbox=\box86
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2020/10/26 v3.5g Customizing captions (AR)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen321
-\captionmargin@=\dimen322
-\captionwidth=\dimen323
-\caption@tempdima=\dimen324
-\caption@indent=\dimen325
-\caption@parindent=\dimen326
-\caption@hangindent=\dimen327
+\captionmargin=\dimen325
+\captionmargin@=\dimen326
+\captionwidth=\dimen327
+\caption@tempdima=\dimen328
+\caption@indent=\dimen329
+\caption@parindent=\dimen330
+\caption@hangindent=\dimen331
 Package caption Info: beamer document class detected.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption-beamer.sto
 File: caption-beamer.sto 2020/08/22 v2.0 Adaption of the caption package to the
  beamer document classes (AR)
 ))
-\c@caption@flags=\count372
-\c@continuedfloat=\count373
+\c@caption@flags=\count375
+\c@continuedfloat=\count376
 Package caption Info: hyperref package is loaded.
 Package caption Info: Hyperref support is turned off
 (caption)             because hyperref has stopped early.
@@ -1058,24 +1073,24 @@ y) (/usr/local/texlive/2021/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2020/09/26 v1.10
 Package: textpos 2020/09/26 1.10, absolute positioning of text on the page
 Package textpos Info: choosing support for LaTeX3 on input line 61.
-\TP@textbox=\box86
-\TP@holdbox=\box87
-\TPHorizModule=\dimen328
-\TPVertModule=\dimen329
-\TP@margin=\dimen330
-\TP@absmargin=\dimen331
+\TP@textbox=\box87
+\TP@holdbox=\box88
+\TPHorizModule=\dimen332
+\TPVertModule=\dimen333
+\TP@margin=\dimen334
+\TP@absmargin=\dimen335
 Grid set 16 x 16 = 22.7622pt x 17.07166pt
-\TPboxrulesize=\dimen332
-\TP@ox=\dimen333
-\TP@oy=\dimen334
+\TPboxrulesize=\dimen336
+\TP@ox=\dimen337
+\TP@oy=\dimen338
 \TP@tbargs=\toks53
 TextBlockOrigin set to 0pt x 0pt
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/eukdate/eukdate.sty
 Package: eukdate 2009/03/18 v1.04 UK format date (Hart's Rules) with weekday
-\c@euk@date=\count374
-\c@euk@month=\count375
-\c@euk@century=\count376
-\c@euk@year=\count377
+\c@euk@date=\count377
+\c@euk@month=\count378
+\c@euk@century=\count379
+\c@euk@year=\count380
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/carlito/carlito.sty
 Package: carlito 2014/08/20 (Bob Tennent) Supports Carlito fonts for LaTeX, pdf
 LaTeX, luaLaTeX and xeLaTeX.
@@ -1086,7 +1101,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks54
 \XKV@tempa@toks=\toks55
 )
-\XKV@depth=\count378
+\XKV@depth=\count381
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 Requested font "[Carlito-Regular.ttf]/OT" at 10.94997pt
@@ -1306,35 +1321,35 @@ Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
 Package zref Info: New property: page on input line 766.
 )
-\c@abspage=\count379
+\c@abspage=\count382
 Package zref Info: New property: abspage on input line 66.
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/media9/pdfbase.sty
 Package: pdfbase 2021/03/01 v0.46 driver independent access to low-level PDF fe
 atures
-\g_pbs_page_int=\count380
-\g_pbs_obj_int=\count381
-\g_pbs_oc_int=\count382
+\g_pbs_page_int=\count383
+\g_pbs_obj_int=\count384
+\g_pbs_oc_int=\count385
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/ocgx2/ocgbase.sty
 Package: ocgbase 2021/01/25 v0.18 support package for ocgx2.sty
-\g_ocgbase_nd_int=\count383
+\g_ocgbase_nd_int=\count386
 )
-\@anim@box=\box88
-\@anim@measbox=\box89
-\@anim@tmpdima=\dimen335
-\@anim@tmpdimb=\dimen336
-\@anim@num=\count384
-\@anim@curframe=\count385
-\@anim@curframe@zb=\count386
-\@anim@resizeflags=\count387
-\@anim@skipfram=\count388
-\@anim@mulframecnt=\count389
-\@anim@@tmlnfile=\read3
-\@anim@tmpcnt=\count390
-\c@@anim@ltxcnt=\count391
-\@anim@curlayer=\count392
-\@anim@lineno=\count393
-\@anim@curfield=\count394
-\@anim@@resizeflags=\count395
+\@anim@box=\box89
+\@anim@measbox=\box90
+\@anim@tmpdima=\dimen339
+\@anim@tmpdimb=\dimen340
+\@anim@num=\count387
+\@anim@curframe=\count388
+\@anim@curframe@zb=\count389
+\@anim@resizeflags=\count390
+\@anim@skipfram=\count391
+\@anim@mulframecnt=\count392
+\@anim@@tmlnfile=\read4
+\@anim@tmpcnt=\count393
+\c@@anim@ltxcnt=\count394
+\@anim@curlayer=\count395
+\@anim@lineno=\count396
+\@anim@curfield=\count397
+\@anim@@resizeflags=\count398
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryshapes.code.tex
@@ -1383,26 +1398,26 @@ File: tikzlibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
 shapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodepartlowerbox=\box90
-\pgfnodeparttwobox=\box91
-\pgfnodepartthreebox=\box92
-\pgfnodepartfourbox=\box93
-\pgfnodeparttwentybox=\box94
-\pgfnodepartnineteenbox=\box95
-\pgfnodeparteighteenbox=\box96
-\pgfnodepartseventeenbox=\box97
-\pgfnodepartsixteenbox=\box98
-\pgfnodepartfifteenbox=\box99
-\pgfnodepartfourteenbox=\box100
-\pgfnodepartthirteenbox=\box101
-\pgfnodeparttwelvebox=\box102
-\pgfnodepartelevenbox=\box103
-\pgfnodeparttenbox=\box104
-\pgfnodepartninebox=\box105
-\pgfnodeparteightbox=\box106
-\pgfnodepartsevenbox=\box107
-\pgfnodepartsixbox=\box108
-\pgfnodepartfivebox=\box109
+\pgfnodepartlowerbox=\box91
+\pgfnodeparttwobox=\box92
+\pgfnodepartthreebox=\box93
+\pgfnodepartfourbox=\box94
+\pgfnodeparttwentybox=\box95
+\pgfnodepartnineteenbox=\box96
+\pgfnodeparteighteenbox=\box97
+\pgfnodepartseventeenbox=\box98
+\pgfnodepartsixteenbox=\box99
+\pgfnodepartfifteenbox=\box100
+\pgfnodepartfourteenbox=\box101
+\pgfnodepartthirteenbox=\box102
+\pgfnodeparttwelvebox=\box103
+\pgfnodepartelevenbox=\box104
+\pgfnodeparttenbox=\box105
+\pgfnodepartninebox=\box106
+\pgfnodeparteightbox=\box107
+\pgfnodepartsevenbox=\box108
+\pgfnodepartsixbox=\box109
+\pgfnodepartfivebox=\box110
 )))
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryarrows.code.tex
@@ -1411,10 +1426,10 @@ File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\arrowsize=\dimen337
+\arrowsize=\dimen341
 ))
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 13.0pt on input line 144.
+(Font)              scaled to size 13.0pt on input line 184.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 13.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -1695,32 +1710,32 @@ nguage=dflt;"
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
-\BKM@id=\count396
+\BKM@id=\count399
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2020/12/30 v 0.09a modify URL breaks
 ) (./betaBinomial.aux)
 \openout1 = `betaBinomial.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 166.
-LaTeX Font Info:    ... okay on input line 166.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 206.
+LaTeX Font Info:    ... okay on input line 206.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1755,7 +1770,7 @@ LaTeX Font Info:    ... okay on input line 166.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 166.
+Package hyperref Info: Link coloring OFF on input line 206.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1765,11 +1780,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count397
+\c@section@level=\count400
 )
-LaTeX Info: Redefining \ref on input line 166.
-LaTeX Info: Redefining \pageref on input line 166.
-LaTeX Info: Redefining \nameref on input line 166.
+LaTeX Info: Redefining \ref on input line 206.
+LaTeX Info: Redefining \pageref on input line 206.
+LaTeX Info: Redefining \nameref on input line 206.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dicti
 onary-English.dict
@@ -1796,11 +1811,11 @@ tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 166.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 206.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 166.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 206.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 166.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 206.
 Requested font "[latinmodern-math.otf]/OT" at 10.94997pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
@@ -1855,16 +1870,16 @@ Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 166.
+(Font)              `operators' in the math version `normal' on input line 206.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 166.
+ line 206.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 166.
+(Font)              `operators' in the math version `bold' on input line 206.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 166.
+t line 206.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1935,15 +1950,15 @@ uage=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 166.
+(Font)              `symbols' in the math version `normal' on input line 206.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 166.
+t line 206.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 166.
+(Font)              `symbols' in the math version `bold' on input line 206.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 166.
+t line 206.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1996,18 +2011,18 @@ uage=dflt;"
 (fontspec)             =6.56999pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 1
-66.
+(Font)              `largesymbols' in the math version `normal' on input line 2
+06.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 166.
+t line 206.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 166
+(Font)              `largesymbols' in the math version `bold' on input line 206
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 166.
-LaTeX Info: Redefining \microtypecontext on input line 166.
+t line 206.
+LaTeX Info: Redefining \microtypecontext on input line 206.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -2021,55 +2036,55 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 (./betaBinomial.nav)
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 166.
+(Font)              scaled to size 6.0pt on input line 206.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 6.0pt on input line 166.
+(Font)              scaled to size 6.0pt on input line 206.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 166.
+(Font)              scaled to size 8.0pt on input line 206.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 8.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 20.0pt on input line 167.
+(Font)              scaled to size 20.0pt on input line 207.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 20.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 20.0pt on input line 167.
+(Font)              scaled to size 20.0pt on input line 207.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 20.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 26.0pt on input line 167.
+(Font)              scaled to size 26.0pt on input line 207.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 26.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 26.0pt on input line 167.
+(Font)              scaled to size 26.0pt on input line 207.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 26.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 4.0pt on input line 167.
+(Font)              scaled to size 4.0pt on input line 207.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 4.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 4.0pt on input line 167.
+(Font)              scaled to size 4.0pt on input line 207.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 4.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2231,13 +2246,13 @@ Requested font "lmbsy5" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
 )
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 185.
+(Font)              scaled to size 12.0pt on input line 225.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 12.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 185.
+(Font)              scaled to size 12.0pt on input line 225.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 12.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2260,37 +2275,37 @@ Requested font "lmmi8" at 7.665pt
 Requested font "lmmi5" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 205.
+(Font)              scaled to size 10.95116pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.951
 16pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 205.
+(Font)              scaled to size 7.6658pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.6658pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 205.
+(Font)              scaled to size 5.47559pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.47559pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 205.
+(Font)              scaled to size 10.94882pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.948
 82pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 205.
+(Font)              scaled to size 7.66417pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.66417pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 205.
+(Font)              scaled to size 5.47441pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.47441pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2332,7 +2347,7 @@ Requested font "lmbsy7" at 7.665pt
 Requested font "lmbsy5" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 205.
+(Font)              scaled to size 10.95pt on input line 245.
 Requested font "[Carlito-Italic.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;m
 apping=tex-text;" at 10.95pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2355,37 +2370,37 @@ Requested font "lmmi8" at 8.0pt
 Requested font "lmmi6" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 205.
+(Font)              scaled to size 12.00128pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 12.001
 28pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 205.
+(Font)              scaled to size 8.00085pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 8.00085pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 205.
+(Font)              scaled to size 6.00064pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 6.00064pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 205.
+(Font)              scaled to size 11.99872pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 11.998
 72pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 205.
+(Font)              scaled to size 7.99915pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.99915pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 205.
+(Font)              scaled to size 5.99936pt on input line 245.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.99936pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2438,27 +2453,24 @@ Requested font "lmbsy7" at 6.0pt
 
 ] [8
 
-] [9
-
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 334.
+(Font)              scaled to size 7.665pt on input line 371.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 334.
+(Font)              scaled to size 5.475pt on input line 371.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 
-Overfull \hbox (12.21165pt too wide) detected at line 334
-[]
+Overfull \vbox (10.7124pt too high) detected at line 371
  []
 
-[10
+[9
 
 ]
 Requested font "[lmroman8-regular]:mapping=tex-text;" at 7.665pt
@@ -2467,31 +2479,15 @@ r.otf
 Requested font "[lmroman5-regular]:mapping=tex-text;" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regula
 r.otf
-[11
+[10
+
+] [11
 
 ] [12
-
-] [13
 
 ]
 File: beta-tuning-1.png Graphic file (type bmp)
 <beta-tuning-1.png>
-[14
-
-] [15
-
-]
-
-LaTeX Warning: Command \= invalid in math mode on input line 436.
-
-Missing character: There is no ̄ ("304) in font lmmi10!
-
-Overfull \vbox (16.48125pt too high) detected at line 436
- []
-
-[16
-
-]
 Requested font "[lmroman12-regular]:mapping=tex-text;" at 12.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regul
 ar.otf
@@ -2501,19 +2497,32 @@ r.otf
 Requested font "[lmroman6-regular]:mapping=tex-text;" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
 r.otf
-[17
+[13
+
+] [14
+
+] [15
+
+]
+
+LaTeX Warning: Command \= invalid in math mode on input line 475.
+
+Missing character: There is no ̄ ("304) in font lmmi10!
+[16
+
+] [17
 
 ]
 File: betaBinomial_files/figure-beamer/unnamed-chunk-2-1.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-2-1.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 469--469
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 508--508
  [] 
  []
 
 
-Overfull \vbox (8.47086pt too high) detected at line 469
+Overfull \vbox (8.47086pt too high) detected at line 508
  []
 
 [18
@@ -2523,7 +2532,7 @@ File: betaBinomial_files/figure-beamer/unnamed-chunk-3-3.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-3-3.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 484--484
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 523--523
  [] 
  []
 
@@ -2534,7 +2543,7 @@ File: betaBinomial_files/figure-beamer/unnamed-chunk-4-5.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-4-5.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 498--498
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 537--537
  [] 
  []
 
@@ -2545,7 +2554,7 @@ File: betaBinomial_files/figure-beamer/unnamed-chunk-5-5.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-5-5.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 503--503
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 549--549
  [] 
  []
 
@@ -2558,7 +2567,17 @@ File: beta-quiz.png Graphic file (type bmp)
 
 ] [23
 
-] [24
+]
+\openout4 = `betaBinomial.vrb'.
+
+(./betaBinomial.vrb
+LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/b/n' will be
+(Font)              scaled to size 9.30756pt on input line 12.
+Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 9.30
+756pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
+eCodePro-Bold.otf
+) [24
 
 ] [25
 
@@ -2719,72 +2738,72 @@ Requested font "lmbsy5" at 2.7375pt
 
 ] [40
 
-] [41
-
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 926.
+(Font)              scaled to size 7.0pt on input line 996.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 926.
+(Font)              scaled to size 5.0pt on input line 996.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
-[42
+[41
 
-] [43
+] [42
 
 ]
-File: betaBinomial_files/figure-beamer/unnamed-chunk-7-1.pdf Graphic file (type
+File: betaBinomial_files/figure-beamer/unnamed-chunk-8-1.pdf Graphic file (type
  pdf)
-<use betaBinomial_files/figure-beamer/unnamed-chunk-7-1.pdf>
+<use betaBinomial_files/figure-beamer/unnamed-chunk-8-1.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 964--964
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1034--1034
+ [] 
+ []
+
+[43
+
+]
+File: betaBinomial_files/figure-beamer/unnamed-chunk-9-3.pdf Graphic file (type
+ pdf)
+<use betaBinomial_files/figure-beamer/unnamed-chunk-9-3.pdf>
+
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1040--1040
  [] 
  []
 
 [44
 
 ]
-File: betaBinomial_files/figure-beamer/unnamed-chunk-8-3.pdf Graphic file (type
- pdf)
-<use betaBinomial_files/figure-beamer/unnamed-chunk-8-3.pdf>
+File: betaBinomial_files/figure-beamer/unnamed-chunk-10-5.pdf Graphic file (typ
+e pdf)
+<use betaBinomial_files/figure-beamer/unnamed-chunk-10-5.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 970--970
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1046--1046
  [] 
  []
 
 [45
 
 ]
-File: betaBinomial_files/figure-beamer/unnamed-chunk-9-5.pdf Graphic file (type
- pdf)
-<use betaBinomial_files/figure-beamer/unnamed-chunk-9-5.pdf>
+File: betaBinomial_files/figure-beamer/unnamed-chunk-11-7.pdf Graphic file (typ
+e pdf)
+<use betaBinomial_files/figure-beamer/unnamed-chunk-11-7.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 976--976
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1066--1066
  [] 
+ []
+
+
+Overfull \vbox (7.59532pt too high) detected at line 1066
  []
 
 [46
 
-]
-File: betaBinomial_files/figure-beamer/unnamed-chunk-10-7.pdf Graphic file (typ
-e pdf)
-<use betaBinomial_files/figure-beamer/unnamed-chunk-10-7.pdf>
-
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 996--996
- [] 
- []
-
-
-Overfull \vbox (7.59532pt too high) detected at line 996
- []
-
-[47
+] [47
 
 ] [48
 
@@ -2796,44 +2815,42 @@ Overfull \vbox (7.59532pt too high) detected at line 996
 
 ] [52
 
-] [53
+]
+File: prior-support.png Graphic file (type bmp)
+<prior-support.png>
+[53
 
 ]
 File: prior-support.png Graphic file (type bmp)
 <prior-support.png>
-[54
 
-]
-File: prior-support.png Graphic file (type bmp)
-<prior-support.png>
-
-Overfull \vbox (11.22658pt too high) detected at line 1205
+Overfull \vbox (11.22658pt too high) detected at line 1275
  []
 
-[55
+[54
+
+] [55
 
 ] [56
 
-] [57
-
 ]
-\tf@nav=\write5
-\openout5 = `betaBinomial.nav'.
+\tf@nav=\write6
+\openout6 = `betaBinomial.nav'.
 
-\tf@toc=\write6
-\openout6 = `betaBinomial.toc'.
+\tf@toc=\write7
+\openout7 = `betaBinomial.toc'.
 
-\tf@snm=\write7
-\openout7 = `betaBinomial.snm'.
+\tf@snm=\write8
+\openout8 = `betaBinomial.snm'.
 
 (./betaBinomial.aux) ) 
 Here is how much of TeX's memory you used:
- 37863 strings out of 476919
- 793300 string characters out of 5821840
- 1280301 words of memory out of 5000000
- 56935 multiletter control sequences out of 15000+600000
- 463790 words of font info for 213 fonts, out of 8000000 for 9000
+ 38340 strings out of 476919
+ 800598 string characters out of 5821840
+ 1290394 words of memory out of 5000000
+ 57401 multiletter control sequences out of 15000+600000
+ 463798 words of font info for 214 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,15n,140p,1813b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on betaBinomial.pdf (57 pages).
+Output written on betaBinomial.pdf (56 pages).

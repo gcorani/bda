@@ -1,6 +1,6 @@
 ---
 title: "Think Bayesian"
-author: "Giorgio Corani - SUPSI"
+author: "Giorgio Corani  - (IDSIA, SUPSI)"
 date: ' Bayesian Data analysis and Probabilistic Programming'
 output:
   beamer_presentation:
@@ -119,13 +119,14 @@ knitr::include_graphics("bayes_diagram.png")
  * According to both Bayesian and frequentist probability,  the probability of observing Heads on a fair coin flip is 1/2. The difference is in their interpretation:
 
 \bigskip
-
-  * Bayesian:  probability measures the relative plausibility of an event.
+  * frequentist:  probability is the long-run relative frequency of a repeatable event.
 
 \bigskip
 
-  * The frequentist interpretation of probability is the long-run relative frequency of a repeatable event.
+  * Bayesian:  probability measures the relative plausibility of an event.
 
+
+  
 # Bayesian vs frequentist intepretation
 
 * An election is coming up and a pollster claims that candidate A has a 0.9 probability of winning. How do you interpret this probability?
@@ -138,21 +139,22 @@ knitr::include_graphics("bayes_diagram.png")
 
   * Candidate A is much more likely to win than to lose.
 
+\bigskip
+
+* This event is non-repeatable and frequentist probability does not really apply.
+
 # Your turn
 
 *  Identify a topic that you know about (e.g., a sport, a school subject, music).
 
 \bigskip
 
-*  Identify a hypothesis about this subject.
+*  Identify a hypothesis about this subject (e.g.: with probability 80% rider X will become world champion)
 
 \bigskip
 
-*  How would your current expertise inform your conclusion about this hypothesis?
+*  Describe how this probability is informed  by  your  expertise and you updated it over time based on the observed data (e.g., race results).
 
-\bigskip
-
-* Which framework are you employing here, Bayesian or frequentist?
 
 
 # Testing hypothesis: frequentist vs Bayesian
@@ -161,21 +163,21 @@ knitr::include_graphics("bayes_diagram.png")
 
 \bigskip
 
-  * 1) what’s the probability that I  have the disease?
+  1) what’s the probability that I  have the disease?
 
   \bigskip
 
-  * 2) if I do not have the disease, what’s the chance that I would’ve gotten the positive result?
+  2) if I do not have the disease, what’s the chance that I would’ve gotten the positive result?
 
 # Asking questions
 
-* Bayesian analysis would answer the first question, by  assessing the uncertainty of the hypothesis, in light of the data.
+* Bayesian analysis would answer the first question, by  assessing the probability of the hypothesis $H$ given  the data $D$, $P(H|D)$.
 
 \bigskip
 
-* A  frequentist analysis would answer the second question, by assesssin the uncertainty of the  data in light of an assumed hypothesis.
+* Frequentist analysis  answers the second question: the probability of the  data $D$ given of an assumed hypothesis $H$ ($P(D|H)$).
 
-# Probability of having the disease, given the positive test
+# Probability of having the disease, given a positive test
 
 |  |  | test pos | test neg | total |
 |---|---|---:|---:|---:|
@@ -187,7 +189,7 @@ knitr::include_graphics("bayes_diagram.png")
 
 \bigskip
 
-* This is the Bayesian answer: it measures the uncertainty of an hypothesis, given the observed data.
+* This is the Bayesian answer: it measures the probability of a hypothesis, given the observed data.
 
 # Probability of testing positive, given that I do not have the disease
 
@@ -215,6 +217,6 @@ knitr::include_graphics("bayes_diagram.png")
 
 * This computation is similar in spirit to the p-value of traditional hypothesis testing.
 
+\bigskip
 
-
-
+* In general the answer you look for is $P(H|D)$ rather than $P(D|H)$.

@@ -1,6 +1,6 @@
 ---
 title: "The beta-binomial model"
-author: "Giorgio Corani"
+author: "Giorgio Corani  - (IDSIA, SUPSI)"
 date: 'Bayesian Data Analysis and Probabilistic Programming'
 output:
   beamer_presentation:
@@ -82,9 +82,9 @@ az.style.use('arviz-darkgrid')
   
   * etc.
 
-# Setting the prior
 
-# The Beta prior
+
+# Prior density for a continous parameter
 
 * The prior for a continuous parameter is specified by a *probability density function* (pdf), denoted by $f(\theta)$. \bigskip 
 
@@ -134,7 +134,8 @@ we can also have $f(\theta) > 1$ in some points.
 f(\theta) & = 
 \frac{1} {\underbrace{B(a,b)}_{\text{normalizing constant}}}   
 \theta^{a-1}(1-\theta)^ {b-1}
-\propto \theta^{a-1}(1-\theta)^ {b-1} \qquad \qquad a,b>0 
+\propto \theta^{a-1}(1-\theta)^ {b-1} \\
+&  a,b>0 \\
 \end{align*}
 
 \bigskip
@@ -174,7 +175,7 @@ $$\text{Var}(\theta) = E((\theta - E(\theta))^2) = \int (\theta - E(\theta))^2 \
 $$\text{SD}(\theta) := \sqrt{\text{Var}(\theta)}$$
 
 
-# Effect of the parameters
+# How the density changes with $a$ and $b$
 ```{r foo, out.width="80%", fig.cap="Mean: solid. Mode: dashed.", echo=FALSE}
 knitr::include_graphics("beta-tuning-1.png")
 ```
@@ -193,6 +194,9 @@ $$\operatorname{VAR}(\theta)= \frac{ab}{(a+b)^2(a+b+1)} $$
 \bigskip
 
 $$\operatorname{SD}(\theta)= \sqrt{\frac{ab}{(a+b)^2(a+b+1)}} $$
+
+
+
 # Quiz yourself
 
 * When $\a = b$, the pdf is:  \bigskip
@@ -280,7 +284,9 @@ for ind, (a, b) in enumerate([(7, 3), (28, 12), (70, 30)]):
 ```
 
 
-# Coefficients < 1
+# $a$ and/or $b$ \textless 1
+
+* The density becomes concave (everywhere, or only on part of the domain)
 
 ```{python, echo=FALSE, fig.height=3, cache=TRUE, fig.align="center"}
 plt.figure(figsize=(10, 3))
@@ -293,7 +299,7 @@ for ind, (a, b) in enumerate([(0.5, 5), (0.5, 0.5), (5, 0.5)]):
     plt.legend(fontsize=12)
 ```
 
-# Which Beta?
+# Quiz
 
 *  Recognize Beta(0.5,0.5), Beta(1,1), Beta(2,2), Beta(6,6), Beta(6,2), Beta(0.5,6).
 
@@ -314,6 +320,19 @@ a & = \frac{7}{3} b
 
 \bigskip
 * Feasible pairs of values are for instance (7,3), (14,6), etc.
+
+# Tuning  $a$ and $b$
+
+* We check how the 5-th and the 95-th quantile vary with $a$ and $b$
+
+```{python, echo=TRUE, fig.height=3, fig.align="center", cache=TRUE}
+from scipy.stats import beta
+q1 = beta.ppf(q=[0.05,0.95],a=7, b=3, loc=0, scale=1)
+q2 = beta.ppf(q=[0.05,0.95],a=28, b=12, loc=0, scale=1)
+q1
+q2
+```
+
 
 # Tuning  $a$ and $b$
 
@@ -339,8 +358,6 @@ a & = \frac{7}{3} b
 
 * Usually there is no single right answer, but  multiple reasonable answers.
 
-
-# The likelihood function
 
 # The Binomial data model
 
@@ -523,7 +540,6 @@ $$
 
 * How would that change your understanding about the mean and the certainty of $\theta$? 
 
-# Sequential updating  
 
 # Sequential updating 
 

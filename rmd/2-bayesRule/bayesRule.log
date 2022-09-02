@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  5 AUG 2022 09:23
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  2 SEP 2022 10:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2258,37 +2258,37 @@ Requested font "lmmi8" at 7.665pt
 Requested font "lmmi5" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 231.
+(Font)              scaled to size 10.95116pt on input line 232.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.951
 16pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 231.
+(Font)              scaled to size 7.6658pt on input line 232.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.6658pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 231.
+(Font)              scaled to size 5.47559pt on input line 232.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.47559pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 231.
+(Font)              scaled to size 10.94882pt on input line 232.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.948
 82pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 231.
+(Font)              scaled to size 7.66417pt on input line 232.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.66417pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 231.
+(Font)              scaled to size 5.47441pt on input line 232.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.47441pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2335,13 +2335,13 @@ Requested font "lmbsy5" at 5.475pt
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 256.
+(Font)              scaled to size 7.665pt on input line 257.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 256.
+(Font)              scaled to size 5.475pt on input line 257.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2369,37 +2369,37 @@ Requested font "lmmi8" at 8.0pt
 Requested font "lmmi6" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 287.
+(Font)              scaled to size 12.00128pt on input line 288.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 12.001
 28pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 287.
+(Font)              scaled to size 8.00085pt on input line 288.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 8.00085pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 287.
+(Font)              scaled to size 6.00064pt on input line 288.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 6.00064pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 287.
+(Font)              scaled to size 11.99872pt on input line 288.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 11.998
 72pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 287.
+(Font)              scaled to size 7.99915pt on input line 288.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.99915pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 287.
+(Font)              scaled to size 5.99936pt on input line 288.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.99936pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2456,7 +2456,7 @@ Requested font "lmbsy7" at 6.0pt
 File: fake_news_diagram.png Graphic file (type bmp)
 <fake_news_diagram.png>
 
-Overfull \hbox (6.80124pt too wide) in paragraph at lines 375--375
+Overfull \hbox (6.80124pt too wide) in paragraph at lines 391--391
 [][]  
  []
 
@@ -2468,13 +2468,13 @@ Overfull \hbox (6.80124pt too wide) in paragraph at lines 375--375
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 428.
+(Font)              scaled to size 7.0pt on input line 465.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 428.
+(Font)              scaled to size 5.0pt on input line 465.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2510,7 +2510,7 @@ Regular.ttf
 ] [31
 
 ]
-Overfull \vbox (6.08774pt too high) detected at line 731
+Overfull \vbox (6.34068pt too high) detected at line 778
  []
 
 [32
@@ -2534,7 +2534,7 @@ Overfull \vbox (6.08774pt too high) detected at line 731
 ] [41
 
 ]
-Overfull \hbox (55.58977pt too wide) detected at line 918
+Overfull \hbox (55.58977pt too wide) detected at line 965
 []
  []
 
@@ -2575,7 +2575,7 @@ File: Monty_open_door.png Graphic file (type bmp)
 Here is how much of TeX's memory you used:
  37566 strings out of 476919
  782822 string characters out of 5821840
- 1279327 words of memory out of 5000000
+ 1279462 words of memory out of 5000000
  56691 multiletter control sequences out of 15000+600000
  445474 words of font info for 164 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
