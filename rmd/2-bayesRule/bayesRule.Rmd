@@ -364,9 +364,9 @@ Requires:
 
 
 \begin{align*}
- p(A|b) & = \frac{p(A)p(A \mid b)}{p(b)} = 
-\frac{p(A)p(A \mid b)}{\sum_{a \in \mathcal{A}} p(a,b)} \\
-& p(b)>0
+ P(A|b) & = \frac{P(A)p(A \mid b)}{P(b)} = 
+\frac{P(A)p(A \mid b)}{\sum_{a \in \mathcal{A}} P(a,b)} \\
+& P(b)>0
 \end{align*}
 
 
@@ -380,11 +380,11 @@ Requires:
 
 # Likelihood 
 
-* $p(A \mid b)$ represents the distribution of the possible outcome $A$  given $B=b$.
+* $P(A \mid b)$ represents the distribution of the possible outcome $A$  given $B=b$.
 
 \bigskip
 
-* When we have a specific observation $b$, we get the likelihood $p(a|b)$ for each $a \in \mathcal{A}$. 
+* When we have a specific observation $b$, we get the likelihood $P(a|b)$ for each $a \in \mathcal{A}$. 
 
 \bigskip
 
@@ -392,11 +392,11 @@ Requires:
 
 # Marginal likelihood 
 * The denominator of Bayes' rule is a normalizing constant,  referred to as the marginal likelihood.
-s
+
 \bigskip
 
 * It  marginalizes the likelihood over the states of the unobserved variable $A$:
-$$p(b)=\sum_{a}p(a)p(b \mid a) = \sum_{a} p(a,b)$$
+$$P(b)=\sum_{a}p(a)P(b \mid a) = \sum_{a} P(a,b)$$
 
 
 # Testing for Covid 19 (Murphy, Sec 3.2.1)
@@ -410,7 +410,7 @@ The test $T$ can be either:
  * positive
  * negative
 
-We want to determine the probability distribution $p(H|positive)$.
+We want to determine the probability distribution $P(H|positive)$.
 
 
 # Test performance: conditional probability
@@ -445,6 +445,7 @@ $P( T \mid \text{healthy})$ |.975 | .025  |
 \bigskip
 
 * The covid prevalence  in New York City  2020 was 10%.
+
 \bigskip
 
 
@@ -457,7 +458,7 @@ $P( T \mid \text{healthy})$ |.975 | .025  |
 # P(infected | positive)
 
 \begin{align*}
-p( \text{infected} \mid \text{positive}) & = \frac{\overbrace{P(\text{infected})}^{\text{prior: prevalence}} 
+P( \text{infected} \mid \text{positive}) & = \frac{\overbrace{P(\text{infected})}^{\text{prior: prevalence}} 
 \overbrace{P(\text{positive}|\text{infected})}^{\text{likelihood}}} { \underbrace{P(\text{positive})}_{\text{prob of observing a positive test: marginal likelihood}}} \\
 \end{align*}
 
@@ -490,7 +491,7 @@ P(\text{infected}|\text{positive}) & = \frac{P(\text{infected}) P(\text{positive
 
 * The posterior probability of being healthy is:
 
-$$ p(\text{healthy} \mid \text{positive})  = 1 - .795 = .205$$
+$$ P(\text{healthy} \mid \text{positive})  = 1 - .795 = .205$$
 
 * The positive  test increases your probability of being infected of about 8 times.
 
