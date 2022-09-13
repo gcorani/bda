@@ -143,7 +143,7 @@ $$P(A|B)=P(A)$$
 
 * Specific values are denote by lowercase; for instance, $y$. \bigskip
 
-*  $p(y)$ denotes the probability of $P(Y=y)$, where $\sum_y p(y)=1$. \bigskip
+*  $P(y)$ denotes the probability of $P(Y=y)$, where $\sum_y p(y)=1$. \bigskip
 
 * We use moreover the shortcut notation $P(x|y) = P(X=x \mid Y=y)$
 
@@ -364,8 +364,8 @@ Requires:
 
 
 \begin{align*}
- P(A|b) & = \frac{P(A)p(A \mid b)}{P(b)} = 
-\frac{P(A)p(A \mid b)}{\sum_{a \in \mathcal{A}} P(a,b)} \\
+ P(A|b) & = \frac{P(A)P(A \mid b)}{P(b)} = 
+\frac{P(A)P(A \mid b)}{\sum_{a \in \mathcal{A}} P(a,b)} \\
 & P(b)>0
 \end{align*}
 
@@ -396,7 +396,7 @@ Requires:
 \bigskip
 
 * It  marginalizes the likelihood over the states of the unobserved variable $A$:
-$$P(b)=\sum_{a}p(a)P(b \mid a) = \sum_{a} P(a,b)$$
+$$P(b)=\sum_{a}P(a)P(b \mid a) = \sum_{a} P(a,b)$$
 
 
 # Testing for Covid 19 (Murphy, Sec 3.2.1)
