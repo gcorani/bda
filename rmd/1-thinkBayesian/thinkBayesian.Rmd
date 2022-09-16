@@ -149,11 +149,11 @@ knitr::include_graphics("bayes_diagram.png")
 
 \bigskip
 
-*  Identify a hypothesis about this subject (e.g.: with probability 80% rider X will become world champion)
+*  Formulata a probabilistic hypothesis about this subject (e.g.: with probability 80% rider X will become world champion)
 
 \bigskip
 
-*  Describe how this probability is informed  by  your  expertise and you updated it over time based on the observed data (e.g., race results).
+*  Discuss whether this probability  is better interpreted by the  frequentist or the  Bayesian  interpretation.
 
 
 
@@ -211,12 +211,8 @@ knitr::include_graphics("bayes_diagram.png")
 
 # Probability of testing positive, given that I do not have the disease
 
-*  Since only 9 of the 96 people without the disease tested positive, there’s a roughly 10% (9/96) chance that you would’ve tested positive even if you didn’t have the disease. 
+*  Since only 9 of the 96 people without the disease tested positive, there’s a roughly 10% (9/96) chance that you would’ve tested positive  if you didn’t have the disease. 
 
 \bigskip
 
 * This computation is similar in spirit to the p-value of traditional hypothesis testing.
-
-\bigskip
-
-* In general the answer you look for is $P(H|D)$ rather than $P(D|H)$.

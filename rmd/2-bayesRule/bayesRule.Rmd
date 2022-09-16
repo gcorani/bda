@@ -67,25 +67,33 @@ $$P(\text{adorable} \; | \; \text{puppy}) = 1$$
 * But an adorable object is not necessarily a puppy:
 $$ P(\text{puppy} \; | \; \text{adorable}) < 1 $$
 
-# $P(B|A)>P(B)$ or $P(B|A)<P(B)$?
+# $P(A|B)>P(A)$?
 
-* $B$ = you just finished reading a book from a certain author and you enjoyed it.
+
+
+
+* $A$ = you will  enjoy the newest novel from a certain author.
+
 \bigskip
 
-* $A$ = you will also enjoy the newest novel from the same author.
 
+* $B$ = you just finished reading a book from the same author and you enjoyed it.
 
-# $P(B|A)>P(B)$ or $P(B|A)<P(B)$?
+# $P(A|B)>P(A)$?
 
-* $B$ = it’s 0 degrees Celsius tonight. \bigskip
+* $B$ = it’s 0 degrees Celsius tonight.
+
+\bigskip
+
 * $A$ = tomorrow it will be very warm.
 
-# $P(B|A)>P(B)$ or $P(B|A)<P(B)$?
+# $P(A|B)>P(A)$?
 
 Consider a woman who is  mother of two children. \bigskip
 
-* $B$ = the first child is a boy \bigskip
 * $A$ = the second child will be a girl
+* $B$ = the first child is a boy \bigskip
+
 
 
 # Independent events
@@ -205,6 +213,72 @@ $$P(A|B)=P(A)$$
 \bigskip
 
 * The likelihood function is not a probability function; instead it is a way to measure the  compatibility of the observation (title contains !) with the different states of the unobserved variable $A$ (fake or real).
+
+# Posterior probability that the article is fake 
+
+
+* We want the posterior probability of the article being fake given that it uses exclamation points.
+
+$$P(\text{fake} \mid !) = \frac{P(\text{fake}) P(! \mid \text{fake})}{P(!)} = \frac{ 0.4 \cdot 0.2667}{0.12} = 0.889$$.
+
+
+* Notice: 
+
+$$P(!) = 
+\underbrace{
+P(!\mid \text{real}) P(\text{real})}_{P(!,\text{real})} + 
+\underbrace{
+P(!\mid \text{fake}) P(\text{fake})}_{P(!,\text{fake})} $$
+
+#  Bayes'  theorem - recap
+
+* Unobserved variable $A$, whose set of possible states  is $\mathcal{A}$.
+
+\bigskip
+
+* Observation:  $B=b$ 
+
+\bigskip
+
+
+
+* Given $B=b$, the posterior probability  of $A=a$ is: 
+
+\bigskip
+
+
+\begin{align*}
+ P(a|b) & = \frac{P(a)P(b \mid a)}{P(b)} = 
+\frac{P(a)P(b \mid a)}{\sum_{a' \in \mathcal{A}} P(a',b)} \\
+& P(b)>0
+\end{align*}
+
+
+# Prior 
+
+
+*  $P(A)$  represents how likely are the different  values of $A$, according to our beliefs,  before we see any data.
+\bigskip
+
+
+
+# Likelihood 
+
+
+* When we have a specific observation $b$, we get the likelihood $P(a|b)$ for each $a \in \mathcal{A}$. 
+
+\bigskip
+
+* The likelihood is not a probability distribution; it does not sum to one. 
+
+# Marginal likelihood 
+* The denominator of Bayes' rule is a normalizing constant,  referred to as the marginal likelihood.
+
+\bigskip
+
+* It  marginalizes the likelihood over the states of the unobserved variable $A$:
+$$P(b)=\sum_{a}P(a)P(b \mid a) = \sum_{a} P(a,b)$$
+
 
 # Joint probability 
 
@@ -331,72 +405,6 @@ P(\text{!}) & = P(\text{real}, \text{!}) + P(\text{fake}, \text{!}) \\
 & = 0.1067 + 0.0133 = 0.12
 \end{align*}
 
-
-
-# Posterior probability that the article is fake 
-
-
-* We want the posterior probability of the article being fake given that it uses exclamation points.
-
-$$P(\text{fake} \mid !) = \frac{P(\text{fake}) P(! \mid \text{fake})}{P(!)} = \frac{ 0.4 \cdot 0.2667}{0.12} = 0.889$$.
-
-
-#  Bayes'  theorem - recap
-
-* Unobserved variable $A$, whose set of possible states is denoted by $\mathcal{A}$.
-
-\bigskip
-
-* Observable variable $B$ 
-
-\bigskip
-
-
-Requires:
-
-  *  prior distribution  $P(A)$ \bigskip
-  
-  *  conditional distribution $P(B|A)$ \bigskip
-
-* Given $B=b$, the posterior distribution  of $A$ is: 
-
-\bigskip
-
-
-\begin{align*}
- P(A|b) & = \frac{P(A)P(A \mid b)}{P(b)} = 
-\frac{P(A)P(A \mid b)}{\sum_{a \in \mathcal{A}} P(a,b)} \\
-& P(b)>0
-\end{align*}
-
-
-# Prior 
-
-
-*  $P(A)$  represents how likely are the different  values of $A$, according to our beliefs,  before we see any data.
-\bigskip
-
-
-
-# Likelihood 
-
-* $P(A \mid b)$ represents the distribution of the possible outcome $A$  given $B=b$.
-
-\bigskip
-
-* When we have a specific observation $b$, we get the likelihood $P(a|b)$ for each $a \in \mathcal{A}$. 
-
-\bigskip
-
-* The likelihood is not a probability distribution; it does not sum to one. 
-
-# Marginal likelihood 
-* The denominator of Bayes' rule is a normalizing constant,  referred to as the marginal likelihood.
-
-\bigskip
-
-* It  marginalizes the likelihood over the states of the unobserved variable $A$:
-$$P(b)=\sum_{a}P(a)P(b \mid a) = \sum_{a} P(a,b)$$
 
 
 # Testing for Covid 19 (Murphy, Sec 3.2.1)
