@@ -103,7 +103,7 @@ $$P(A|B)=P(A)$$
 
 \bigskip
 
-* Marginal and conditional probability are identical.
+* Unconditional (i.e., *marginal*) and conditional probability are identical.
 
 \bigskip  
 
@@ -292,7 +292,7 @@ $$P(b)=\sum_{a}P(a)P(b \mid a) = \sum_{a} P(a,b)$$
 both $A=a$ and $B=b$.
 \bigskip
 
-* It is defined as  $$ P(a, b) = P(a|b) P(b)$$
+* We can compute it as  $$ P(a, b) = P(a|b) P(b)$$
 
 
 # Joint probability
@@ -510,7 +510,7 @@ $$ P(\text{healthy} \mid \text{positive})  = 1 - .795 = .205$$
 
 # Yet another exercise
 * We have two coins: 
-  * the first coins  lands  heads of tails with equal probability
+  * the first coins  lands  heads or tails with equal probability
   * the second coin is rigged and always lands heads. 
   
   \bigskip

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  9 SEP 2022 13:15
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  28 SEP 2022 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2454,40 +2454,49 @@ Requested font "lmbsy7" at 6.0pt
 ] [8
 
 ]
-LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 371.
-Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
-mapping=tex-text;" at 7.665pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Regular.ttf
-LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 371.
-Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
-mapping=tex-text;" at 5.475pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Regular.ttf
-
-Overfull \vbox (10.7124pt too high) detected at line 371
- []
-
-[9
-
-]
 Requested font "[lmroman8-regular]:mapping=tex-text;" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman8-regula
 r.otf
 Requested font "[lmroman5-regular]:mapping=tex-text;" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regula
 r.otf
-[10
+LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
+(Font)              scaled to size 7.665pt on input line 357.
+Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
+mapping=tex-text;" at 7.665pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Regular.ttf
+LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
+(Font)              scaled to size 5.475pt on input line 357.
+Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
+mapping=tex-text;" at 5.475pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Regular.ttf
+[9
+
+] [10
 
 ] [11
 
-] [12
+]
+Overfull \vbox (10.7124pt too high) detected at line 422
+ []
+
+[12
+
+] [13
+
+] [14
 
 ]
-File: beta-tuning-1.png Graphic file (type bmp)
-<beta-tuning-1.png>
+File: betaBinomial_files/figure-beamer/unnamed-chunk-2-1.pdf Graphic file (type
+ pdf)
+<use betaBinomial_files/figure-beamer/unnamed-chunk-2-1.pdf>
+
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 457--457
+ [] 
+ []
+
 Requested font "[lmroman12-regular]:mapping=tex-text;" at 12.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman12-regul
 ar.otf
@@ -2497,65 +2506,54 @@ r.otf
 Requested font "[lmroman6-regular]:mapping=tex-text;" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman6-regula
 r.otf
-[13
 
-] [14
-
-] [15
-
-]
-
-LaTeX Warning: Command \= invalid in math mode on input line 475.
-
-Missing character: There is no ̄ ("304) in font lmmi10!
-[16
-
-] [17
-
-]
-File: betaBinomial_files/figure-beamer/unnamed-chunk-2-1.pdf Graphic file (type
- pdf)
-<use betaBinomial_files/figure-beamer/unnamed-chunk-2-1.pdf>
-
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 508--508
- [] 
+Overfull \vbox (8.47086pt too high) detected at line 457
  []
 
-
-Overfull \vbox (8.47086pt too high) detected at line 508
- []
-
-[18
+[15
 
 ]
 File: betaBinomial_files/figure-beamer/unnamed-chunk-3-3.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-3-3.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 523--523
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 472--472
  [] 
  []
 
-[19
+[16
 
 ]
 File: betaBinomial_files/figure-beamer/unnamed-chunk-4-5.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-4-5.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 537--537
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 486--486
  [] 
  []
 
-[20
+[17
+
+]
+File: beta-tuning-1.png Graphic file (type bmp)
+<beta-tuning-1.png>
+[18
+
+] [19
+
+] [20
 
 ]
 File: betaBinomial_files/figure-beamer/unnamed-chunk-5-5.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-5-5.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 549--549
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 548--548
  [] 
+ []
+
+
+Overfull \vbox (7.08081pt too high) detected at line 548
  []
 
 [21
@@ -2591,6 +2589,14 @@ eCodePro-Bold.otf
 
 ] [30
 
+] [31
+
+] [32
+
+] [33
+
+] [34
+
 ]
 Requested font "[lmroman10-regular]:mapping=tex-text;" at 10.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regul
@@ -2601,17 +2607,19 @@ r.otf
 Requested font "[lmroman5-regular]:mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regula
 r.otf
-[31
-
-] [32
-
-] [33
-
-] [34
-
-] [35
+[35
 
 ] [36
+
+] [37
+
+] [38
+
+] [39
+
+] [40
+
+] [41
 
 ]
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
@@ -2730,108 +2738,108 @@ Requested font "lmbsy5" at 3.83247pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
 Requested font "lmbsy5" at 2.7375pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
-[37
+[42
 
-] [38
+] [43
 
-] [39
+] [44
 
-] [40
+] [45
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 1008.
+(Font)              scaled to size 7.0pt on input line 1127.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 1008.
+(Font)              scaled to size 5.0pt on input line 1127.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
-[41
+[46
 
-] [42
+] [47
 
 ]
 File: betaBinomial_files/figure-beamer/unnamed-chunk-8-1.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-8-1.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 1046--1046
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1165--1165
  [] 
  []
 
-[43
+[48
 
 ]
 File: betaBinomial_files/figure-beamer/unnamed-chunk-9-3.pdf Graphic file (type
  pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-9-3.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 1052--1052
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1171--1171
  [] 
  []
 
-[44
+[49
 
 ]
 File: betaBinomial_files/figure-beamer/unnamed-chunk-10-5.pdf Graphic file (typ
 e pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-10-5.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 1058--1058
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1177--1177
  [] 
  []
 
-[45
+[50
 
 ]
 File: betaBinomial_files/figure-beamer/unnamed-chunk-11-7.pdf Graphic file (typ
 e pdf)
 <use betaBinomial_files/figure-beamer/unnamed-chunk-11-7.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 1078--1078
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1197--1197
  [] 
  []
 
 
-Overfull \vbox (7.59532pt too high) detected at line 1078
+Overfull \vbox (7.59532pt too high) detected at line 1197
  []
 
-[46
-
-] [47
-
-] [48
-
-] [49
-
-] [50
-
-] [51
+[51
 
 ] [52
 
-]
-File: prior-support.png Graphic file (type bmp)
-<prior-support.png>
-[53
+] [53
 
-]
-File: prior-support.png Graphic file (type bmp)
-<prior-support.png>
-
-Overfull \vbox (11.22658pt too high) detected at line 1287
- []
-
-[54
+] [54
 
 ] [55
 
 ] [56
+
+] [57
+
+]
+File: prior-support.png Graphic file (type bmp)
+<prior-support.png>
+[58
+
+]
+File: prior-support.png Graphic file (type bmp)
+<prior-support.png>
+
+Overfull \vbox (11.22658pt too high) detected at line 1393
+ []
+
+[59
+
+] [60
+
+] [61
 
 ]
 \tf@nav=\write6
@@ -2845,12 +2853,12 @@ Overfull \vbox (11.22658pt too high) detected at line 1287
 
 (./betaBinomial.aux) ) 
 Here is how much of TeX's memory you used:
- 38340 strings out of 476919
- 800598 string characters out of 5821840
- 1290394 words of memory out of 5000000
- 57401 multiletter control sequences out of 15000+600000
+ 38349 strings out of 476919
+ 800681 string characters out of 5821840
+ 1290674 words of memory out of 5000000
+ 57410 multiletter control sequences out of 15000+600000
  463798 words of font info for 214 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,15n,140p,1813b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on betaBinomial.pdf (56 pages).
+Output written on betaBinomial.pdf (61 pages).

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  16 SEP 2022 18:01
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  17 SEP 2022 08:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2456,7 +2456,7 @@ Requested font "lmbsy7" at 6.0pt
 File: fake_news_diagram.png Graphic file (type bmp)
 <fake_news_diagram.png>
 
-Overfull \hbox (6.80124pt too wide) in paragraph at lines 404--404
+Overfull \hbox (6.80124pt too wide) in paragraph at lines 405--405
 [][]  
  []
 
@@ -2468,13 +2468,13 @@ Overfull \hbox (6.80124pt too wide) in paragraph at lines 404--404
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 478.
+(Font)              scaled to size 7.0pt on input line 479.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 478.
+(Font)              scaled to size 5.0pt on input line 479.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2530,7 +2530,7 @@ Regular.ttf
 ] [41
 
 ]
-Overfull \hbox (55.58977pt too wide) detected at line 985
+Overfull \hbox (55.58977pt too wide) detected at line 986
 []
  []
 
@@ -2571,7 +2571,7 @@ File: Monty_open_door.png Graphic file (type bmp)
 Here is how much of TeX's memory you used:
  37566 strings out of 476919
  782822 string characters out of 5821840
- 1279462 words of memory out of 5000000
+ 1280462 words of memory out of 5000000
  56691 multiletter control sequences out of 15000+600000
  445474 words of font info for 164 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

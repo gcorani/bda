@@ -113,9 +113,37 @@ az.style.use('arviz-darkgrid')
 
     -   the greater $f(\theta)$, the more plausible the corresponding value of $\theta$.
 
+
+# Central tendency
+
+-   The **mean** or **expected value** of $\theta$ is a weighted average: each possible $\theta$ value is weighted by its pdf:
+
+$$E[\theta] = \int_x \theta \cdot f(\theta) d\theta $$
+
+\bigskip
+
+-   The **mode** is the value of $\theta$ at which the pdf is highest.
+
+$$ \operatorname{Mode}(\theta) = \text{arg max}_{\theta} f(\theta)$$
+
+# Measures of variability
+
+-   The variance measures the expected squared distance of possible $\theta$ values from their mean:
+
+$$\text{Var}(\theta) = E((\theta - E(\theta))^2) = \int (\theta - E(\theta))^2 \cdot f(\theta) d\theta.$$
+
+# Standard deviation
+
+-   The variance has squared units; the standard deviation, which measures the typical unsquared distance of $\theta$ values from $E(\theta)$, is easier to interpret.
+    \bigskip
+
+-   The standard deviation measures the expected distance of possible $\theta$ values from their mean:
+
+$$\text{SD}(\theta) := \sqrt{\text{Var}(\theta)}$$
+
 # The Beta pdf
 
--   $\text{Beta}(a, b)$, is a pdf restricted to the $[0, 1]$ interval.
+-   $\text{Beta}(a, b)$, is a pdf restricted to the $(0, 1)$ interval.
     \bigskip
 
 -   Its parameters are $a >0$ and $b>0$.
@@ -141,38 +169,6 @@ f(\theta) & =
 
 -   $1-\theta$ is raised to the power of $b−1$ (not $b$)
 
-# Central tendency
-
--   The **mean** or **expected value** of $\theta$ is a weighted average: each possible $\theta$ value is weighted by its pdf:
-
-$$E[\theta] = \int_x x \cdot f(x) dx $$
-
-\bigskip
-
--   The **mode** is the value of $\theta$ at which the pdf is highest.
-
-$$ \operatorname{Mode}(\theta) = \text{arg max}_{\theta} f(\theta)$$
-
-# Measures of variability
-
--   The variance measures the expected squared distance of possible $\theta$ values from their mean:
-
-$$\text{Var}(\theta) = E((\theta - E(\theta))^2) = \int (\theta - E(\theta))^2 \cdot f(\theta) d\theta.$$
-
-# Standard deviation
-
--   The variance has squared units; the standard deviation, which measures the typical unsquared distance of $\theta$ values from $E(\theta)$, is easier to interpret.
-    \bigskip
-
--   The standard deviation measures the expected distance of possible $\theta$ values from their mean:
-
-$$\text{SD}(\theta) := \sqrt{\text{Var}(\theta)}$$
-
-# How the density changes with $a$ and $b$
-
-```{r foo, out.width="80%", fig.cap="Mean: solid. Mode: dashed.", echo=FALSE}
-knitr::include_graphics("beta-tuning-1.png")
-```
 
 # Central tendency measures of the Beta
 
@@ -187,32 +183,6 @@ E(\theta) & = \frac{a}{a + b} \\
 $$\operatorname{VAR}(\theta)= \frac{ab}{(a+b)^2(a+b+1)} $$ \bigskip
 
 $$\operatorname{SD}(\theta)= \sqrt{\frac{ab}{(a+b)^2(a+b+1)}} $$
-
-# Quiz yourself
-
--   When $\a = b$, the pdf is: \bigskip
-
-    -   Right-skewed, with a mode smaller than 0.5.
-    -   Symmetric with mode 0.5.
-    -   Left-skewed with mode greater than 0.5.
-
-    \bigskip
-
--   Using the same options as above, discuss the pdf when $a > b$.
-
-\bigskip
-
--   Which pdf has greater variability: Beta(20,20) or Beta(5,5)?
-
-# Effect of $a$ and $b$
-
--   $a > b$: the distribution is right-skewed, the mode is larger than 0.5; vice versa for $b > a$.
-    \bigskip
-
--   $a = b$: symmetric distribution with mean 0.5.
-    \bigskip
-
--   Increasing $a$ and $b$ decreases the variance.
 
 # Uniform distribution: $a = b = 1$
 
@@ -270,9 +240,49 @@ for ind, (a, b) in enumerate([(7, 3), (28, 12), (70, 30)]):
     plt.legend(fontsize=12)
 ```
 
-# $a$ and/or $b$ \textless 1
+# How the density changes with $a$ and $b$
 
--   The density becomes concave (everywhere, or only on part of the domain)
+```{r foo, out.width="80%", fig.cap="Mean: solid. Mode: dashed.", echo=FALSE}
+knitr::include_graphics("beta-tuning-1.png")
+```
+
+# Quiz yourself
+
+-   When $a = b$, the pdf is: \bigskip
+
+    -   Right-skewed, with a mode greater than 0.5.
+    -   Symmetric with mode 0.5.
+    -   Left-skewed with mode smaller than 0.5.
+
+    \bigskip
+
+-   Using the same options as above, discuss the pdf when $a > b$.
+
+\bigskip
+
+-   Which pdf has greater variability: Beta(20,20) or Beta(5,5)?
+
+# Effect of $a$ and $b$
+
+-   $a > b$: the distribution is right-skewed, the mode is larger than 0.5; vice versa for $b > a$.
+    \bigskip
+
+-   $a = b$: symmetric distribution with mean 0.5.
+    \bigskip
+
+-   Increasing $a$ and $b$ decreases the variance.
+
+# $a$ and/or $b$ \textless 1: concave density
+
+Consider $a$ = $b$ = 0.5
+\begin{align*}
+f(\theta) \propto \theta^{a-1}  (1-\theta)^{b-1} \\
+f(\theta) \propto \theta^{-0.5}  (1-\theta)^{-0.5} \\
+f(\theta) \propto \frac{1}{\sqrt{\theta}}  
+ \frac{1}{\sqrt{1-\theta}}\\
+\end{align*}
+
+
 
 ```{python, echo=FALSE, fig.height=3, cache=TRUE, fig.align="center"}
 plt.figure(figsize=(10, 3))
@@ -316,8 +326,8 @@ a & = \frac{7}{3} b
 
 ```{python, echo=TRUE, fig.height=3, fig.align="center", cache=TRUE}
 from scipy.stats import beta
-q1 = beta.ppf(q=[0.05,0.95],a=7, b=3, loc=0, scale=1)
-q2 = beta.ppf(q=[0.05,0.95],a=28, b=12, loc=0, scale=1)
+q1 = beta.ppf(q=[0.05,0.95],a=7, b=3)
+q2 = beta.ppf(q=[0.05,0.95],a=28, b=12)
 q1
 q2
 ```
@@ -331,7 +341,7 @@ q2
 | 5-th quantile  |   0.45 |     0.58 |     0.62 |
 | 95-th quantile |   0.90 |     0.81 |     0.77 |
 
--   The choice (7, 3) captures the mean and the variability of the polls in this example.
+-   The choice (7, 3) captures the mean and the variability of the polls in this example. Other choices yield too narrow a distribution.
 
 # Tune a Beta prior!
 
@@ -341,11 +351,8 @@ q2
         He thinks I has a 40% chance of getting the job, but he is pretty unsure; he expresses his uncertainty by putting his chance between 20% and 60%.
         \bigskip
 
-    -   A scientist has created a new test for a disease.
-        He expects that the test is accurate 80% of the time with a variance of 0.05.
-        \bigskip
 
--   Usually there is no single right answer, but multiple reasonable answers.
+-   There is no single correct prior, but multiple reasonable answers.
 
 # The Binomial data model
 
@@ -369,7 +376,9 @@ q2
 
 -   The success probability $\theta$ is constant in all flips.
 
-# The binomial likelihood
+
+
+# The binomial distribution
 
 Given $\theta$, a single flip takes: \bigskip
 
@@ -377,18 +386,74 @@ Given $\theta$, a single flip takes: \bigskip
 
 -   *tails* with probability $1-\theta$ \bigskip
 
--   Assuming a constant $\theta$ and the independence of the flips, the sequence $$H \quad T  \quad T \quad H \quad H$$ has probability $$ \theta (1-\theta) (1-\theta) \theta \theta = \theta^2 (1-\theta)^3$$
+-   Assuming a constant $\theta$ and the independence of the flips, the sequence $$H \quad T  \quad T \quad H \quad H$$ has probability $$ \theta (1-\theta) (1-\theta) \theta \theta = \theta^3 (1-\theta)^2$$
 
 -   In general, a sequence containing $y$ heads in $n$ flips has probability $$\theta^y (1-\theta)^{n-y}$$
 
-# Binomial likelihood
+- We assume a fixed number $n$ of trials.
 
--   We can get $\binom{n}{y} = \frac{n!}{k!(n-y)!}$ sequences containing $y$ successes in $n$ trials.
+# Binomial distribution
+
+-   We can get $\binom{n}{y} = \frac{n!}{y!(n-y)!}$ sequences containing $y$ successes in $n$ trials.
     \bigskip
 
--   The probability of observing $y$ successes in $n$ trials is: $$P(y \mid \theta) = \binom{n}{y} \theta^y (1 − \theta)^{1−y}$$ \bigskip
+$$ P(y|\theta) = \binom{n}{y} \theta^y (1-\theta)^{n-y}$$
 
 -   This is probability of the observing $y$ tails within $n$ flips, given the value of $\theta$.
+
+
+# The binomial distribution - quiz
+
+* Toni Kukoc played for Chicago Bulls in  the 90s
+
+\bigskip
+
+* In his career, his 3-point  rate is 31%.
+
+\bigskip
+
+* In a match against Orlando Magic, he realized 6 out of 8 shoots. 
+
+\bigskip
+
+* Which is the probability of him repeating or improving this performance?
+
+# The binomial distribution - quiz
+\begin{align*}
+P(X=6) &= \binom{8}{6} .31^6 \cdot .69^2 = 0.011 \\
+P(X=7) &= \binom{8}{7} .31^7 \cdot .69 = 0.002 \\
+P(X=8) &= \binom{8}{8} .31^8 \cdot .69^0  =  .31^8 = 0.00005 \\
+P(X=6) & + P(X=7) + P(X=8) = 0.013 \approx 1/77
+\end{align*}
+
+* A similar performance can be repeated about every 77 matches, that is about once for season.
+
+# Checking assumptions
+
+Discuss whether the assumptions of the binomial model are satisfied:
+\bigskip
+
+* $\theta$ is the same for every shoot 
+
+\bigskip
+
+* the outcome of the different shoots is independent from each other
+
+\bigskip
+
+* Kukoc will  shoot exactly 8 times in every future game. 
+
+\bigskip
+
+# Binomial likelihood
+
+* So far, we assumed $\theta$ to be fixed and the data to be random. Thus used the binomial to evaluate the plausibility of a certain number of successes given a fixed $\theta$
+
+\bigskip
+
+* From now on, we will instead interpret it as a likelihood.
+We will keep the data fixed (these are the data we observed)
+and we will interpret it as a function  of $\theta$, to assess which values of $\theta$ are more likely to have generated the observed outcome.
 
 # The Beta-binomial model
 
@@ -400,7 +465,7 @@ y | \theta & \sim \text{Bin}(n, \theta) \\
 ```
 -   This model applies to any setting where parameter $\theta$ lies in [0,1] \bigskip
     -   requires tuning of a Beta prior
-    -   assumes data $y$ to be the number of "successes" in $n$ fixed, independent trials with constant probability of success $\theta$.
+    -   assumes data $y$ to be the number of "successes" in $n$  independent trials with constant probability of success $\theta$.
 
 # Binomial likelihood
 
@@ -420,9 +485,10 @@ y | \theta & \sim \text{Bin}(n, \theta) \\
 \binom{10}{6} 0.3^6 (0.7)^{4} = 0.037 \\
 \end{align*}
 ```
+
+
 # Binomial likelihood
 
-$$P(y \mid \theta) = \binom{n}{y} \theta^y (1 − \theta)^{1−y}$$
 
 \bigskip
 
@@ -437,8 +503,16 @@ $$P(y \mid \theta) = \binom{n}{y} \theta^y (1 − \theta)^{1−y}$$
 -   It does not integrate to 1 over all values of $\theta$!
     \bigskip
 
--   It integrates to 1 if we keep $\theta$ fixed and we integrate over possible outcomes $y$.
-    But this would not be a likelihood function!
+# Binomial likelihood
+
+$$P(y \mid \theta) = \binom{n}{y} \theta^y (1 − \theta)^{1−y}$$
+
+- It integrates to 1 if we keep $\theta$ fixed and we integrate over possible outcomes $y$. 
+
+\bigskip
+
+- Instead, the likelihood function treats  the observed data as fixed 
+and let $P(y \mid \theta)$ vary with $\theta$.
 
 # Posterior
 
@@ -486,9 +560,9 @@ The beta prior is *conjugate* with the binomial likelihood, as we obtain a poste
 $$
 \underbrace{\frac{a + y}{a+ b + n}}_{\text{posterior}} =
 \underbrace{\frac{y}{n}}_{\text{observed proportion}}
-\underbrace{\frac{n}{n+a+b}}_{\text{weight}} +
+\underbrace{\frac{n}{a+b+n}}_{\text{weight}} +
 \underbrace{\frac{a}{a+b}}_{\text{prior mean of $\theta$}}
-\underbrace{\frac{a+b}{n+a+b}}_{\text{weight of the prior}}
+\underbrace{\frac{a+b}{a+b+n}}_{\text{weight of the prior}}
 $$
 
 \bigskip
@@ -667,16 +741,7 @@ For each scenario of the next slide, identify whether
 
 -   Prior: $\theta \sim$ Beta(20,2), data: $y$=10, $n$=200
 
-git \# The posterior mean is just part of the information
 
--   Bayesian analysis yields the posterior distribution of $\theta$, **not** a single value.
-    \bigskip
-
--   The dispersion of the posterior is a measure of our uncertainty.
-    \bigskip
-
--   The uncertainty decreases when we have more data.
-    \bigskip
 
 # Sensitivity to the prior
 
