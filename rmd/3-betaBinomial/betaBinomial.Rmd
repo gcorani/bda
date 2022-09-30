@@ -439,6 +439,8 @@ Discuss whether the assumptions of the binomial model are satisfied:
 
 * the outcome of the different shoots is independent from each other
 
+  * Yes, see Tversky, A., and Gilovich, T. “The cold facts about the hot hand in basketball,” Chance 2 (1) 16–21 (1989).
+
 \bigskip
 
 * Kukoc will  shoot exactly 8 times in every future game. 
@@ -837,3 +839,94 @@ knitr::include_graphics("prior-support.png")
     \bigskip
 
 -   Complex models have no conjugate priors and requires numerical Markov chain Monte Carlo (MCMC) to get the posterior.
+
+# Solution of exercises 3.9 and 3.10 (https://www.bayesrulesbook.com/chapter-3.html#exercises-2)
+
+* plot and summarize the  Beta(8,2) and the Beta(1,20) prior
+
+```{python, echo=FALSE, fig.height=2, fig.align="center"}
+plt.figure(figsize=(10, 3))
+x = np.linspace(0, 1, 100)
+
+for ind, (a, b) in enumerate([(8, 2), (1, 20)]):
+    y = stats.beta.pdf(x, a, b)
+    plt.subplot(1, 2, ind+1)
+    plt.plot(x, y, label='a = %s\nb = %s' % (a, b))
+    plt.legend(fontsize=12)
+```
+# Code of the previous plot
+
+```{python, echo=TRUE, fig.height=2, fig.align="center", eval=FALSE}
+plt.figure(figsize=(10, 3))
+x = np.linspace(0, 1, 100)
+
+for ind, (a, b) in enumerate([(8, 2), (1, 20)]):
+    y = stats.beta.pdf(x, a, b)
+    plt.subplot(1, 2, ind+1)
+    plt.plot(x, y, label='a = %s\nb = %s' % (a, b))
+    plt.legend(fontsize=12)
+```
+
+# Summarize the Beta (8,2)
+```{python, echo=TRUE, fig.height=2, fig.align="center"}
+rv = beta.rvs(a=8, b=2, size=1000)
+pd.Series(rv).describe(percentiles=[0.05,0.25,0.50,0.75,0.95])
+```
+
+# Summarize the Beta (1,20)
+```{python, echo=TRUE, fig.height=2, fig.align="center"}
+rv = beta.rvs(a=1, b=20, size=1000)
+pd.Series(rv).describe(percentiles=[0.05,0.25,0.50,0.75,0.95])
+```
+
+# Likelihood function: $y$=12, $n$=50
+
+```{python, echo=TRUE, fig.height=2, fig.align="center"}
+from scipy.stats import binom
+plt.figure(figsize=(10, 3))
+theta = np.linspace(0, 1, 100)
+
+#binomial probability mass function for each theta
+lik = binom.pmf(12, n=50, p=theta)
+```
+# Prior [Beta(8,2)], likelihood and posterior [Beta(20,40)]
+```{python, echo=FALSE, fig.height=3, fig.align="center"}
+from scipy.stats import binom
+plt.figure(figsize=(10, 3))
+theta = np.linspace(0, 1, 100)
+
+#prior
+prior = stats.beta.pdf(x, a, b)
+plt.subplot(1, 3, 1)
+plt.plot(x, y, label='Prior: a = %s\nb = %s' % (a, b))
+plt.legend(fontsize=12)
+
+#likelihood
+lik = binom.pmf(12, n=50, p=theta)
+plt.subplot(1, 3, 2)
+plt.plot(theta, lik, label='likelihood')
+plt.legend(fontsize=12)
+
+#posterior
+a_post=20
+b_post=40
+posterior = stats.beta.pdf(x, a_post, b_post)
+plt.subplot(1, 3, 3)
+plt.plot(theta, posterior, label='Posterior: a = %s\nb = %s' % (a, b))
+plt.legend(fontsize=12)
+```
+
+# Comparing the two posteriors: Beta(8,2) and Beta(13,58)
+
+* They are similar even though the priors were strongly different.
+ 
+```{python, echo=FALSE, fig.height=2, fig.align="center"}
+plt.figure(figsize=(10, 3))
+x = np.linspace(0, 1, 100)
+
+for ind, (a, b) in enumerate([(20, 40), (13, 58)]):
+    y = stats.beta.pdf(x, a, b)
+    plt.subplot(1, 2, ind+1)
+    plt.plot(x, y, label='a = %s\nb = %s' % (a, b))
+    plt.legend(fontsize=12)
+```
