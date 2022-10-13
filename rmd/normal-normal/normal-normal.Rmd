@@ -145,12 +145,6 @@ knitr::include_graphics("normal-tuning.png")
  
 * We allow the volume to range over ($-\infty, \infty$), but values  beyond $\mu \pm 3 \sigma$ are given negligible probability.
 
-# Normal prior
-
-\bigskip
-
-* There is no single right prior, but different reasonable priors.
-
 
 # Normal likelihood
 
@@ -213,6 +207,10 @@ $$
 \end{align*}
 
 * We treat $\mu'$, $\sigma_{\mu}$ and $\sigma$ as fixed numbers. 
+
+\bigskip
+
+* The likelihood assumes independence of the observations $y_1, y_2, ..., y_n$
 
 \bigskip
 
@@ -531,6 +529,17 @@ plt.plot(mu, lik)
 
 * https://www.bayesrulesbook.com/chapter-5.html#exercises-4
 
+\tiny
+```{python, echo=TRUE, fig.height=2, fig.align="center" , eval=FALSE}
+plt.figure(figsize=(10, 3))
+x = np.linspace(-1, 15, 100)
+mu = 7.2
+sigma = 2.6
+y = stats.norm.pdf(x, loc = mu, scale = sigma)
+plt.plot(x, y, label='normal (%s, %s)' % (mu, sigma))
+plt.legend(fontsize=12)
+```
+
 
 ```{python, echo=FALSE, fig.height=2, fig.align="center"}
 plt.figure(figsize=(10, 3))
@@ -541,9 +550,13 @@ y = stats.norm.pdf(x, loc = mu, scale = sigma)
 plt.plot(x, y, label='normal (%s, %s)' % (mu, sigma))
 plt.legend(fontsize=12)
 ```
+
+# Questions b,c,d,e
+
 * $P (X) >= 7.6$, $P (X) >= 4$, $P (X) < 0$, $P(X)>8$
 
-```{python, echo=FALSE, fig.height=2, fig.align="center"}
+\tiny
+```{python, echo=TRUE, fig.height=2, fig.align="center"}
 mu = 7.2
 sigma = 2.6
 p1 = 1 - stats.norm.cdf(7.6, loc = mu, scale = sigma)
@@ -555,32 +568,7 @@ p2
 p3
 p4
 ```
-# Code of the plot
 
-\tiny
-
-```{python, echo=TRUE, fig.height=2, fig.align="center" , eval=FALSE}
-plt.figure(figsize=(10, 3))
-x = np.linspace(-1, 15, 100)
-mu = 7.2
-sigma = 2.6
-y = stats.norm.pdf(x, loc = mu, scale = sigma)
-plt.plot(x, y, label='normal (%s, %s)' % (mu, sigma))
-plt.legend(fontsize=12)
-```
-
-# Code for the computation of probabilities
-
-\tiny
-
-```{python, echo=TRUE, fig.height=2, fig.align="center", eval=FALSE}
-mu = 7.2
-sigma = 2.6
-p1 = 1 - stats.norm.cdf(7.6, loc = mu, scale = sigma)
-p2 = 1 - stats.norm.cdf(4, loc = mu, scale = sigma)
-p3 = stats.norm.cdf(0, loc = mu, scale = sigma)
-p4 = 1 - stats.norm.cdf(8, loc = mu, scale = sigma)
-```
 
 # Prior, likelihood and posterior
 
@@ -603,27 +591,33 @@ plt.title('Prior')
 plt.legend(fontsize=12)
 
 #likelihood
-lik = norm.pdf (-0.7, loc = mu, scale = sigma_lik)
-lik = lik * norm.pdf (1.2, loc = mu, scale = sigma_lik)
-lik = lik * norm.pdf (4.5, loc = mu, scale = sigma_lik)
-lik = lik * norm.pdf (-4,  loc = mu, scale = sigma_lik)
+y   = np.array([-0.7, 1.2, 4.5, -4])
+
+#code below could be  vectorized
+lik = norm.pdf (y[0], loc = mu, scale = sigma_lik)
+lik = lik * norm.pdf (y[1], loc = mu, scale = sigma_lik)
+lik = lik * norm.pdf (y[2], loc = mu, scale = sigma_lik)
+lik = lik * norm.pdf (y[3],  loc = mu, scale = sigma_lik)
 
 plt.subplot(1, 3, 2)
 plt.plot(mu, lik)
 plt.title('Likelihood')
 
 #posterior
-y         = np.array([-0.7, 1.2, 4.5, -4])
 y_bar     = np.mean(y)
 n         = len(y)
 w_prior   = sigma_lik**2 / (4 * prior_sigma + sigma_lik**2)
 post_mean = prior_mean * w_prior + y_bar * (1 - w_prior)
+#post_mean = "{:.2f}".format(post_mean)
+
 post_var  = (prior_sigma**2 * sigma_lik**2)/(n * prior_sigma**2 + sigma_lik**2)
 post_s    = np.sqrt(post_var)
+#formatting
+#post_s = "{:.2f}".format(post_s)
 
 posterior = stats.norm.pdf(mu, loc = post_mean, scale = post_var)
 plt.subplot(1, 3, 3)
-plt.plot(mu, posterior, label='mean = %s\n sigma = %s' % (post_mean, post_s))
+plt.plot(mu, posterior, label='mu = %s\n sigma = %s' % ("{:.1f}".format(post_mean), "{:.1f}".format(post_s)))
 plt.legend(fontsize=12)
 plt.title('Posterior')
 ```
@@ -657,10 +651,13 @@ plt.legend(fontsize=12)
 
 ```{python, echo=TRUE, fig.height=3, fig.align="center", eval=FALSE}
 #likelihood
-lik = norm.pdf (-0.7, loc = mu, scale = sigma_lik)
-lik = lik * norm.pdf (1.2, loc = mu, scale = sigma_lik)
-lik = lik * norm.pdf (4.5, loc = mu, scale = sigma_lik)
-lik = lik * norm.pdf (-4,  loc = mu, scale = sigma_lik)
+#code below could be  vectorized
+y   = np.array([-0.7, 1.2, 4.5, -4])
+lik = norm.pdf (y[0], loc = mu, scale = sigma_lik)
+lik = lik * norm.pdf (y[1], loc = mu, scale = sigma_lik)
+lik = lik * norm.pdf (y[2], loc = mu, scale = sigma_lik)
+lik = lik * norm.pdf (y[3],  loc = mu, scale = sigma_lik)
+
 
 plt.subplot(1, 3, 2)
 plt.plot(mu, lik)
@@ -674,7 +671,6 @@ plt.title('Likelihood')
 
 ```{python, echo=TRUE, fig.align="center", eval=FALSE}
 #posterior
-y         = np.array([-0.7, 1.2, 4.5, -4])
 y_bar     = np.mean(y)
 n         = len(y)
 w_prior   = sigma_lik**2 / (n*prior_sigma + sigma_lik**2)
@@ -685,8 +681,9 @@ post_var  = (prior_sigma**2 * sigma_lik**2)/
             (n * prior_sigma**2 + sigma_lik**2)
 post_s    = np.sqrt(post_var)
 posterior = stats.norm.pdf(mu, post_mean, post_var)
-plt.subplot(1, 3, 3)
-plt.plot(mu, posterior, label='mean = %s\n sigma = %s' % (post_mean, post_s))
+
+ plt.subplot(1, 3, 3)
+plt.plot(mu, posterior, label='mu = %s\n sigma = %s' % (post_mean, post_s))
 plt.legend(fontsize=12)
 plt.title('Posterior')
 ```
