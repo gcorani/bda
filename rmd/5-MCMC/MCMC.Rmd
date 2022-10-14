@@ -19,37 +19,64 @@ fontsize: 13pt
 * J. Krushke, "Doing Bayesian Data Analysis", Chapter 7
 
 
-# Non-conjugate likelihood
 
-* Generally the likelihood is **not**  conjugate to the prior.
-\bigskip
+# Bayes' rule
 
-* Grid approximation  does not scale. 
-\bigskip
-
-* If we need to compute the joint distribution of 6 parameters, each represented by 1000 states, we have $1000^6$ states, too much for any computer.
-
-# MCMC
-
-* MCMC methods address this type of problems. For simplicity, we show  a single-parameter problem. 
+* We denote the prior by $f(\theta)$,   the data by $D$,
+the likelihood by $f(D \mid \theta)$.
 
 \bigskip
 
-* We denote the prior by $p(\theta)$ and the likelihood by $p(D \mid \theta)$, where $D$ denotes the data.
-
-\bigskip
-
-* The method avoids the direct evaluation of the difficult integral in the denominator of Bayes’ rule:
+* The computationally challenging part  of Bayes’ rule is  the denominator:
 
 \begin{align*}
-p(\theta \mid D) =
-\frac{p(\theta) p(D \mid \theta)}{\underbrace{p(D)}_{\text{marg lik}}}
+f(\theta \mid D) =
+\frac{f(\theta) f(D \mid \theta)}{\underbrace{f(D)}_{\text{marg lik}}}
  =
 \frac{p(\theta) p(D \mid \theta)}{\int p(\theta) p(D \mid \theta) d\theta}
 \end{align*}
 
-* The method  approximates  the posterior of $\theta$
+\bigskip
+
+* In the conjugate case, we have an analytical expression of $f(\theta \mid D)$.
+
+# Non-conjugate likelihood
+
+* Generally the likelihood is **not**  conjugate to the prior.
+
+\bigskip
+
+* Is gridding a solution?
+  * define a grid of values of the parameters 
+  * for each point of the grid, compute the product (prior x likelihood)
+  * normalize the obtained density
+
+
+# Gridding does not scale
+
+* The joint distribution of 6 parameters, each represented by 1000 states, has $1000^6$ states, too much for any computer.
+
+# MCMC
+
+* MCMC methods address this type of problems. 
+
+\bigskip
+
+* It  approximates  the posterior of $\theta$
 by returning many samples.
+
+\bigskip
+
+* Doing so, it avoids computing  the difficult integral in the denominator of Bayes’ rule.
+
+\bigskip
+
+* For simplicity, we show  a single-parameter problem. 
+
+\bigskip
+
+
+
 
 #  Approximating a distribution with a (large) sample
 
@@ -87,26 +114,35 @@ knitr::include_graphics("fig71.png")
 
 * The population of the different islands is 1000, 2000, 3000, ...,7000.
 
+\bigskip
+
 * This is the unnormalized distribution we want to sample from.
 
 
 # Making decisions
 
-* Flip a coin to decide whether the *proposed* island is located east or west.
+* Flip a coin to decide whether the *proposed* island is  east or west of the current one.
 
 \bigskip
 
-  * Visit it **if** it has a larger population than the current one.
-
-  * Otherwise, visit it with probability 
-$p_{\text{move}} = \frac{p_{\text{proposed}}}{p_{\text{current}}}$ 
+* If it has a larger population than the current one, visit it.
 
 \bigskip
 
-* In the long run, each  island is visited proportionally to its population!
+* Otherwise, visit it with probability 
+
+$$p_{\text{move}} = \frac{\text{pop}_{\text{proposed}}}{\text{pop}_{\text{current}}}$$
+
+
+  * $\text{pop}_{\text{proposed}}$: population of the proposed island
+  * $\text{pop}_{\text{current}}$: population of the current island.
+
+\bigskip
+
+* In the long run, each  island is visited proportionally to its population.
 
 # Discussion 
-* At each time step, both the chosen direction and its acceptance are random. 
+* The proposed direction and its acceptance are random. 
 
 \bigskip
 
@@ -114,71 +150,51 @@ $p_{\text{move}} = \frac{p_{\text{proposed}}}{p_{\text{current}}}$
 
 \bigskip
 
-* Yet, in the long run the relative frequency of visits mimics in any case the target distribution.
+* Yet, in the long run the relative frequency of visits mimics in every case the target distribution.
 
 # Proposal
-* We are  at position $\theta_{\text{current}}$. 
+
+
+*  The possible  moves and the probability of proposing each constitute the *proposal distribution*. 
 
 \bigskip
 
-
-* We randomly propose to move right (50\%) or left (50\%). 
-
-\bigskip
-
-*  The possible  moves and the probability of proposing each is the *proposal distribution*. 
-
-\bigskip
-
-* Our proposal distribution has only two values (left and right) with 50-50 probabilities.
+* Our proposal distribution has only two values (left and right) with  probability 0.5 each.
 
 # Accepting the proposal
-* If the target distribution is greater at the proposed position,  we  accept the proposed move. 
-  * we always move higher if we can.
+* If the target distribution is greater at the proposed position,  we  accept the proposal: *we always move higher if we can*.
 
 \bigskip
 *  If the target distribution is less at the proposed position than at our current position, we accept the move with probability:
 
-$$p_{\text{move}} = \frac{p_{\text{proposed}}}{p_{\text{current}}}$$ 
+$$p_{\text{move}} = \frac{\text{pop}_{\text{proposed}}}{\text{pop}_{\text{current}}}$$ 
 
 \bigskip
-* We move to the proposed position with probability:
-$$ p_{\text{move}} = min \left(  \frac {p(\theta_{\text{proposed}})} {p(\theta_{\text{current}})}, 1 \right) $$
+* More in general, we move to the proposed position with probability:
+
+$$ p_{\text{move}} = min \left(  \frac {f(\theta_{\text{proposed}})} {f(\theta_{\text{current}})}, 1 \right) $$
+
+where $f(\theta)$ is the unnormalized posterior  (see later).
 
 # We use the *unnormalized* posterior
 
 * The algorithm evaluates the ratio 
-$\frac{p(\theta_{\text{proposed}})}{p(\theta_{\text{current}})}$,
+$\frac{f(\theta_{\text{proposed}})}{f(\theta_{\text{current}})}$,
 without computing the normalizing constant (i.e., the denominator) of Bayes rule. 
 
 \bigskip
 
 * It does not require the 
- absolute value of $p(\theta|D)$, but only the ratio between the density in different locations.
+ absolute value of $f(\theta|D)$, but only the ratio between the density in different locations.
 
 \bigskip
 
-* We  sample from $p(\theta)p(D|\theta)$ without normalizing  by the (often) untractable marginal likelihood $p(D)$.
+* We  sample from $f(\theta)f(D|\theta)$ without normalizing  by the (often) untractable marginal likelihood $p(D)$.
  
  \bigskip
  
 * In the example of  islands-hopping, the target distribution was the unnormalized population of each island, not a normalized probability.
 
-
-# Discussion
-* We want to sample from  a target distribution.
-
-\bigskip
-
-* This is usually the unnormalized posterior distribution of $\theta$, $p(\theta)p(D|\theta)$.
-
-\bigskip
-
-* Extensions for continuous values (see the following).
-
-\bigskip
-
-* Extensions for any number of dimensions (not covered).
 
 # Random walk
 * The samples from the posterior are generated by  a *random walk*
@@ -194,11 +210,11 @@ without computing the normalizing constant (i.e., the denominator) of Bayes rule
 \bigskip
 
 * We accept the  move  with probability 
-$$ p_{\text{move}} = min \left(  \frac {p(\theta_{\text{proposed}})} {p(\theta_{\text{current}})}, 1 \right) $$
+$$ p_{\text{move}} = min \left(  \frac {f(\theta_{\text{proposed}})} {f(\theta_{\text{current}})}, 1 \right) $$
 
-#  Metropolis algorithm applied to Bernoulli likelihood and beta prior
+#  Metropolis algorithm applied to the beta-binomial model
 
-$p(\theta \mid D) \propto p(D \mid \theta) p(\theta) = \theta^{a+y} (1-\theta)^{b+n-y}$
+$f(\theta \mid D) \propto f(D \mid \theta) f(\theta) = \theta^{a+y-1} (1-\theta)^{b+n-y-1}$
 
 \bigskip
 *  $\theta$ is a continuous parameter 
@@ -215,9 +231,11 @@ $p(\theta \mid D) \propto p(D \mid \theta) p(\theta) = \theta^{a+y} (1-\theta)^{
 
 * Hence $\sigma$ controls how far $\theta_{\text{proposed}}$  can be from $\theta_{\text{current}}$.
 
-#  Sampling Bernoulli likelihood and beta prior
+#  Sampling the beta-binomial
 
-Start from $\theta_0$.
+Randomly draw the starting point  $\theta_0 \in (0,1)$.
+
+\bigskip
 
 At each iteration:
 
@@ -229,8 +247,8 @@ At each iteration:
 We move to $\theta_{\text{proposed}}$ with probability:
 
 \begin{align*}
-p & = \min \left( 1, \frac{P(\theta_{\text{proposed}} \mid D)}{P(\theta_{\text{current}} \mid D)}  \right) \\
-& = \min \left( 1, \frac{\theta_{proposed}^{a+y} (1-\theta_{proposed})^{b+n-y}}{\theta_{current}^{a+y} (1-\theta_{current})^{b+n-y}}  \right) 
+p & = \min \left( 1, \frac{f(\theta_{\text{proposed}} \mid D)}{f(\theta_{\text{current}} \mid D)}  \right) \\
+& = \min \left( 1, \frac{\theta_{\text{proposed}}^{a+y-1} (1-\theta_{\text{proposed}})^{b+n-y-1}}{\theta_{\text{current}}^{a+y-1} (1-\theta_{\text{current}})^{b+n-y-1}}  \right) 
 \end{align*}
 
 # Application 
@@ -238,7 +256,7 @@ p & = \min \left( 1, \frac{P(\theta_{\text{proposed}} \mid D)}{P(\theta_{\text{c
 
 \bigskip
 
-* The Bernoulli likelihood $\theta^{14} (1-\theta^{6})$ corresponding to 20 tosses and 14 tails.
+* The Bernoulli likelihood $\theta^{14} (1-\theta^{6})$ corresponds to 20 tosses and 14 tails.
 
 \bigskip
 
@@ -247,15 +265,29 @@ p & = \min \left( 1, \frac{P(\theta_{\text{proposed}} \mid D)}{P(\theta_{\text{c
 # Results
 ![Approximating an exact mathematical distribution by a large random sample of representative values](fig74.png)
 
-* The probability of accepting a jump is  $\frac{N_{\text{acc}}} {N_{\text{pro}}}$
+# Discussion
+
+* $\frac{N_{\text{acc}}} {N_{\text{pro}}}$ denotes the probability of accepting a proposal.
+
+\bigskip
 
 * It decreases when $\sigma$ gets larger.
 
-* Central column: smooth histogram. Yet, each step is correlated to the previous one. 
+\bigskip
 
-* These are not 50,000 independent samples of the posterior. 
+# Discussion
 
-* The *effective samples size* is  11723.9. This is the equivalent number of samples if they were sampled independently of each other (as the sampling is a sequential process, some auto-correlation in the samples is generally present).
+* The sequence of sampled values is called *trace*. The value of the trace are generally auto-correlated (i.e., the next sampled value is similar to the previous sampled value).
+
+\bigskip
+
+* Autocorrelation is stronger in the first column, medium in the second column, and strong again in third column.
+
+\bigskip
+
+* The *effective samples size* is  is the equivalent number of samples if they were sampled independently of each other (as the sampling is a sequential process, some auto-correlation in the samples is generally present).
+
+
 
 # Left column (small $\sigma$)
 
@@ -277,51 +309,42 @@ p & = \min \left( 1, \frac{P(\theta_{\text{proposed}} \mid D)}{P(\theta_{\text{c
 
 * The proposed jumps are often far away from the bulk of the posterior distribution; the proposals are often rejected.
 
-* The process accepts new values only occasionally, producing a very clumpy chain. 
+\bigskip
 
-* In the long run, the chain will explore the posterior distribution thoroughly and produce a good representation, but it will require a very long chain. 
+* The process rarely accepts new values, producing a  clumpy chain. 
+
+\bigskip
 
 * The effective size of this 50,000 step chain is only 2113.4.
 
-* An acceptance ratio of about 0.5 usually provides the best effective sample size.
+
+# Discussion
+
+* In no case we have 50,000 *independent* samples of the posterior. 
+
+\bigskip
+
+* The effective sample sizes are 468, 11723, 2113 in the three different scenarios.
+
+\bigskip
+
+* Tuning the width of the proposal distribution has a major impact on the effectivness of the sampling.
+
+\bigskip
+
+* In general good sampling is obtained when about 50% of the proposals is accepted (central column).
+
+\bigskip
 
 * Advanced implementations of the Metropolis algorithm  automatically  adjust the width of the proposal distribution.
 
-# Possible exercise - 1
 
-* Tune a Uniform proposal model with half-width $w$ for a Metropolis algorithm.
+# Your turn 
 
-\bigskip
-
-* Draw a trace plot for a tour where the Uniform proposal model uses a very small $w$
+* Implement the island hopping algorithm
 
 \bigskip
 
-* Why is it problematic if w
-is too small, and hence defines the neighborhood around the current chain value too narrowly?
+* Check that your visits are proportional to the population of the islands.
 
 
-# Possible exercise - 2
-
-*Draw a trace plot for a tour where the Uniform proposal model uses a very large $w$. Why is it problematic if w
-is too large, and hence defines the neighborhood too widely?
-
-\bigskip
-
-* Draw a trace plot for a tour where the Uniform proposal model uses a w
-that is neither too small or too large.
-
-\bigskip
-
-* Describe how you would go about finding an appropriate half-width w for a Uniform proposal model.
-
-# Further exercises 
-
-* Implement the island hopping algorithm? 
-
-\bigskip
-
-* Replicate the experiment about sampling the posterior beta.
-
-\bigskip
-* Replicate the experiment with a non-conjugate prior (e.g.,m a triangular one).

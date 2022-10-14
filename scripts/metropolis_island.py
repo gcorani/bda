@@ -27,7 +27,7 @@ position[0] = start
 for i in range(1,samples):
     # proposal = right
     proposal = min(position[i-1]+1,7)
-    if  np.random.uniform()<0.5:
+    if  np.random.uniform()<0.5: #debug
         # proposal = left
         proposal = max(position[i-1]-1,1)
     position[i] = next_position(position[i-1],proposal)

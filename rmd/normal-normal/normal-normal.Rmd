@@ -309,6 +309,8 @@ $$
 
 https://www.bayesrulesbook.com/chapter-5.html#exercises-4
 
+* Compare the analytical posterior and the numerical posterior obtained via gridding (you create a grid of values of $\mu$, multiply prior and likelihood, and normalize). 
+
 #  Treating $\sigma$ as a parameter
 
 *  A more sophisticated approach is to treat $\sigma$ as a parameter.
@@ -621,6 +623,10 @@ plt.plot(mu, posterior, label='mu = %s\n sigma = %s' % ("{:.1f}".format(post_mea
 plt.legend(fontsize=12)
 plt.title('Posterior')
 ```
+
+
+
+
 
 # Code of the previous figure
 
