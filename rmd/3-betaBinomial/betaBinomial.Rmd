@@ -49,7 +49,7 @@ az.style.use('arviz-darkgrid')
 
 # The bias $\theta$ of a coin
 
--   A coin falls tails with probability $\theta \in (0,1)$ \bigskip
+-   A coin falls heads with probability $\theta \in (0,1)$ \bigskip
 
 -   $\theta$ is the *bias* of the coin
 
@@ -399,7 +399,10 @@ Given $\theta$, a single flip takes: \bigskip
 
 $$ P(y|\theta) = \binom{n}{y} \theta^y (1-\theta)^{n-y}$$
 
--   This is probability of the observing $y$ tails within $n$ flips, given the value of $\theta$.
+
+\bigskip
+
+*   This is probability of the observing $y$ heads within $n$ flips, given the value of $\theta$.
 
 
 # The binomial distribution - quiz
@@ -630,15 +633,15 @@ $$
 
 -   After first experiment: \bigskip
 
-    -   $f(\theta|D_1) = \text{Beta}(1+13,10+20)$ \bigskip
-    -   $E[\theta]= \frac{14}{44} = 0.32$ \bigskip
-    -   Thus Beta(14,30) becomes the prior before analyzing the data of the second experiment. \bigskip
+    -   $f(\theta|D_1) = \text{Beta}(1+13,10+7)$ \bigskip
+    -   $E[\theta]= \frac{14}{14+17} = 0.45$ \bigskip
+    -   Thus Beta(14,17) becomes the prior before analyzing the data of the second experiment. \bigskip
 
 # Sequential updating
 
 -   After second experiment:
-    -   Beta(14+20,30+40)
-    -   $E[\theta]= \frac{34}{104} = 0.33$ \bigskip
+    -   Beta(14+20,17+20)
+    -   $E[\theta]= \frac{34}{34+37} = 0.48$ \bigskip
 
 # Impact of the prior on the posterior
 
