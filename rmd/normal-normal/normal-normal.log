@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  13 OCT 2022 10:00
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  13 OCT 2022 13:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2463,7 +2463,7 @@ Requested font "[lmroman5-regular]:mapping=tex-text;" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regula
 r.otf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 758.
+(Font)              scaled to size 10.0pt on input line 766.
 Requested font "[Carlito-Italic.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;m
 apping=tex-text;" at 10.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2474,7 +2474,7 @@ Italic.ttf
 File: half_normal.png Graphic file (type bmp)
 <half_normal.png>
 
-Overfull \vbox (5.4878pt too high) detected at line 781
+Overfull \vbox (5.4878pt too high) detected at line 789
  []
 
 [22
@@ -2484,7 +2484,7 @@ File: normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic file (typ
 e pdf)
 <use normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 793--793
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 801--801
  [] 
  []
 
@@ -2509,7 +2509,7 @@ Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 9.30
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
 eCodePro-Bold.otf
 )
-Overfull \vbox (9.05531pt too high) detected at line 866
+Overfull \vbox (9.05531pt too high) detected at line 874
  []
 
 [25
@@ -2564,7 +2564,7 @@ Overfull \hbox (6.8126pt too wide) in paragraph at lines 23--23
  []
 
 )
-Overfull \vbox (5.547pt too high) detected at line 1048
+Overfull \vbox (5.547pt too high) detected at line 1056
  []
 
 [34
@@ -2595,7 +2595,7 @@ File: normal-normal_files/figure-beamer/unnamed-chunk-10-5.pdf Graphic file (ty
 pe pdf)
 <use normal-normal_files/figure-beamer/unnamed-chunk-10-5.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 1165--1165
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1173--1173
  [] 
  []
 
