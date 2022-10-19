@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  13 OCT 2022 13:27
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  18 OCT 2022 16:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2533,6 +2533,8 @@ Overfull \vbox (9.05531pt too high) detected at line 874
 
 ] [33
 
+] [34
+
 ]
 \openout4 = `normal-normal.vrb'.
 
@@ -2564,12 +2566,12 @@ Overfull \hbox (6.8126pt too wide) in paragraph at lines 23--23
  []
 
 )
-Overfull \vbox (5.547pt too high) detected at line 1056
+Overfull \vbox (5.547pt too high) detected at line 1090
  []
 
-[34
+[35
 
-] [35
+] [36
 
 ]
 \openout4 = `normal-normal.vrb'.
@@ -2583,28 +2585,23 @@ Overfull \hbox (6.8126pt too wide) in paragraph at lines 23--23
  [] 
  []
 
-) [36
+) [37
 
 ]
 \openout4 = `normal-normal.vrb'.
 
-(./normal-normal.vrb) [37
+(./normal-normal.vrb) [38
 
 ]
 File: normal-normal_files/figure-beamer/unnamed-chunk-10-5.pdf Graphic file (ty
 pe pdf)
 <use normal-normal_files/figure-beamer/unnamed-chunk-10-5.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 1173--1173
+Overfull \hbox (6.8126pt too wide) in paragraph at lines 1207--1207
  [] 
  []
 
-[38
-
-]
-\openout4 = `normal-normal.vrb'.
-
-(./normal-normal.vrb) [39
+[39
 
 ]
 \openout4 = `normal-normal.vrb'.
@@ -2615,6 +2612,11 @@ Overfull \hbox (6.8126pt too wide) in paragraph at lines 1173--1173
 \openout4 = `normal-normal.vrb'.
 
 (./normal-normal.vrb) [41
+
+]
+\openout4 = `normal-normal.vrb'.
+
+(./normal-normal.vrb) [42
 
 ]
 \tf@nav=\write6
@@ -2628,12 +2630,12 @@ Overfull \hbox (6.8126pt too wide) in paragraph at lines 1173--1173
 
 (./normal-normal.aux) ) 
 Here is how much of TeX's memory you used:
- 36767 strings out of 476919
- 769063 string characters out of 5821840
- 1264935 words of memory out of 5000000
- 55852 multiletter control sequences out of 15000+600000
+ 36769 strings out of 476919
+ 769079 string characters out of 5821840
+ 1264991 words of memory out of 5000000
+ 55854 multiletter control sequences out of 15000+600000
  445570 words of font info for 176 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,14n,140p,1814b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on normal-normal.pdf (41 pages).
+Output written on normal-normal.pdf (42 pages).

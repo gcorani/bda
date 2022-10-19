@@ -352,14 +352,12 @@ https://www.bayesrulesbook.com/chapter-5.html#exercises-4
 
 
 
-
-
 ```{r, echo=FALSE, out.width = '75%', fig.cap= "from wikipedia"}
 knitr::include_graphics("half_normal.png")
 ```
 
 
-# Effect of the scale parameter
+# Effect of the scale parameter $\xi$
 
 * The half-normal pdf is characterized by a scale parameter (the standard deviation of the underlying normal).
 
@@ -482,6 +480,21 @@ $$y  \sim \mathcal{N}(\mu, \sigma)$$
 \vec{y} & \sim N(\mu, \sigma) \\
 \end{align*}
 
+# Numerical exercise  
+
+* Compute the posterior distribution of the height model by using a bi-dimensional gridding.
+
+\bigskip
+
+* Assume to have collected two observations: 168 cm. and 178 cm. 
+
+\bigskip
+
+* Plot the posterior joint and the posterior marginals.
+
+\bigskip
+
+* Solution: see code on *icorsi*.
 
 # Solution of the likelihood exercise  
 
