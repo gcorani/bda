@@ -21,6 +21,7 @@ def next_position(current,proposal):
     return (next_vis)
 
 # sampling the islands
+
 pop = range(1,8)
 start = 3
 samples = 50000
