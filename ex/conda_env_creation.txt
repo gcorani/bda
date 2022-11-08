@@ -1,9 +1,7 @@
 # note: problems with python 3.10 and reticulate on windows
-conda install numpy scipy pandas matplotlib seaborn arviz
-pip install scikit-learn
-conda install jupyter
-conda install pymc3
-conda install rise
+conda create --name bda python=3.10
+conda install numpy scipy pandas matplotlib seaborn jupyter rise pymc3
+pip install arviz==0.12.1 scikit-learn graphviz
 
 # alternative installation, with new pymc (4.0). To be tested
 conda create --name bda4 -c conda-forge python=3.10
