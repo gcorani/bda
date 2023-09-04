@@ -574,7 +574,7 @@ The posterior probability of the coin which has landed tail to be the rigged one
 \\
 \end{align*}
 
-# Your turn
+# Your turn: Monty Python problem
 ```{r figurename, echo=FALSE, out.width = '45%'}
 knitr::include_graphics("Monty_open_door.png")
 ```
@@ -592,10 +592,101 @@ knitr::include_graphics("Monty_open_door.png")
 
 * He then says "Do you want to pick door No. 2?" Should you switch your choice?
 
-# Solution
+# Solutions
+##
 
-* TBD
+
+# Solutions of the Monty Python problem
+
+* The prior probability of each door having the car is uniform:
+$$ P(D_1) = P(D_2) = P(D_3) = 1/3 $$
+     
+   \bigskip
+
+
+* Let us assume you choose door 1 and the presenter open door 2.
+
+\bigskip
+
+* To update our prior beliefs, we need the conditional probabilities
+of opening door 2, given that the car is behind any given door:
+$$P(O_2 \mid D_1), P(O_2 \mid D_2), P(O_2 \mid D_3)$$.
+
+# Conditional probability
+
+* If the car is behind door 1, the presenter opens with equal probability $D_2$
+or $D_3$: 
+$$P(O_2 \mid D_1)=0.5$$
+
+\bigskip
+
+
+* If the car is behind door 2, the presenter will never open door 2: 
+$$P(O_2 \mid D_2)=0$$
+
+\bigskip
+
+* If the car is behind door 3, the presenter will surely open door 2: 
+$$P(O_2 \mid D_3)=1$$
 
      
-     
-     
+# Posterior probability of $D_1$
+
+\begin{align*}
+P(D_1 \mid O_2) & = \frac{P(D_1) P(O_2 \mid D_1)}{P(O_2)}\\
+\end{align*}
+
+\bigskip
+
+* The denominator is decomposed as:
+$$ P(O_2) =
+P(O_2 \mid D_1) P(D_1) + P(O_2 \mid D_2) P(D_2) + P(O_2 \mid D_3) P(D_3)
+$$
+
+\bigskip
+
+* The prior probabilities of all doors are the same and they cancel out:
+
+\begin{align*}
+P(D_1 \mid O_2) & = \frac{P(O_2 \mid D_1)}
+{P(O_2 \mid D_1) + P(O_2 \mid D_2)  + P(O_2 \mid D_3)}\\
+& = \frac{1/2}{3/2} = 1/3
+\end{align*}
+
+# Posterior probability of $D_3$
+* The posterior probability of $D_2$ is obviously 0 (it has been opened).
+
+\bigskip
+
+* The posterior probability of $D_2$ is thus 2/3, but let us compute it.
+
+\bigskip
+
+* Reusing previous computation we get:
+
+\bigskip
+
+\begin{align*}
+P(D_3 \mid O_2) & = \frac{P(O_2 \mid D_3)}
+{P(O_2 \mid D_1) + P(O_2 \mid D_2)  + P(O_2 \mid D_3)}\\
+& = \frac{1}{3/2} = 2/3
+\end{align*}
+
+# Conclusions
+
+* The optimal strategy is swapping doors as it has a 2/3 probability of  winning.
+
+\bigskip
+
+* In contrast, the probability of winning with the original door is 1/3.
+
+
+# Further considerations (from Kevin Murphy, Sec. 2.3.2)
+
+\bigskip
+
+* Consider a game is played with a million doors. The contestant chooses one door, then the game show host opens 999,998 doors in such a way as not to reveal the prize, leaving the contestant’s selected door and one other door closed. 
+
+\bigskip
+
+* The contestant may now stick or switch. Where do you think the prize is?

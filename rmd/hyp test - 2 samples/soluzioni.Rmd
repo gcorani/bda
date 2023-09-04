@@ -1,0 +1,91 @@
+# Soluzioni
+
+```{r, echo=FALSE, out.width = '85%', fig.align = 'center'}
+knitr::include_graphics("solution.jpg", )
+```
+
+# Esercizio: p - value
+
+
+* Il valore critico (quinto percentile) è $t_{0.05,23} = -1.71$ 
+
+\bigskip
+
+* Per 23 gradi di libertà, da tabella troviamo il decimo percentile $t_{0.1,23} = -t_{0.9,23} = -1.319$.
+
+\bigskip
+
+* La statistica (-1.67) è compresa fra il 5 ed il 10 percentile.
+
+\bigskip
+
+* Il p-value è calcolato integrando la distribuzione di $- \infty$ a -1.67. Concludiamo che $0.05 < \text{p-value} < 0.1$
+
+
+# Vendite a scaffale vs spazio dedicato
+
+\begin{align*}
+H_0 \; : \mu_{\text{dedicato}} \leq \mu_{\text{scaffale}} \\
+H_1 \; : \mu_{\text{dedicato}} > \mu_{\text{scaffale}}  \\
+\end{align*}
+
+```{r, echo=FALSE,}
+s_p    <- sqrt( (350 + 157)/2 )
+t_stat <- (72 - 50.3) / (s_p * sqrt((1/10+1/10)))
+```
+
+* $s_p$ = $\sqrt{ (350 + 157)/2 }$ = `r round(s_p,2)`
+
+\bigskip
+
+* statistica $t$ = $\frac{72 - 50.3}{s_p  \sqrt{(1/10+1/10)}}$
+= `r round(t_stat,2)`
+
+\bigskip
+
+* valore critico: $t_{0.95,18}$=`r round(qt(0.95,df=18),2)`
+
+\bigskip
+
+* Rifiutiamo $H_0$: le vendite medie con spazio dedicato sono significativamente superiori a quelle
+dello scaffale.
+
+# Tempi di parcheggio
+
+* L'intervallo di confidenza per il tempo medio di parcheggio è:
+
+$$ 1.21 \pm \frac{12.68}{\sqrt{14}} \cdot t_{0.95, 13} = [-4.79, 7.21 ]$$
+
+\bigskip
+
+* e quindi la differenza nei tempi di parcheggio non risulta statisticamente significativa.
+
+\bigskip
+
+* Una conclusione analoga si può ottenere calcolando la statistica (0.35) e verificando che ricade all'interno dei valori critici ($\pm$ 1.77).
+
+
+# Produzione di cuscinetti a sfera
+
+* Testiamo che dopo l'intervento il processo sia diventato meno difettoso:
+
+\begin{align*}
+H_0 \; &: \pi_1 \leq \pi_2  \\
+H_1 \; &:  \pi_1 > \pi_2  \\
+\end{align*}
+
+# Produzione di cuscinetti a sfera
+
+\begin{align*}
+\bar{p} & = \frac{8 + 12}{85 + 85} = 0.118 \\
+Z &= \frac{12/85 - 8/85}{\sqrt{.118 (1- .118) \cdot (\frac{1}{85}+\frac{1}{85})}} =  0.95\\
+\text{valore critico: } & \Phi^{-1}(1-\alpha) = \Phi^{-1}(0.95) = 1.64 \\
+\text{p-value}: & 1-\Phi(Z) = 1-\Phi(0.95) = 0.18 \\
+\end{align*}
+
+\bigskip
+
+* Il test non rifiuta $H_0$
+
+
+

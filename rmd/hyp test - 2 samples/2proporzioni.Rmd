@@ -1,0 +1,166 @@
+#
+## Confronto fra due proporzioni
+
+# Confronto fra due proporzioni
+
+
+* Vogliamo confrontare i parametri $\pi_1$ e $\pi_2$ che caratterizzano due distribuzioni binomiali.
+
+\bigskip 
+
+* Il test si basa su una approssimazione per campioni ampi per i quali $p_1 = \frac{X_1}{n_1}$ e  $p_1 = \frac{X_2}{n_2}$ sono normalmente distribuite.
+
+\bigskip 
+
+* Entrambi i campioni devono contenere almeno 5 successi e 5 insuccessi.
+
+\bigskip 
+
+* Questo permette di applicare l'approssimazione normale alla binomiale per entrambe le popolazioni. 
+
+# Confronto fra due proporzioni
+
+* Abbiamo estratto due campioni di dimensione $n_1$ e $n_2$ dalle due popolazioni, il cui  numero di successi è rispettivamente $X_1$ e $X_2$. 
+
+\bigskip
+
+* Il test di uguaglianza a due code è:
+
+\begin{align*}
+H_0 \; & : \pi_1 = \pi_2 \\
+H_1 \; & : \pi_1 \neq \pi_2
+\end{align*}
+
+# Statistica del test
+
+
+\begin{align*}
+Z & = \frac{(p_1 - p_2)}{\sqrt{\bar{p}(1-\bar{p}) \left( \frac{1}{n_1} + \frac{1}{n_2} \right)}} \\
+\\
+& \text{dove :}\\
+\\
+\bar{p} & = \frac{X_1 + X_2}{n_1 + n_2}\\
+\end{align*}
+
+
+* Sotto $H_0$ la statistica si distribuisce come una $N(0,1)$.
+
+\bigskip
+
+* Nel caso di test a una coda, la statistica rimane identica ma cambia la regione di rifiuto.
+
+# Riassunto regioni di rifiuto
+
+|  $H_1$                    |             Regione di rifiuto            |       p-value       |   |
+|:-------------------------:|:-----------------------------------------:|:-------------------:|---|
+|     $\pi_1 \neq \pi_2$    | $z < z_{\alpha/2}$ e $z > z_{1-\alpha/2}$ | $2 (1-\Phi(|z|))$ |   |
+|      $\pi_1 > \pi_2$      |             $z > z_{1-\alpha}$            |     $1-\Phi(z)$     |   |
+|      $\pi_1 < \pi_2$      |              $z < z_{\alpha}$             |      $\Phi(z)$      |   |
+
+
+# Intervallo di confidenza di $\pi_1 - \pi_2$
+
+I valori plausibili di $\pi_1 - \pi_2$ sono contenuti nell'intervallo:
+\[
+p_1 - p_2 \pm z_{1-\alpha/2} \sqrt{ \frac{p_1 (1-p_1)}{n_1} + \frac{p_2 (1-p_2)}{n_2}}
+\]
+
+\bigskip 
+* In questo caso non c'è una perfetta corrispondenza tra CI e test a due code, perchè il test ed il CI stimano l'errore standard di $\pi_1 - \pi_2$ in modo (leggermente) diverso.
+
+# Esempio: valutare l'efficacia di un farmaco
+
+* Per valutare l'efficacia di un farmaco si svolge un *randomized trial*.
+
+\bigskip
+
+* In modo casuale ad alcuni pazienti viene somministrato il farmaco; ad altri il placebo.
+
+\bigskip
+
+* Alla fine del periodo di cura, è necessario analizzare se c'è una differenza statisticamente significativa fra i due gruppi.
+
+# Esempio: valutare l'efficacia di un farmaco
+
+* Il gruppo farmaco contiene 227 pazienti, di cui 163 guariti al termine del periodo.
+
+\bigskip
+
+* Il gruppo  placebo contiene 262 pazienti, di cui 154 guariti al termine del periodo.
+
+\bigskip
+
+* Il farmaco è significativamente più efficace del placebo?
+
+
+# Valutare l'efficacia di un farmaco
+
+* Entrambi i gruppi contengono almeno 5 successi e 5 insuccessi; possiamo quindi fare il test che usa l'approssimazione per campioni larghi.
+
+\bigskip
+
+* Vogliamo provare a dimostrare l'efficacia del farmaco, quindi facciamo il test:
+
+\begin{align*}
+H_0 \; : \pi_{\text{farmaco}} \leq \pi_{\text{placebo}}\\
+H_1 \; : \pi_{\text{farmaco}} > \pi_{\text{placebo}}\\
+\end{align*}
+
+* Vogliamo forte evidenza che il farmaco sia efficace, quindi usiamo $\alpha=0.01$.
+
+# Valutare l'efficacia di un farmaco
+
+* La regione di rifiuto del test contiene valori  *positivi* di $p_{\text{farmaco}} - p_{\text{placebo}}$ e quindi della statistica.
+
+\bigskip
+
+* Regione di rifiuto: $Z_0 > \Phi^{-1}({.99})$ = `r round(qnorm(.99),2)`
+
+# Valutare l'efficacia di un farmaco
+
+```{r, echo=FALSE, out.width = '85%', fig.align = 'center', warning=FALSE}
+
+n1 <- 227
+n2 <- 262
+p1 <- 163/n1
+p2 <- 154/n2
+p_bar  <- (163 + 154) / (n1 + n2)
+p_err <- sqrt ( (p_bar * (1 - p_bar)) * (1/n1 + 1/n2) )
+p_stat <- (p1 - p2) / p_err
+p_stat <- round(p_stat,2)
+p_val  <-  1 - pnorm(p_stat)
+```
+
+
+\bigskip 
+
+\begin{align*}
+p_{\text{farmaco}} & = 163/227 = 0.72 \\
+p_{\text{placebo}} & = 154/262 = 0.59 \\
+\bar{p} & = (163 + 154)/(227 + 262) = 0.65\\
+Z & = \frac{p_{\text{farmaco}} - p_{\text{placebo}}} 
+{\sqrt{ \bar{p} \cdot (1-\bar{p}) \cdot 1/n}} = 3.01 > 2.33\\
+\text{p-value} & = 1-\Phi(3.01) = 0.0013
+\end{align*}
+
+
+\bigskip
+* La statistica è in regione di rifiuto.
+* Il p-value è un ordine di grandezza più piccolo di $\alpha$
+
+
+# Esercizio
+
+* Un processo produce cuscinetti per l'albero motore.
+
+\bigskip
+
+* Si preleva un campione di 85 cuscinetti, che risulta contenere 12 non-conformi.
+
+\bigskip
+
+* Il processo produttivo viene quindi rivisto. Si preleva un nuovo campione di 85 cuscinetti, che risulta contenere 8 non-conformi.
+
+\bigskip
+
+* Possiamo concludere con confidenza del 95% che la frazione di non-conformi è significativamente decresciuta?

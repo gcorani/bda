@@ -20,11 +20,13 @@ import matplotlib.pyplot as plt
 #to keep the computation fast, we use only 80 points.
 mu_len = 80
 mu = np.linspace(145, 205, mu_len)
+mu_step = mu[1]-mu[0]
 
 #the sigma has a broad range (see slides: 75% pctile is 40; max is 128 and we use more points)
 #the value of 0 is not feasible.
 #we would better have a non-uniform grid
 sigma = np.linspace(0.01, 100, 120)
+sigma_step = sigma[1]-sigma[0]
 
 post_density = np.zeros( ( len(mu),len(sigma) ) ) 
 
@@ -45,8 +47,15 @@ for row, current_mu in enumerate(mu):
 
 #numbers are small and numerically problem can arise. 
 #use the log to have a more robust computation
+#see the labs, which cover log-probability 
 
-post_density = post_density/np.sum(post_density)
+#normalizing constant
+Z = np.sum(post_density * sigma_step * mu_step)
+
+#the post_density, integrated over sigma and mu sum up to 1.
+post_density = post_density/Z
+
+
 
 #for very small values of sigma, the posterior mean
 #equals the  mean of the data.
