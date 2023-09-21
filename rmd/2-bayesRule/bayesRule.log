@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  15 SEP 2023 16:00
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  21 SEP 2023 10:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2771,30 +2771,32 @@ Overfull \hbox (48.97386pt too wide) detected at line 989
 
 ] [49
 
+] [50
+
 ]
 File: Monty_open_door.png Graphic file (type bmp)
 <Monty_open_door.png>
-[50
-
-] [51
+[51
 
 ] [52
 
 ] [53
 
+] [54
+
 ]
-Overfull \hbox (9.92055pt too wide) detected at line 1239
+Overfull \hbox (9.92055pt too wide) detected at line 1283
 [][][][][] [] [][][][] [] [][][][][][][][] [] [][][][] [] [][][][][][][][] [] [
 ][][][] [] [][][][][][][][]
  []
 
-[54
-
-] [55
+[55
 
 ] [56
 
 ] [57
+
+] [58
 
 ]
 \tf@nav=\write5
@@ -2808,12 +2810,12 @@ Overfull \hbox (9.92055pt too wide) detected at line 1239
 
 (./bayesRule.aux) ) 
 Here is how much of TeX's memory you used:
- 37722 strings out of 476919
- 787673 string characters out of 5821840
- 1283683 words of memory out of 5000000
- 56824 multiletter control sequences out of 15000+600000
+ 37724 strings out of 476919
+ 787691 string characters out of 5821840
+ 1283739 words of memory out of 5000000
+ 56826 multiletter control sequences out of 15000+600000
  445626 words of font info for 183 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,15n,174p,1810b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on bayesRule.pdf (57 pages).
+Output written on bayesRule.pdf (58 pages).

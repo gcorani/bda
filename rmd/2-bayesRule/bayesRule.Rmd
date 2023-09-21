@@ -574,6 +574,26 @@ The posterior probability of the coin which has landed tail to be the rigged one
 \\
 \end{align*}
 
+# Your turn
+
+* Consider a slight modification of the previous setup.
+
+\bigskip
+
+* You pick a coin (either the rigged or the fair one) and you  toss it twice.
+
+\bigskip
+
+* The first toss is head; the posterior distribution of the coin being rigged is  as in the previous exercise: 1/3 fair, 2/3 rigged.
+
+\bigskip
+
+* Update this posterior with the outcome of the  second toss, which is tails.
+  * Which is the probability of the coin being rigged?
+
+
+
+
 # Your turn: Monty Python problem
 ```{r figurename, echo=FALSE, out.width = '45%'}
 knitr::include_graphics("Monty_open_door.png")
