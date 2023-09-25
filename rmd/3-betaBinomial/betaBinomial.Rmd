@@ -41,6 +41,12 @@ plt.rcParams.update({
 az.style.use('arviz-darkgrid')
 ```
 
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(cache=TRUE)
+```
+
+
 # References
 
 -   The Beta-Binomial model: Ch. 3 of `Bayes Rules! An Introduction to Applied Bayesian Modeling`
@@ -484,9 +490,9 @@ y | \theta & \sim \text{Bin}(n, \theta) \\
 
 ```{=tex}
 \begin{align*}
-\text{Bin}(y=6,\; n=10, \; \theta=0.6) & =
+p(y=6,\; n=10 \mid \theta=0.6) & =
 \binom{10}{6} 0.6^6 (0.4)^{4} = 0.35 \\
-\text{Bin}(y=6,\; n=10, \; \theta=0.3) & =
+p(y=6,\; n=10, \mid \theta=0.3) & =
 \binom{10}{6} 0.3^6 (0.7)^{4} = 0.037 \\
 \end{align*}
 ```
@@ -510,7 +516,7 @@ y | \theta & \sim \text{Bin}(n, \theta) \\
 
 # Binomial likelihood
 
-$$P(y \mid \theta) = \binom{n}{y} \theta^y (1 − \theta)^{1−y}$$
+$$p(y \mid \theta) = \binom{n}{y} \theta^y (1 − \theta)^{1−y}$$
 
 - It integrates to 1 if we keep $\theta$ fixed and we integrate over possible outcomes $y$. 
 
@@ -530,7 +536,7 @@ and let $P(y \mid \theta)$ vary with $\theta$.
 ```{=tex}
 \begin{align*}
 f(\theta) & \propto \theta^{a-1} (1-\theta)^{b-1} && \text{Beta prior}\\
-f(y \mid \theta) & \propto \theta^{y} (1-\theta)^{n-y} && \text{Binomial likelihood} \\
+p(y \mid \theta) & \propto \theta^{y} (1-\theta)^{n-y} && \text{Binomial likelihood} \\
 f(\theta \mid y) & \propto  \theta^{y+a-1} (1-\theta)^{n-y+b-1} && \text{Beta posterior}\\
 \end{align*}
 ```
