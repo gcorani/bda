@@ -129,6 +129,9 @@ ui-tests/playwright-report
 # VSCode
 .vscode
 
+# PyCharm
+.idea/*
+
 # R and RStudio
 .Rhistory
 scripts/R/spotify.csv
