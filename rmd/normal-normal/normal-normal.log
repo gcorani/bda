@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  18 OCT 2022 16:20
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  7 OCT 2023 11:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -733,40 +733,6 @@ LaTeX Info: Redefining \addtolength on input line 81.
 \pgfphysicalheight=\dimen286
 \pgfphysicalwidth=\dimen287
 \pgfpages@shipoutbox=\box73
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/lmodern.sty
-Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/unicode-math/unicode-math.sty (
 /usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2021-02-18 L3 programming layer (loader) 
@@ -829,7 +795,41 @@ LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
 \g__um_primekern_muskip=\muskip18
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/unicode-math/unicode-math-table.t
-ex)))
+ex))) (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/beamertheme-metropolis/beamerthem
 emetropolis.sty
 Package: beamerthememetropolis 2017/01/23 v1.2 Metropolis Beamer theme
@@ -944,13 +944,244 @@ Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
 )
 \c@fontsnotfound=\count360
 
-Package beamerthememetropolis Warning: Could not find Fira Sans fonts on input 
-line 95.
+Package fontspec Info: Fira Sans Light scale = 0.8489459548753585.
 
 
-Package beamerthememetropolis Warning: Could not find Fira Mono fonts on input 
-line 95.
+Package fontspec Info: Fira Sans Light scale = 0.8489459548753585.
 
+
+Package fontspec Info: Fira Sans Light scale = 0.8489459548753585.
+
+
+Package fontspec Info: Fira Sans scale = 0.842503424240982.
+
+
+Package fontspec Info: Fira Sans scale = 0.842503424240982.
+
+
+Package fontspec Info: Fira Sans Light Italic scale = 0.8489459548753585.
+
+
+Package fontspec Info: Fira Sans Light Italic scale = 0.8489459548753585.
+
+
+Package fontspec Info: Fira Sans Italic scale = 0.842503424240982.
+
+
+Package fontspec Info: Fira Sans Italic scale = 0.842503424240982.
+
+
+Package fontspec Info: Font family 'FiraSansLight(0)' created for font 'Fira
+(fontspec)             Sans Light' with options
+(fontspec)             [Scale=MatchLowercase,Ligatures=TeX,ItalicFont={Fira
+(fontspec)             Sans Light Italic},BoldFont={Fira
+(fontspec)             Sans},BoldItalicFont={Fira Sans Italic}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.8489459548753585]"Fira Sans
+(fontspec)             Light/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[0.8489459548753585]"Fira Sans
+(fontspec)             Light/OT:script=latn;language=dflt;+smcp;mapping=tex-tex
+t;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.842503424240982]"Fira
+(fontspec)             Sans/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[0.842503424240982]"Fira
+(fontspec)             Sans/OT:script=latn;language=dflt;+smcp;mapping=tex-text
+;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.8489459548753585]"Fira Sans Light
+(fontspec)             Italic/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[0.8489459548753585]"Fira Sans Light
+(fontspec)             Italic/OT:script=latn;language=dflt;+smcp;mapping=tex-te
+xt;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.842503424240982]"Fira Sans
+(fontspec)             Italic/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[0.842503424240982]"Fira Sans
+(fontspec)             Italic/OT:script=latn;language=dflt;+smcp;mapping=tex-te
+xt;"
+
+LaTeX Font Info:    Font shape `TU/FiraSansLight(0)/m/n' will be
+(Font)              scaled to size 9.29602pt on input line 95.
+
+Package fontspec Info: Fira Sans Light scale = 0.8489486192968059.
+
+
+Package fontspec Info: Fira Sans Light scale = 0.8489486192968059.
+
+
+Package fontspec Info: Fira Sans Light scale = 0.8489486192968059.
+
+
+Package fontspec Info: Fira Sans scale = 0.8425060684425124.
+
+
+Package fontspec Info: Fira Sans scale = 0.8425060684425124.
+
+
+Package fontspec Info: Fira Sans Light Italic scale = 0.8489486192968059.
+
+
+Package fontspec Info: Fira Sans Light Italic scale = 0.8489486192968059.
+
+
+Package fontspec Info: Fira Sans Italic scale = 0.8425060684425124.
+
+
+Package fontspec Info: Fira Sans Italic scale = 0.8425060684425124.
+
+
+Package fontspec Info: Font family 'FiraSansLight(1)' created for font 'Fira
+(fontspec)             Sans Light' with options
+(fontspec)             [Scale=MatchLowercase,ItalicFont={Fira Sans Light
+(fontspec)             Italic},BoldFont={Fira Sans},BoldItalicFont={Fira Sans
+(fontspec)             Italic}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.8489486192968059]"Fira Sans
+(fontspec)             Light/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[0.8489486192968059]"Fira Sans
+(fontspec)             Light/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.8425060684425124]"Fira
+(fontspec)             Sans/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[0.8425060684425124]"Fira
+(fontspec)             Sans/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[0.8489486192968059]"Fira Sans Light
+(fontspec)             Italic/OT:script=latn;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[0.8489486192968059]"Fira Sans Light
+(fontspec)             Italic/OT:script=latn;language=dflt;+smcp;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.8425060684425124]"Fira Sans
+(fontspec)             Italic/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[0.8425060684425124]"Fira Sans
+(fontspec)             Italic/OT:script=latn;language=dflt;+smcp;"
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/lmss/m/n --> TU/FiraSansLight(1)/m/n on input line 
+95.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/lmss/bx/n --> TU/FiraSansLight(1)/bx/n on input lin
+e 95.
+
+Package fontspec Info: Fira Mono scale = 0.8425060684425124.
+
+
+Package fontspec Info: Could not resolve font "Fira Mono Medium/I" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Fira Mono/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Fira Mono scale = 0.8425060684425124.
+
+
+Package fontspec Info: Fira Mono Medium scale = 0.8409095707619872.
+
+
+Package fontspec Info: Fira Mono/BI scale = 0.8409095707619872.
+
+
+Package fontspec Info: Font family 'FiraMono(0)' created for font 'Fira Mono'
+(fontspec)             with options
+(fontspec)             [Scale=MatchLowercase,WordSpace={1,0,0},HyphenChar=None,
+PunctuationSpace=WordSpace,BoldFont={Fira
+(fontspec)             Mono Medium}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.8425060684425124]"Fira
+(fontspec)             Mono/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.8409095707619872]"Fira Mono
+(fontspec)             Medium/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.8409095707619872]"Fira
+(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+(fontspec)             and font adjustment code:
+(fontspec)             \fontdimen 2\font =1\fontdimen 2\font \fontdimen 3\font
+(fontspec)             =0\fontdimen 3\font \fontdimen 4\font =0\fontdimen
+(fontspec)             4\font \fontdimen 7\font =0\fontdimen 2\font
+(fontspec)             \tex_hyphenchar:D \font =-1\scan_stop: 
+
+
+Package fontspec Info: Fira Mono scale = 0.8425060684425124.
+
+
+Package fontspec Info: Could not resolve font "Fira Mono Medium/I" (it
+(fontspec)             probably doesn't exist).
+
+
+Package fontspec Info: Could not resolve font "Fira Mono/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: Fira Mono scale = 0.8425060684425124.
+
+
+Package fontspec Info: Fira Mono Medium scale = 0.8409095707619872.
+
+
+Package fontspec Info: Fira Mono/BI scale = 0.8409095707619872.
+
+
+Package fontspec Info: Font family 'FiraMono(1)' created for font 'Fira Mono'
+(fontspec)             with options [Scale=MatchLowercase,BoldFont={Fira Mono
+(fontspec)             Medium}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[0.8425060684425124]"Fira
+(fontspec)             Mono/OT:script=latn;language=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
+(fontspec)             - 'bold' (b/n) with NFSS spec.:
+(fontspec)             <->s*[0.8409095707619872]"Fira Mono
+(fontspec)             Medium/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.:
+(fontspec)             <->s*[0.8409095707619872]"Fira
+(fontspec)             Mono/BI/OT:script=latn;language=dflt;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
+
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/lmtt/m/n --> TU/FiraMono(1)/m/n on input line 95.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/lmtt/m/n --> TU/FiraMono(1)/bx/n on input line 95.
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/upquote/upquote.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
@@ -1084,6 +1315,12 @@ lt;+lnum;+tnum;mapping=tex-text;"
 e=dflt;+lnum;+tnum;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
+LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 85.
+Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
+mapping=tex-text;" at 10.95pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Regular.ttf
 
 Package fontspec Info: Font family 'Carlito(1)' created for font 'Carlito'
 (fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
@@ -1111,16 +1348,6 @@ lt;+lnum;+tnum;mapping=tex-text;"
 e=dflt;+lnum;+tnum;mapping=tex-text;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/lmss/m/n --> TU/Carlito(1)/m/n on input line 85.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/lmss/bx/n --> TU/Carlito(1)/bx/n on input line 85.
-LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 85.
-Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
-mapping=tex-text;" at 10.95pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Regular.ttf
 
 Package fontspec Info: Font family 'Carlito(2)' created for font 'Carlito'
 (fontspec)             with options [Ligatures = TeX,Scale = 1,Extension =
@@ -1379,7 +1606,7 @@ File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 \arrowsize=\dimen331
 ))
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 13.0pt on input line 177.
+(Font)              scaled to size 13.0pt on input line 180.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 13.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -1484,12 +1711,6 @@ uage=dflt;"
 nguage=dflt;"
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/lmtt/m/n --> TU/SourceCodePro(1)/m/n on input line 
-121.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/lmtt/m/n --> TU/SourceCodePro(1)/bx/n on input line
- 121.
 Requested font "[SourceCodePro-Medium.otf]/OT" at 12.99997pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
 eCodePro-Medium.otf
@@ -1666,26 +1887,26 @@ Package: xurl 2020/12/30 v 0.09a modify URL breaks
 ) (./normal-normal.aux)
 \openout1 = `normal-normal.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 199.
-LaTeX Font Info:    ... okay on input line 199.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 202.
+LaTeX Font Info:    ... okay on input line 202.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1694,14 +1915,14 @@ LaTeX Font Info:    ... okay on input line 199.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(21.9pt, 320.39537pt, 21.9pt)
+* h-part:(L,W,R)=(18.59204pt, 327.01128pt, 18.59204pt)
 * v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
 * \paperwidth=364.19536pt
 * \paperheight=273.14662pt
-* \textwidth=320.39537pt
+* \textwidth=327.01128pt
 * \textheight=244.6939pt
-* \oddsidemargin=-50.37pt
-* \evensidemargin=-50.37pt
+* \oddsidemargin=-53.67795pt
+* \evensidemargin=-53.67795pt
 * \topmargin=-72.26999pt
 * \headheight=14.22636pt
 * \headsep=0.0pt
@@ -1720,7 +1941,7 @@ LaTeX Font Info:    ... okay on input line 199.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 199.
+Package hyperref Info: Link coloring OFF on input line 202.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1732,9 +1953,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count393
 )
-LaTeX Info: Redefining \ref on input line 199.
-LaTeX Info: Redefining \pageref on input line 199.
-LaTeX Info: Redefining \nameref on input line 199.
+LaTeX Info: Redefining \ref on input line 202.
+LaTeX Info: Redefining \pageref on input line 202.
+LaTeX Info: Redefining \nameref on input line 202.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dicti
 onary-English.dict
@@ -1761,11 +1982,11 @@ tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 199.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 202.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 199.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 202.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 199.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 202.
 Requested font "[latinmodern-math.otf]/OT" at 10.94997pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
@@ -1820,16 +2041,16 @@ Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 199.
+(Font)              `operators' in the math version `normal' on input line 202.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 199.
+ line 202.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 199.
+(Font)              `operators' in the math version `bold' on input line 202.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 199.
+t line 202.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -1900,15 +2121,15 @@ uage=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 199.
+(Font)              `symbols' in the math version `normal' on input line 202.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 199.
+t line 202.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 199.
+(Font)              `symbols' in the math version `bold' on input line 202.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 199.
+t line 202.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -1961,18 +2182,18 @@ uage=dflt;"
 (fontspec)             =6.56999pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 1
-99.
+(Font)              `largesymbols' in the math version `normal' on input line 2
+02.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 199.
+t line 202.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 199
+(Font)              `largesymbols' in the math version `bold' on input line 202
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 199.
-LaTeX Info: Redefining \microtypecontext on input line 199.
+t line 202.
+LaTeX Info: Redefining \microtypecontext on input line 202.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -1984,55 +2205,55 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 (./normal-normal.nav)
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 199.
+(Font)              scaled to size 6.0pt on input line 202.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 6.0pt on input line 199.
+(Font)              scaled to size 6.0pt on input line 202.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 199.
+(Font)              scaled to size 8.0pt on input line 202.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 8.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 20.0pt on input line 200.
+(Font)              scaled to size 20.0pt on input line 203.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 20.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 20.0pt on input line 200.
+(Font)              scaled to size 20.0pt on input line 203.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 20.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 26.0pt on input line 200.
+(Font)              scaled to size 26.0pt on input line 203.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 26.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 26.0pt on input line 200.
+(Font)              scaled to size 26.0pt on input line 203.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 26.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 4.0pt on input line 200.
+(Font)              scaled to size 4.0pt on input line 203.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 4.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 4.0pt on input line 200.
+(Font)              scaled to size 4.0pt on input line 203.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 4.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2041,25 +2262,25 @@ Regular.ttf
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 216.
+(Font)              scaled to size 10.95pt on input line 219.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 10.95pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 216.
+(Font)              scaled to size 10.95pt on input line 219.
 Requested font "[Carlito-Italic.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;m
 apping=tex-text;" at 10.95pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Italic.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 216.
+(Font)              scaled to size 10.0pt on input line 219.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 10.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 216.
+(Font)              scaled to size 10.0pt on input line 219.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 10.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2076,7 +2297,7 @@ t 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-16.
+19.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -2087,42 +2308,42 @@ Requested font "lmmi7" at 7.0pt
 Requested font "lmmi5" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.00107pt on input line 216.
+(Font)              scaled to size 10.00107pt on input line 219.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.001
 07pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.00075pt on input line 216.
+(Font)              scaled to size 7.00075pt on input line 219.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.00075pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.00053pt on input line 216.
+(Font)              scaled to size 5.00053pt on input line 219.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.00053pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 9.99893pt on input line 216.
+(Font)              scaled to size 9.99893pt on input line 219.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 9.9989
 3pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 6.99925pt on input line 216.
+(Font)              scaled to size 6.99925pt on input line 219.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 6.99925pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 4.99947pt on input line 216.
+(Font)              scaled to size 4.99947pt on input line 219.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 4.99947pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
-LaTeX Font Info:    Trying to load font information for U+msa on input line 216
+LaTeX Font Info:    Trying to load font information for U+msa on input line 219
 .
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -2139,7 +2360,7 @@ tfm
 Requested font "msam5" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.
 tfm
-LaTeX Font Info:    Trying to load font information for U+msb on input line 216
+LaTeX Font Info:    Trying to load font information for U+msb on input line 219
 .
 (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -2157,7 +2378,7 @@ Requested font "msbm5" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.
 tfm
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-16.
+19.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -2179,7 +2400,7 @@ Requested font "lmmib7" at 7.0pt
 Requested font "lmmib5" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib5.tfm
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-216.
+219.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -2190,13 +2411,13 @@ Requested font "lmbsy7" at 7.0pt
 Requested font "lmbsy5" at 5.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 216.
+(Font)              scaled to size 12.0pt on input line 219.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 12.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 216.
+(Font)              scaled to size 12.0pt on input line 219.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 12.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2219,37 +2440,37 @@ Requested font "lmmi8" at 7.665pt
 Requested font "lmmi5" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 235.
+(Font)              scaled to size 10.95116pt on input line 238.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.951
 16pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 235.
+(Font)              scaled to size 7.6658pt on input line 238.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.6658pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 235.
+(Font)              scaled to size 5.47559pt on input line 238.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.47559pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 235.
+(Font)              scaled to size 10.94882pt on input line 238.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.948
 82pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 235.
+(Font)              scaled to size 7.66417pt on input line 238.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.66417pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 235.
+(Font)              scaled to size 5.47441pt on input line 238.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.47441pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2329,37 +2550,37 @@ Requested font "lmmi8" at 8.0pt
 Requested font "lmmi6" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 287.
+(Font)              scaled to size 12.00128pt on input line 290.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 12.001
 28pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 287.
+(Font)              scaled to size 8.00085pt on input line 290.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 8.00085pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 287.
+(Font)              scaled to size 6.00064pt on input line 290.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 6.00064pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 287.
+(Font)              scaled to size 11.99872pt on input line 290.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 11.998
 72pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 287.
+(Font)              scaled to size 7.99915pt on input line 290.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.99915pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 287.
+(Font)              scaled to size 5.99936pt on input line 290.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.99936pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2411,19 +2632,19 @@ File: normal-tuning.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 7.665pt on input line 401.
+(Font)              scaled to size 7.665pt on input line 404.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 5.475pt on input line 401.
+(Font)              scaled to size 5.475pt on input line 404.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 
-Overfull \vbox (1.23337pt too high) detected at line 401
+Overfull \vbox (1.23337pt too high) detected at line 404
  []
 
 [8
@@ -2440,7 +2661,17 @@ Overfull \vbox (1.23337pt too high) detected at line 401
 
 ] [14
 
-] [15
+]
+Requested font "[lmroman10-regular]:mapping=tex-text;" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regul
+ar.otf
+Requested font "[lmroman7-regular]:mapping=tex-text;" at 7.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-regula
+r.otf
+Requested font "[lmroman5-regular]:mapping=tex-text;" at 5.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regula
+r.otf
+[15
 
 ] [16
 
@@ -2452,45 +2683,38 @@ Overfull \vbox (1.23337pt too high) detected at line 401
 
 ] [20
 
+] [21
+
 ]
-Requested font "[lmroman10-regular]:mapping=tex-text;" at 10.0pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman10-regul
-ar.otf
-Requested font "[lmroman7-regular]:mapping=tex-text;" at 7.0pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman7-regula
-r.otf
-Requested font "[lmroman5-regular]:mapping=tex-text;" at 5.0pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm/lmroman5-regula
-r.otf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 766.
+(Font)              scaled to size 10.0pt on input line 804.
 Requested font "[Carlito-Italic.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;m
 apping=tex-text;" at 10.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Italic.ttf
-[21
+[22
 
 ]
 File: half_normal.png Graphic file (type bmp)
 <half_normal.png>
 
-Overfull \vbox (5.4878pt too high) detected at line 789
+Overfull \vbox (8.27913pt too high) detected at line 827
  []
 
-[22
+[23
 
 ]
 File: normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic file (typ
 e pdf)
 <use normal-normal_files/figure-beamer/unnamed-chunk-3-1.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 801--801
+Overfull \hbox (0.1967pt too wide) in paragraph at lines 839--839
  [] 
  []
 
-[23
+[24
 
-] [24
+] [25
 
 ]
 \openout4 = `normal-normal.vrb'.
@@ -2509,12 +2733,10 @@ Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 9.30
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
 eCodePro-Bold.otf
 )
-Overfull \vbox (9.05531pt too high) detected at line 874
+Overfull \vbox (9.05531pt too high) detected at line 912
  []
 
-[25
-
-] [26
+[26
 
 ] [27
 
@@ -2522,18 +2744,22 @@ Overfull \vbox (9.05531pt too high) detected at line 874
 
 ] [29
 
+] [30
+
 ]
 \openout4 = `normal-normal.vrb'.
 
-(./normal-normal.vrb) [30
-
-] [31
+(./normal-normal.vrb) [31
 
 ] [32
 
 ] [33
 
 ] [34
+
+] [35
+
+] [36
 
 ]
 \openout4 = `normal-normal.vrb'.
@@ -2561,17 +2787,19 @@ File: normal-normal_files/figure-beamer/unnamed-chunk-6-3.pdf Graphic file (typ
 e pdf)
 <use normal-normal_files/figure-beamer/unnamed-chunk-6-3.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 23--23
+Overfull \hbox (0.1967pt too wide) in paragraph at lines 23--23
  [] 
  []
 
 )
-Overfull \vbox (5.547pt too high) detected at line 1090
+Overfull \vbox (5.547pt too high) detected at line 1135
  []
 
-[35
+[37
 
-] [36
+] [38
+
+] [39
 
 ]
 \openout4 = `normal-normal.vrb'.
@@ -2581,32 +2809,11 @@ File: normal-normal_files/figure-beamer/unnamed-chunk-8-3.pdf Graphic file (typ
 e pdf)
 <use normal-normal_files/figure-beamer/unnamed-chunk-8-3.pdf>
 
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 23--23
+Overfull \hbox (0.1967pt too wide) in paragraph at lines 23--23
  [] 
  []
 
-) [37
-
-]
-\openout4 = `normal-normal.vrb'.
-
-(./normal-normal.vrb) [38
-
-]
-File: normal-normal_files/figure-beamer/unnamed-chunk-10-5.pdf Graphic file (ty
-pe pdf)
-<use normal-normal_files/figure-beamer/unnamed-chunk-10-5.pdf>
-
-Overfull \hbox (6.8126pt too wide) in paragraph at lines 1207--1207
- [] 
- []
-
-[39
-
-]
-\openout4 = `normal-normal.vrb'.
-
-(./normal-normal.vrb) [40
+) [40
 
 ]
 \openout4 = `normal-normal.vrb'.
@@ -2614,9 +2821,30 @@ Overfull \hbox (6.8126pt too wide) in paragraph at lines 1207--1207
 (./normal-normal.vrb) [41
 
 ]
+File: normal-normal_files/figure-beamer/unnamed-chunk-10-5.pdf Graphic file (ty
+pe pdf)
+<use normal-normal_files/figure-beamer/unnamed-chunk-10-5.pdf>
+
+Overfull \hbox (0.1967pt too wide) in paragraph at lines 1286--1286
+ [] 
+ []
+
+[42
+
+]
 \openout4 = `normal-normal.vrb'.
 
-(./normal-normal.vrb) [42
+(./normal-normal.vrb) [43
+
+]
+\openout4 = `normal-normal.vrb'.
+
+(./normal-normal.vrb) [44
+
+]
+\openout4 = `normal-normal.vrb'.
+
+(./normal-normal.vrb) [45
 
 ]
 \tf@nav=\write6
@@ -2630,12 +2858,12 @@ Overfull \hbox (6.8126pt too wide) in paragraph at lines 1207--1207
 
 (./normal-normal.aux) ) 
 Here is how much of TeX's memory you used:
- 36769 strings out of 476919
- 769079 string characters out of 5821840
- 1264991 words of memory out of 5000000
- 55854 multiletter control sequences out of 15000+600000
- 445570 words of font info for 176 fonts, out of 8000000 for 9000
+ 36918 strings out of 476919
+ 773860 string characters out of 5821840
+ 1268047 words of memory out of 5000000
+ 55980 multiletter control sequences out of 15000+600000
+ 445722 words of font info for 195 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 131i,14n,140p,1814b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 131i,14n,174p,1814b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on normal-normal.pdf (42 pages).
+Output written on normal-normal.pdf (45 pages).

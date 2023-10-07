@@ -220,6 +220,22 @@ $$
 
 * Later we will treat also $\sigma$ as a parameter. 
 
+
+# The Normal-Normal  model
+
+In the hyppocampus example, the normal-normal model is:
+
+\bigskip 
+
+\begin{align*}
+\mu & \sim N(6.5, 0.05) \\
+\vec{y} & \sim N(\mu, 0.25) \\
+\end{align*}
+
+\bigskip 
+* The only parameter of this model is $\mu$.
+
+
 # Your turn: normal likelihood functions
 
 * For a Normal random sample $y_i \sim N(μ,σ)$ with $\sigma$=10 we observe:  
@@ -227,8 +243,10 @@ $$
 $$y_1,y_2,y_3=(−4.3, 0.7, −19.4)$$ 
 
 
+\bigskip 
 * Specify and plot the corresponding likelihood function of $\mu$.
-
+  * Hint: define a range for the  values of $\mu$ and make it a grid of e.g. 100 points 
+  * Compute the likelihood for each point of the grid.
 
 
 # Conjugacy of the normal-normal model
@@ -273,6 +291,10 @@ $$
 * The normal-normal is a *conjugate* model, since the posterior density is normal like the prior.
 
 # Your turn
+
+With reference to the hyppocampus model:
+
+\bigskip
 
 *  Which is the posterior mean,  if we did  5 measures with $\bar{y}=6.7$?
 
@@ -496,6 +518,10 @@ $$y  \sim \mathcal{N}(\mu, \sigma)$$
 
 * Solution: see code on *icorsi*.
 
+# Solutions
+##
+
+
 # Solution of the likelihood exercise  
 
 * Compute the likelihood as a function of $\mu$ for a normal  sample  with $\sigma$=10, given the observations:  
@@ -539,6 +565,27 @@ plt.plot(mu, lik)
 \bigskip
 
 * You will see how do this in the labs.
+
+# Posterior mean for the hyppocampus model
+
+\begin{align*}
+\mu|\vec{y} \; & \sim \;  N\bigg(\mu'
+\underbrace{\frac{\sigma^2}{n\sigma_{\mu}^2+\sigma^2}}_{w} + \bar{y}
+\underbrace{\frac{n\sigma_{\mu}^2}{n\sigma_{\mu}^2+\sigma^2}}_{1-w}, \; \frac{\sigma_{\mu}^2\sigma^2}{n\sigma_{\mu}^2+\sigma^2}\bigg) \\
+\\
+& \mu' = 6.5 \;\; \sigma_{\mu} = 0.05; \sigma = 0.25
+\end{align*}
+
+* For $n$=5, we get $w$=0.833 and  posterior mean 6.53.
+
+\bigskip
+
+* For $n$=35, we get $w$=0.416 and  posterior mean 6.61.
+
+\bigskip
+
+* When we have more data, the posterior mean is closer to the sample mean.
+
 
 # Solution of exercises 5.9 and 5.10 
 
