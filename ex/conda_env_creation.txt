@@ -1,5 +1,6 @@
 # Rise currently needs notebook < 7
 conda create -c conda-forge -n bda "pymc>=5"
+# conda create -c conda-forge -n pymc_env "pymc>=5" "libblas=*=*accelerate" (mac, see https://discourse.pymc.io/t/installation-issues-v5-9-macos/13094/3)
 conda activate bda
 conda install -c conda-forge "notebook<7"
 conda install -c conda-forge rise
