@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Mon May  2 20:47:09 2022
-
-@author: giorgio
-"""
 import numpy as np
 import pandas as pd
 from scipy.stats import norm
@@ -27,25 +22,25 @@ mu_step = mu[1]-mu[0]
 #we would better have a non-uniform grid
 sigma = np.linspace(0.01, 100, 120)
 sigma_step = sigma[1]-sigma[0]
-
 post_density = np.zeros( ( len(mu),len(sigma) ) ) 
 
 #we could vectorize the code. But here we aim at clarity.
+# we assume the priors p(mu) and p(sigma) to be independent 
 for row, current_mu in enumerate(mu):
+  mu_prior = norm.pdf(current_mu, loc=175, scale=5)
   for col, current_sigma in enumerate(sigma):
-    #prior: prior(current_mu) * density(current_sigma)
-    # we assume the priors p(mu) and p(sigma) to be independent
-    prior = norm.pdf(current_mu, loc=175, scale=5)
-    prior = prior * halfnorm.pdf(current_sigma, scale=35)
-    
+    sigma_prior = halfnorm.pdf(current_sigma, scale=35)
+    prior   = mu_prior * sigma_prior
+
     #assuming independence of the y_i, the lik terms multiply
     lik   = norm.pdf(168, loc=current_mu, scale=current_sigma)
     lik   = lik * norm.pdf(178, loc=current_mu, scale=current_sigma)
-    
+
     #unnormalized density
     post_density[row,col] = prior * lik
 
-#numbers are small and numerically problem can arise. 
+
+
 #use the log to have a more robust computation
 #see the labs, which cover log-probability 
 
@@ -76,6 +71,7 @@ plt.subplot(1, 2, 1)
 post_mu = np.nansum(post_density, axis=1)
 plt.plot(mu,post_mu)
 plt.title("Post mean")
+plt.show()
 
 #posterior marginal of sigma
 post_sigma = np.sum(post_density, axis=0)
