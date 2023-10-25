@@ -18,31 +18,36 @@ fontsize: 13pt
 # Credits
 * J. Krushke, "Doing Bayesian Data Analysis", Chapter 7
 
-
+<!-- for very strange reason, this is needed to compile the first math eq  -->
+\sbox0{$x$}
 
 # Bayes' rule
 
-* We denote the prior by $f(\theta)$,   the data by $D$,
-the likelihood by $f(D \mid \theta)$.
+* The computationally challenging part is  the denominator:
 
-\bigskip
-
-* The computationally challenging part  of Bayes’ rule is  the denominator:
 
 \begin{align*}
 f(\theta \mid D) =
-\frac{f(\theta) f(D \mid \theta)}{\underbrace{f(D)}_{\text{marg lik}}}
- =
-\frac{p(\theta) p(D \mid \theta)}{\int p(\theta) p(D \mid \theta) d\theta}
+\frac{
+\underbrace{f(\theta)}_{\text{prior}} 
+\underbrace{\mathcal{L}(D \mid \theta)}_{\text{likelihood}}
+}
+{
+{\underbrace{f(D)}_{\text{marg lik}}}
+}
 \end{align*}
 
 \bigskip
 
-* In the conjugate case, we have an analytical expression of $f(\theta \mid D)$.
+* where $D$ denotes the observed data and 
 
-# Non-conjugate likelihood
+$$f(D) = \int f(D, \theta) d\theta = \int f(\theta) \mathcal{L}(D \mid \theta) d\theta$$
 
-* Generally the likelihood is **not**  conjugate to the prior.
+# Bayes' rule
+
+\bigskip
+
+* In the conjugate case, we have an analytical expression of $f(\theta \mid D)$ but generally the likelihood is **not**  conjugate to the prior.
 
 \bigskip
 
@@ -233,7 +238,7 @@ $f(\theta \mid D) \propto f(D \mid \theta) f(\theta) = \theta^{a+y-1} (1-\theta)
 
 #  Sampling the beta-binomial
 
-Randomly draw the starting point  $\theta_0 \in (0,1)$.
+* Draw the starting point  $\theta_0 \in (0,1)$.
 
 \bigskip
 
@@ -241,6 +246,16 @@ At each iteration:
 
 * Draw $\Delta \theta \sim N(0, \sigma)$
 * $\theta_{\text{proposed}} = \theta_{\text{current}} + \Delta \theta$
+
+\bigskip
+* Make sure the $\theta_{\text{proposed}}$ is within the feasible interval; the density is only  defined in the open interval (0,1).
+
+\begin{align*}
+\theta_{\text{proposed}} & = \text{min} (\theta_{\text{proposed}}, 0.9999) \\
+\theta_{\text{proposed}} & = \text{max} (\theta_{\text{proposed}}, 0.0001) 
+\end{align*}
+
+
 
 # Probability of the move
 
@@ -341,10 +356,12 @@ p & = \min \left( 1, \frac{f(\theta_{\text{proposed}} \mid D)}{f(\theta_{\text{c
 
 # Your turn 
 
-* Implement the island hopping algorithm
+You can choose between two implementation tasks: 
+\bigskip
+
+* Implement the island hopping algorithm and check that your visits are proportional to the population of the islands 
 
 \bigskip
 
-* Check that your visits are proportional to the population of the islands.
-
+* Implement the sampling of the posterior Beta and check that the mean of your samples is close to the actual posterior mean.
 
