@@ -28,7 +28,6 @@ library(reticulate)
 ```{python, echo=FALSE}
 import numpy as np
 import pandas as pd
-import arviz as az
 import scipy.stats as stats
 from scipy.stats import beta 
 from matplotlib import pyplot as plt
@@ -38,7 +37,6 @@ plt.rcParams.update({
     "text.usetex": True,
     "font.family": "sans-serif",
     "font.sans-serif": ["Helvetica"]})
-az.style.use('arviz-darkgrid')
 ```
 
 
@@ -278,7 +276,7 @@ knitr::include_graphics("beta-tuning-1.png")
 
 -   Increasing $a$ and $b$ decreases the variance.
 
-# $a$ and/or $b$ \textless 1: concave density
+# $a$ and/or $b$ \textless 1: convex density
 
 Consider $a$ = $b$ = 0.5
 \begin{align*}
