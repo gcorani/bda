@@ -1,0 +1,471 @@
+---
+title: "Hypothesis testing for two samples"
+author: "Giorgio Corani  - (IDSIA, SUPSI)"
+date: 'Bayesian Data Analysis and Probabilistic Programming'
+output:
+  beamer_presentation:
+    latex_engine: xelatex
+    fig_width: 7
+    fig_height: 3.5
+    highlight: tango
+    theme: metropolis
+    includes:
+      in_header: header.tex
+  slidy_presentation:
+    highlight: tango
+  ioslides_presentation:
+    highlight: tango
+fontsize: 13pt
+editor_options: 
+  markdown: 
+    wrap: sentence
+---
+
+
+
+```{r, include=FALSE, out.width="80%"}
+library(tidyverse)
+library(ggplot2)
+library(showtext)
+library(ggthemes)
+library(showtext)
+library(reshape2)
+library(kableExtra)
+library(latex2exp)
+```
+
+
+# TODO
+
+* in fondo: inserire analisi frequentista delle due proporzioni beauty and gender
+* nel notebook aggiungere analisi bayesiana dell'esempio 
+* discutere che analisi frequentista equivale a prior uniforme?
+* aggiungere anche posterior predictive check?
+
+# Credits
+
+*  The examples are mostly from D. P. Montgomery, *Introduction to Statistical Process Control*, 6th Edition, Wiley.
+
+\bigskip
+
+
+<!-- the line below is a piece of math which avoids compilation error -->
+<!-- the first math cannot be an align environment -->
+\sbox0{$x$}
+
+
+
+
+# How to compare two populations
+
+
+```{r, echo=FALSE, out.width = '85%', fig.align = 'center'}
+knitr::include_graphics("two-populations.pdf", )
+```
+
+
+\bigskip
+
+  * The first  population has mean $\mu_1$ and variance $\sigma^2_1$.
+  
+  \bigskip
+
+  * The second  population has mean  $\mu_2$ and variance $\sigma_2^2$. 
+
+
+# How to compare two populations
+
+```{r, echo=FALSE, out.width = '85%', fig.align = 'center'}
+knitr::include_graphics("two-populations.pdf", )
+```
+
+* The sample sizes are   $n_1$ e $n_2$.
+
+\bigskip
+
+* We assume the samples of the populations to be  *independent* from each other.
+
+
+# The assumption of equal variances  
+
+* We assume $\sigma_1^2 = \sigma_2^2$.
+
+\bigskip
+
+* This allows estimating $\sigma^2$ as a weighted average of $s_1^2$  e  $s_2^2$. This
+is generally more accurate than estimating the two variances independently.
+
+
+
+# Comparing the mean of two populations
+
+* The two-tailed test is:
+
+\bigskip
+
+\begin{align*}
+H_0 \; &: \mu_1 = \mu_2\\
+H_1 \; &: \mu_1 \neq \mu_2 \\
+\end{align*}
+
+
+
+# Comparing the mean of two populations
+ 
+ We have:
+
+\bigskip
+
+* $\bar{x}_1$ e $\bar{x}_2$: empirical means of the two samples
+
+\bigskip
+
+*  $s_1^2$ e  $s_2^2$: empirical variances of the two samples.
+
+# Sampling distribution of  $\bar{x}_1 - \bar{x}_2$
+
+* It is the distribution of $\bar{x}_1 - \bar{x}_2$  if we extract many times two samples of size $n_1$ e $n_2$   from the two populations.
+
+\bigskip 
+
+* Assuming
+
+  * $\sigma_1^2= \sigma_2^2 =\sigma^2$.
+
+  *  $n_1$ and $n_2$  \textgreater 15-20 (for the normality of $\bar{x}_1$ e $\bar{x}_2$):
+
+ $$ \bar{x}_1 - \bar{x}_2 \sim N \left(  \mu_1 - \mu_2, \sigma^2  \left( \frac{1}{n_1}  +  \frac{1}{n_2}  \right) \right)$$
+
+
+# Test statistic, assuming  $\sigma$ to be known
+
+* Given:
+
+ $$ \bar{x}_1 - \bar{x}_2 \sim N \left(  \mu_1 - \mu_2, \sigma^2  \left( \frac{1}{n_1}  +  \frac{1}{n_2}  \right) \right)$$
+
+\bigskip
+
+under $H_0$ we have:
+
+\begin{align*}
+ \frac{\bar{x}_1 - \bar{x}_2
+-  \overbrace{(\mu_1 - \mu_2)}^{\text{ipotizzato 0 in } H_0}}
+ {\sigma \sqrt{ \left( \frac{1}{n_1}  +  \frac{1}{n_2} \right) }} = 
+ \frac{\bar{x}_1 - \bar{x}_2}
+ {\sigma \sqrt{ \left( \frac{1}{n_1}  +  \frac{1}{n_2} \right) }} \sim N (0  , 1)
+\end{align*}
+
+
+\bigskip
+
+* Yet, $\sigma$ is. unknown and we cannot use this statistic.
+
+
+# $t$-test
+
+
+
+
+\bigskip
+
+* The  statistic of the  $t$ is:
+
+$$t = \frac{\bar{x}_1-\bar{x}_2} {s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}$$
+
+\bigskip
+
+* which follows a $t$ distribution with ($n_1 + n_2 - 2$) degrees of freedom. 
+
+* note that $s_p$ replaces $\sigma$ in the statistic
+
+
+
+# Pooled variance
+
+
+* In order to estimate  $\sigma^2$ we use a weighted average of   $s_1^2$ and $s_2^2$:
+
+\bigskip
+
+\begin{align*}
+s^2_P &  = \frac{(n_1-1)}{n_1 + n_2 -2} \cdot s_1^2 + \frac{ (n_2-1)}{n_1 + n_2 -2} \cdot s_2^2 \\
+s_P &  = \sqrt{s^2_P}
+\end{align*}
+
+\bigskip
+
+* $s^2_P$: *pooled* variance
+  * the weight are in practice proportional to the sample sizes (actually, they are proportional to the degrees of freedom).
+  * if $n_1 = n_2$, $s_p^2$ is the simple mean of  $s_1^2$ and  $s_2^2$.
+
+# The test  statistic
+
+$$t = \frac{\bar{x}_1-\bar{x}_2} {s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}$$
+
+\bigskip
+
+* $\bar{x}_1-\bar{x}_2$ is the sample estimate of $\mu_1 - \mu_2$.
+
+\bigskip
+
+* $s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}$   is the *standard error* of $\bar{x}_1-\bar{x}_2$,
+i.e., a measure of how the estimate $\bar{x}_1-\bar{x}_2$ is spread around the actual value of $\mu_1 - \mu_2$
+
+
+
+
+
+```{r child = 'regioni_rifiuto.Rmd'}
+```
+
+
+# Example:  comparing mean yields of catalysts 
+
+* Two catalysts are being compared: catalyst 1 is currently in use, but catalyst 2 is acceptable. 
+
+\bigskip
+
+* Catalyst 2 is cheaper: it should be adopted, providing it does not change the process yield. 
+
+\bigskip
+
+* An experiment is run in the pilot plant and results are in the next slide. Is there any difference between the mean yields?
+
+\bigskip
+
+* The two-tailed test is:
+
+\begin{align*}
+H_0: \; & \mu_1 = \mu_2 \\
+H_1: \; & \mu_1 \neq \mu_2 \\
+\end{align*}
+
+# Comparing mean yields of catalysts 
+
+
+\bigskip
+
+* $n_1 = n_2 = 8$
+* $\bar{x}_1$ = 92.25, $s_1$ =2.39
+* $\bar{x}_2$ = 92.73, $s_2$ =2.98
+
+
+* We adopt $\alpha$=0.05.
+
+# Comparing mean yields of catalysts 
+
+
+* Since $n_1 = n_2$, $s^2_p$ is the average of $s_1^2$ and $s_2^2$:
+
+\begin{align*}
+s^2_p &= \frac{7}{14} s_1^2 + \frac{7}{14} s_2^2 =\frac{2.39^2 + 2.98^2}{2} = 7.3 \\
+s_p &= \sqrt{s^2_p} = \sqrt{7.3} = 2.7
+\end{align*}
+
+
+
+
+# Statistic and  critical values
+
+\begin{align*}
+t_0 & = 
+\frac{\bar{x}_1-\bar{x}_2}{
+s_p     \sqrt{\frac{1}{n_1} + \frac{1}{n_2}}} \\
+\\
+& = 
+\frac{92.25 - 92.73}{2.7 \sqrt{\frac{1}{8} + \frac{1}{8}}} \\
+\\
+& = -0.35 \\
+\end{align*}
+
+* The critical values are $\pm t_{.975,14}=\pm 2.145$.
+
+
+
+# Decision
+
+* The statistic is in *non-rejection* region: we do not have strong evidence  that 
+the  mean yield of the two catalysts is different.
+
+
+\bigskip
+
+```{r echo=FALSE, out.width="90%", fig.align='center', warning=FALSE}
+library(ggplot2)
+library(ggthemes)
+library(latex2exp)
+
+tDistribution <- data.frame(
+  x = seq(-4,4, by = 0.01),
+  y = dt(seq(-4,4, by = 0.01), df=13)
+)
+
+critical <- qt(.975, df=13)
+
+shadeRight <- rbind(c(critical,0), subset(tDistribution, x > critical))
+shadeLeft <-  rbind(c(-critical,0), subset(tDistribution, x < -critical))
+
+
+ggplot(tDistribution, aes(x,y)) +
+  geom_line() +
+  geom_polygon(data = shadeRight, aes(x=x, y=y, fill="red")) +
+  geom_polygon(data = shadeLeft, aes(x=x, y=y, fill="red")) +
+  #remove legend
+  guides(fill="none") +
+  theme_economist() +
+  theme(text = element_text(size = 16)) +
+
+  #remove labels
+  ylab("") + xlab("") +
+
+  #remove y ticks
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank()) +
+
+  scale_x_continuous(breaks=c(-critical, -0.35, critical),
+                     labels = c(-2.145, -0.35, 2.145)) #+
+
+```
+
+# Confidence interval   (CI) of  $\mu_1 - \mu_2$
+
+* The CI contains the plausible values of $\mu_1-\mu_2$: 
+
+$$ \bar{x}_1 - \bar{x}_2 \pm t_{1-\alpha/2, n_1+n_2-2} \cdot s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}} $$
+
+\bigskip
+  
+* $t_{1-\alpha/2, n_1+n_2-2}$ :  quantile ($1-\alpha/2$) of the $t$ distributon with   ($n_1+n_2-2$) degrees of freedom; it is the critical value of the  test.
+
+\bigskip
+  
+* $s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}$ is the standard error of $(\bar{x}_1 - \bar{x}_2)$
+
+# CI vs hypothesis test
+
+
+* If the hypothesis $\mu_1=\mu_2$ is plausible given the data:
+  * the two-tailed test does not reject $H_0$  
+  * the CI contains 0.
+  
+\bigskip
+
+* If the hypothesis  $\mu_1=\mu_2$ is *not* plausible:
+  * the two-tailed test *rejects* $H_0$  
+  * the CI does not contain 0.
+
+# Confidence interval (CI)
+
+* The degrees of freedom are 8-1+8-1 = 14
+
+\bigskip
+
+\begin{align*}
+\bar{x}_1-\bar{x}_2 & \pm t_{.975,14} \cdot s_p \sqrt{\frac{1}{n_1}+\frac{1}{n_2}} \\
+(92.25 - 92.73) & \pm 2.145 \cdot 2.7 \sqrt{\frac{1}{8}+\frac{1}{8}} =
+(-3.38, 2.42)
+\end{align*}
+
+
+```{r, echo=FALSE, out.width = '85%', fig.align = 'center'}
+low <- (92.25 - 92.73) + 2.145 * 2.7 * sqrt(1/8 + 1/8) 
+up <- (92.25 - 92.73) - 2.145 * 2.7 * sqrt(1/8 + 1/8) 
+```
+
+\bigskip
+
+*  0 is a plausible value for $\mu_1-\mu_2$, as it is within the   CI.
+
+\bigskip
+
+* Indeed the test does not refuse $H_0$.
+
+
+# Example of one-tailed test
+
+*  A study reports the weight of calcium in standard cement and cement doped with lead, after a stress test.
+
+\bigskip
+
+* Reduced levels of calcium imply low  hydration in the cement, possibly allowing water to attack various  the cement structure.
+
+\bigskip
+
+
+* The dopes cement is more expensive, and we want evidence ($\alpha$=0.05) of its higher performance compared to  standard cement.
+
+
+#  One-tailed test
+
+* The alternative hypothesis $H_1$ is what we try to demonstrate (  *doped* cement has  higher performance).
+
+\bigskip
+
+\begin{align*}
+H_0: \; & \mu_{\text{standard}} \geq  \mu_{\text{doped}}\\
+H_1: \; & \mu_{\text{standard}} < \mu_{\text{doped}}\\
+\end{align*}
+
+
+
+# Data
+
+\begin{align*}
+n_{\text{standard}} = 10\\ 
+\bar{x}_{\text{standard}} = 87.0\\
+s_{\text{standard}} = 5.0\\
+\\
+n_{\text{doped}} = 15\\
+\bar{x}_{\text{doped}} = 90.0\\
+s_{\text{doped}} = 4.0
+\end{align*}
+
+
+# Test statistic
+
+
+\bigskip
+
+\begin{align*}
+s_P^2 & = \frac{9 \cdot (5)^2 + 14 \cdot (4)^2}{10+15-2} = 19.52 \\
+s_P & = \sqrt{19.52} = 4.4 \\
+\end{align*}
+
+\bigskip
+
+The statistic is:
+
+
+\begin{align*}
+t_0 & = 
+\frac{\bar{x}_{\text{standard}}-\bar{x}_{\text{doped}}}{
+s_p     \sqrt{\frac{1}{n_{\text{standard}}} + \frac{1}{n_{\text{doped}}}}} \\
+& = 
+\frac{87 - 90}{4.4 \sqrt{\frac{1}{10} + \frac{1}{15}}} = -1.67 \\
+\end{align*}
+
+
+
+
+#  Rejection region
+
+
+* If $\bar{x}_{\text{doped}} > \bar{x}_{\text{standard}}$, the statistic is negative and thus in favor of    $H_1$.
+
+\bigskip
+
+* The precise criterion is that we reject   $H_0$ if $t_0 < t_{0.05,23} = -1.71$.
+
+\bigskip
+
+* The statistic (-1.67) is in rejection region: there is no strong  evidence that  *doped* cement performs better than standard cement. 
+
+\bigskip
+
+```{r child = '2proportions.Rmd'}
+```
+ 
+
+```{r child = 'soluzioni.Rmd'}
+```
+

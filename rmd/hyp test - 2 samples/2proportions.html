@@ -11,7 +11,7 @@
 
 
 
-<title>2proporzioni.knit</title>
+<title>2proportions.knit</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -354,66 +354,70 @@ display: none;
 
 <div id="section" class="section level1">
 <h1></h1>
-<div id="confronto-fra-due-proporzioni" class="section level2">
-<h2>Confronto fra due proporzioni</h2>
+<div id="comparing-two-proportions" class="section level2">
+<h2>Comparing two proportions</h2>
 </div>
 </div>
-<div id="confronto-fra-due-proporzioni-1" class="section level1">
-<h1>Confronto fra due proporzioni</h1>
+<div id="hypothesis-test-for-two-proportions" class="section level1">
+<h1>Hypothesis test for two proportions</h1>
 <ul>
-<li>Vogliamo confrontare i parametri <span class="math inline">\(\pi_1\)</span> e <span class="math inline">\(\pi_2\)</span> che caratterizzano due
-distribuzioni binomiali.</li>
+<li>We want to check whether <span class="math inline">\(\pi_1\)</span>
+e <span class="math inline">\(\pi_2\)</span>, the proportion of
+successes in two populations, are significantly different.</li>
 </ul>
 <ul>
-<li>Il test si basa su una approssimazione per campioni ampi per i quali
-<span class="math inline">\(p_1 = \frac{X_1}{n_1}\)</span> e <span class="math inline">\(p_1 = \frac{X_2}{n_2}\)</span> sono normalmente
-distribuite.</li>
+<li>We observe the <em>sample</em> proportion of successes, <span class="math inline">\(p_1 = \frac{X_1}{n_1}\)</span> and <span class="math inline">\(p_2 = \frac{X_2}{n_2}\)</span>, while <span class="math inline">\(\pi_1\)</span> and <span class="math inline">\(\pi_2\)</span> cannot be observed.</li>
 </ul>
 <ul>
-<li>Entrambi i campioni devono contenere almeno 5 successi e 5
-insuccessi.</li>
+<li>The term success and failure refer to the outcome being 1 or 0.</li>
 </ul>
 <ul>
-<li>Questo permette di applicare l’approssimazione normale alla
-binomiale per entrambe le popolazioni.</li>
+<li>If both samples contains at least 5 successes and failures, then
+<span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span> are approximately normally
+distributed. We use this approximation in order to define the sampling
+distribution of the statistic.</li>
 </ul>
 </div>
-<div id="confronto-fra-due-proporzioni-2" class="section level1">
-<h1>Confronto fra due proporzioni</h1>
+<div id="comparing-two-proportions-1" class="section level1">
+<h1>Comparing two proportions</h1>
 <ul>
-<li>Abbiamo estratto due campioni di dimensione <span class="math inline">\(n_1\)</span> e <span class="math inline">\(n_2\)</span> dalle due popolazioni, il cui numero
-di successi è rispettivamente <span class="math inline">\(X_1\)</span> e
-<span class="math inline">\(X_2\)</span>.</li>
+<li>We have two samples of size <span class="math inline">\(n_1\)</span>
+e <span class="math inline">\(n_2\)</span>, containing <span class="math inline">\(X_1\)</span> and <span class="math inline">\(X_2\)</span> successes.</li>
 </ul>
 <ul>
-<li>Il test di uguaglianza a due code è:</li>
+<li>The two-tailed test is:</li>
 </ul>
 <p><span class="math display">\[\begin{align*}
 H_0 \; &amp; : \pi_1 = \pi_2 \\
 H_1 \; &amp; : \pi_1 \neq \pi_2
 \end{align*}\]</span></p>
 </div>
-<div id="statistica-del-test" class="section level1">
-<h1>Statistica del test</h1>
+<div id="the-test-statistic" class="section level1">
+<h1>The test statistic</h1>
 <p><span class="math display">\[\begin{align*}
 Z &amp; = \frac{(p_1 - p_2)}{\sqrt{\bar{p}(1-\bar{p}) \left(
 \frac{1}{n_1} + \frac{1}{n_2} \right)}} \\
-\\
-&amp; \text{dove :}\\
+&amp; \text{with :}\\
 \\
 \bar{p} &amp; = \frac{X_1 + X_2}{n_1 + n_2}\\
 \end{align*}\]</span></p>
 <ul>
-<li>Sotto <span class="math inline">\(H_0\)</span> la statistica si
-distribuisce come una <span class="math inline">\(N(0,1)\)</span>.</li>
-</ul>
-<ul>
-<li>Nel caso di test a una coda, la statistica rimane identica ma cambia
-la regione di rifiuto.</li>
+<li>Under <span class="math inline">\(H_0\)</span>, the statistic <span class="math inline">\(Z \sim N(0,1)\)</span></li>
 </ul>
 </div>
-<div id="riassunto-regioni-di-rifiuto" class="section level1">
-<h1>Riassunto regioni di rifiuto</h1>
+<div id="the-test-statistic-1" class="section level1">
+<h1>The test statistic</h1>
+<ul>
+<li>If we extract many times two samples of size <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> from two populations with <span class="math inline">\(\pi_1 = \pi_2\)</span> and compute the statistic,
+it will be different every time, following approximately a <span class="math inline">\(N(0,1)\)</span> distribution.</li>
+</ul>
+<ul>
+<li>It the test is one-tailed the statistics remains the same, but the
+rejection region changes.</li>
+</ul>
+</div>
+<div id="rejection-regions" class="section level1">
+<h1>Rejection regions</h1>
 <table>
 <colgroup>
 <col width="28%" />
@@ -424,7 +428,7 @@ la regione di rifiuto.</li>
 <thead>
 <tr class="header">
 <th align="center"><span class="math inline">\(H_1\)</span></th>
-<th align="center">Regione di rifiuto</th>
+<th align="center">Rejection region</th>
 <th align="center">p-value</th>
 <th></th>
 </tr>
@@ -459,18 +463,22 @@ z_{\alpha}\)</span></td>
 </tbody>
 </table>
 </div>
-<div id="intervallo-di-confidenza-di-pi_1---pi_2" class="section level1">
-<h1>Intervallo di confidenza di <span class="math inline">\(\pi_1 -
-\pi_2\)</span></h1>
-<p>I valori plausibili di <span class="math inline">\(\pi_1 -
-\pi_2\)</span> sono contenuti nell’intervallo: <span class="math display">\[
+<div id="ci-of-pi_1---pi_2" class="section level1">
+<h1>CI of <span class="math inline">\(\pi_1 - \pi_2\)</span></h1>
+<ul>
+<li><p>If we extract many times two samples of size <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> from two populations with <span class="math inline">\(\pi_1 = \pi_2\)</span> and compute the CI, it will
+contain the actual value of <span class="math inline">\(\pi_1 -
+\pi_2\)</span> in (<span class="math inline">\(1 - \alpha\)</span>) of
+the experiments.</p></li>
+<li><p>The CI is:</p></li>
+</ul>
+<p><span class="math display">\[
 p_1 - p_2 \pm z_{1-\alpha/2} \sqrt{ \frac{p_1 (1-p_1)}{n_1} + \frac{p_2
 (1-p_2)}{n_2}}
 \]</span></p>
 <ul>
-<li>In questo caso non c’è una perfetta corrispondenza tra CI e test a
-due code, perchè il test ed il CI stimano l’errore standard di <span class="math inline">\(\pi_1 - \pi_2\)</span> in modo (leggermente)
-diverso.</li>
+<li>The CI and the two-tailed test approximate differently the standard
+error and they might sometimes draw inconsistent conclusions.</li>
 </ul>
 </div>
 <div id="esempio-valutare-lefficacia-di-un-farmaco" class="section level1">
@@ -488,65 +496,60 @@ ad altri il placebo.</li>
 differenza statisticamente significativa fra i due gruppi.</li>
 </ul>
 </div>
-<div id="esempio-valutare-lefficacia-di-un-farmaco-1" class="section level1">
-<h1>Esempio: valutare l’efficacia di un farmaco</h1>
+<div id="example-assess-the-effect-of-a-process-innovation" class="section level1">
+<h1>Example: assess the effect of a process innovation</h1>
 <ul>
-<li>Il gruppo farmaco contiene 227 pazienti, di cui 163 guariti al
-termine del periodo.</li>
+<li>From a traditional production process we have 262 boards, of which
+154 without any defect.</li>
 </ul>
 <ul>
-<li>Il gruppo placebo contiene 262 pazienti, di cui 154 guariti al
-termine del periodo.</li>
+<li>From a innovative production process we have 227 boards, of which
+163 without any defect.</li>
 </ul>
 <ul>
-<li>Il farmaco è significativamente più efficace del placebo?</li>
+<li>Is the new process significantly more accurate than the previous
+one?</li>
 </ul>
 </div>
-<div id="valutare-lefficacia-di-un-farmaco" class="section level1">
-<h1>Valutare l’efficacia di un farmaco</h1>
+<div id="comparing-the-two-proportions" class="section level1">
+<h1>Comparing the two proportions</h1>
 <ul>
-<li>Entrambi i gruppi contengono almeno 5 successi e 5 insuccessi;
-possiamo quindi fare il test che usa l’approssimazione per campioni
-larghi.</li>
+<li>Both samples contain more than 5 successes and 5 failures; the
+normal approximation is sound.</li>
 </ul>
 <ul>
-<li>Vogliamo provare a dimostrare l’efficacia del farmaco, quindi
-facciamo il test:</li>
+<li>The test is:</li>
 </ul>
 <p><span class="math display">\[\begin{align*}
 H_0 \; : \pi_{\text{farmaco}} \leq \pi_{\text{placebo}}\\
 H_1 \; : \pi_{\text{farmaco}} &gt; \pi_{\text{placebo}}\\
 \end{align*}\]</span></p>
 <ul>
-<li>Vogliamo forte evidenza che il farmaco sia efficace, quindi usiamo
-<span class="math inline">\(\alpha=0.01\)</span>.</li>
+<li>and we use <span class="math inline">\(\alpha=0.01\)</span>.</li>
 </ul>
 </div>
-<div id="valutare-lefficacia-di-un-farmaco-1" class="section level1">
-<h1>Valutare l’efficacia di un farmaco</h1>
+<div id="comparing-the-two-proportions-1" class="section level1">
+<h1>Comparing the two proportions</h1>
 <ul>
-<li>La regione di rifiuto del test contiene valori <em>positivi</em> di
-<span class="math inline">\(p_{\text{farmaco}} -
-p_{\text{placebo}}\)</span> e quindi della statistica.</li>
+<li>The rejection region contains positive values of <span class="math inline">\(p_{\text{farmaco}} - p_{\text{placebo}}\)</span>
+and thus also of the statistic.</li>
 </ul>
 <ul>
-<li>Regione di rifiuto: <span class="math inline">\(Z_0 &gt;
+<li>Rejection region: <span class="math inline">\(Z_0 &gt;
 \Phi^{-1}({.99})\)</span> = 2.33</li>
 </ul>
 </div>
-<div id="valutare-lefficacia-di-un-farmaco-2" class="section level1">
-<h1>Valutare l’efficacia di un farmaco</h1>
+<div id="comparing-the-two-proportions-2" class="section level1">
+<h1>Comparing the two proportions</h1>
 <p><span class="math display">\[\begin{align*}
-p_{\text{farmaco}} &amp; = 163/227 = 0.72 \\
-p_{\text{placebo}} &amp; = 154/262 = 0.59 \\
+p_{\text{new}} &amp; = 163/227 = 0.72 \\
+p_{\text{old}} &amp; = 154/262 = 0.59 \\
 \bar{p} &amp; = (163 + 154)/(227 + 262) = 0.65\\
-Z &amp; = \frac{p_{\text{farmaco}} - p_{\text{placebo}}}
+Z &amp; = \frac{p_{\text{new}} - p_{\text{old}}}
 {\sqrt{ \bar{p} \cdot (1-\bar{p}) \cdot 1/n}} = 3.01 &gt; 2.33\\
-\text{p-value} &amp; = 1-\Phi(3.01) = 0.0013
 \end{align*}\]</span></p>
 <ul>
-<li>La statistica è in regione di rifiuto.</li>
-<li>Il p-value è un ordine di grandezza più piccolo di <span class="math inline">\(\alpha\)</span></li>
+<li>The statistic is in rejection region.</li>
 </ul>
 </div>
 <div id="esercizio" class="section level1">
