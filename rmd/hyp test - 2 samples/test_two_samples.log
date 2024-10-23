@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  23 OCT 2024 15:12
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  23 OCT 2024 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2779,9 +2779,9 @@ Regular.ttf
 ] [14
 
 ]
-File: test_two_samples_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic file 
+File: test_two_samples_files/figure-beamer/unnamed-chunk-12-1.pdf Graphic file 
 (type pdf)
-<use test_two_samples_files/figure-beamer/unnamed-chunk-13-1.pdf>
+<use test_two_samples_files/figure-beamer/unnamed-chunk-12-1.pdf>
 [15
 
 ]
@@ -2791,15 +2791,15 @@ Requested font "[Carlito-Italic.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;m
 apping=tex-text;" at 10.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Italic.ttf
-File: test_two_samples_files/figure-beamer/unnamed-chunk-14-1.pdf Graphic file 
+File: test_two_samples_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic file 
 (type pdf)
-<use test_two_samples_files/figure-beamer/unnamed-chunk-14-1.pdf>
+<use test_two_samples_files/figure-beamer/unnamed-chunk-13-1.pdf>
 [16
 
 ]
-File: test_two_samples_files/figure-beamer/unnamed-chunk-15-1.pdf Graphic file 
+File: test_two_samples_files/figure-beamer/unnamed-chunk-14-1.pdf Graphic file 
 (type pdf)
-<use test_two_samples_files/figure-beamer/unnamed-chunk-15-1.pdf>
+<use test_two_samples_files/figure-beamer/unnamed-chunk-14-1.pdf>
 [17
 
 ]
@@ -2866,20 +2866,15 @@ Overfull \vbox (12.43062pt too high) detected at line 817
 
 ] [43
 
-]
-File: solution.jpg Graphic file (type bmp)
-<solution.jpg>
-[44
+] [44
 
 ] [45
 
-] [46
+]
+Overfull \vbox (0.44762pt too high) detected at line 1225
+ []
 
-] [47
-
-] [48
-
-] [49
+[46
 
 ]
 \tf@nav=\write5
@@ -2893,12 +2888,12 @@ File: solution.jpg Graphic file (type bmp)
 
 (./test_two_samples.aux) ) 
 Here is how much of TeX's memory you used:
- 39053 strings out of 476919
- 808684 string characters out of 5821840
- 1312648 words of memory out of 5000000
+ 39047 strings out of 476919
+ 808841 string characters out of 5821840
+ 1312480 words of memory out of 5000000
  58092 multiletter control sequences out of 15000+600000
  445740 words of font info for 185 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,16n,174p,1817b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on test_two_samples.pdf (49 pages).
+Output written on test_two_samples.pdf (46 pages).

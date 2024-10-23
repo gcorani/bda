@@ -35,12 +35,6 @@ library(latex2exp)
 ```
 
 
-# TODO
-
-* in fondo: inserire analisi frequentista delle due proporzioni beauty and gender
-* nel notebook aggiungere analisi bayesiana dell'esempio 
-* discutere che analisi frequentista equivale a prior uniforme?
-* aggiungere anche posterior predictive check?
 
 # Credits
 
@@ -93,7 +87,7 @@ knitr::include_graphics("two-populations.pdf", )
 \bigskip
 
 * This allows estimating $\sigma^2$ as a weighted average of $s_1^2$  e  $s_2^2$. This
-is generally more accurate than estimating the two variances independently.
+is generally more accurate than estimating the two variances separately.
 
 
 
@@ -132,7 +126,7 @@ H_1 \; &: \mu_1 \neq \mu_2 \\
 
   * $\sigma_1^2= \sigma_2^2 =\sigma^2$.
 
-  *  $n_1$ and $n_2$  \textgreater 15-20 (for the normality of $\bar{x}_1$ e $\bar{x}_2$):
+  *  $n_1$ and $n_2$  \textgreater 10 (to have the normality of $\bar{x}_1$ e $\bar{x}_2$):
 
  $$ \bar{x}_1 - \bar{x}_2 \sim N \left(  \mu_1 - \mu_2, \sigma^2  \left( \frac{1}{n_1}  +  \frac{1}{n_2}  \right) \right)$$
 
@@ -158,7 +152,7 @@ under $H_0$ we have:
 
 \bigskip
 
-* Yet, $\sigma$ is. unknown and we cannot use this statistic.
+* Yet, $\sigma$ is unknown and we cannot use this statistic.
 
 
 # $t$-test
@@ -174,9 +168,11 @@ $$t = \frac{\bar{x}_1-\bar{x}_2} {s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}$$
 
 \bigskip
 
-* which follows a $t$ distribution with ($n_1 + n_2 - 2$) degrees of freedom. 
+* It follows a $t$ distribution with ($n_1 + n_2 - 2$) degrees of freedom. 
 
-* note that $s_p$ replaces $\sigma$ in the statistic
+\bigskip
+
+* $s_p$ replaces $\sigma$.
 
 
 
@@ -194,8 +190,8 @@ s_P &  = \sqrt{s^2_P}
 
 \bigskip
 
-* $s^2_P$: *pooled* variance
-  * the weight are in practice proportional to the sample sizes (actually, they are proportional to the degrees of freedom).
+* $s^2_P$: *pooled* variance:
+  * the weight are almost proportional to the sample sizes (actually, they are proportional to the degrees of freedom).
   * if $n_1 = n_2$, $s_p^2$ is the simple mean of  $s_1^2$ and  $s_2^2$.
 
 # The test  statistic
@@ -464,8 +460,3 @@ s_p     \sqrt{\frac{1}{n_{\text{standard}}} + \frac{1}{n_{\text{doped}}}}} \\
 
 ```{r child = '2proportions.Rmd'}
 ```
- 
-
-```{r child = 'soluzioni.Rmd'}
-```
-

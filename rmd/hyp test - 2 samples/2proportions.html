@@ -361,15 +361,22 @@ display: none;
 <div id="hypothesis-test-for-two-proportions" class="section level1">
 <h1>Hypothesis test for two proportions</h1>
 <ul>
-<li>We want to check whether <span class="math inline">\(\pi_1\)</span>
-e <span class="math inline">\(\pi_2\)</span>, the proportion of
-successes in two populations, are significantly different.</li>
-</ul>
-<ul>
-<li>We observe the <em>sample</em> proportion of successes, <span class="math inline">\(p_1 = \frac{X_1}{n_1}\)</span> and <span class="math inline">\(p_2 = \frac{X_2}{n_2}\)</span>, while <span class="math inline">\(\pi_1\)</span> and <span class="math inline">\(\pi_2\)</span> cannot be observed.</li>
+<li>We denote by <span class="math inline">\(\pi_1\)</span> e <span class="math inline">\(\pi_2\)</span> the proportion of successes in two
+populations.</li>
 </ul>
 <ul>
 <li>The term success and failure refer to the outcome being 1 or 0.</li>
+</ul>
+<ul>
+<li>We want to check whether <span class="math inline">\(\pi_1\)</span>
+e <span class="math inline">\(\pi_2\)</span> are significantly
+different.</li>
+</ul>
+<ul>
+<li><span class="math inline">\(\pi_1\)</span> e <span class="math inline">\(\pi_2\)</span> cannot be observed. We observe
+instead the <em>sample</em> proportions, <span class="math inline">\(p_1
+= \frac{X_1}{n_1}\)</span> and <span class="math inline">\(p_2 =
+\frac{X_2}{n_2}\)</span>.</li>
 </ul>
 <ul>
 <li>If both samples contains at least 5 successes and failures, then
@@ -402,7 +409,7 @@ Z &amp; = \frac{(p_1 - p_2)}{\sqrt{\bar{p}(1-\bar{p}) \left(
 \bar{p} &amp; = \frac{X_1 + X_2}{n_1 + n_2}\\
 \end{align*}\]</span></p>
 <ul>
-<li>Under <span class="math inline">\(H_0\)</span>, the statistic <span class="math inline">\(Z \sim N(0,1)\)</span></li>
+<li>Under <span class="math inline">\(H_0\)</span>, <span class="math inline">\(Z \sim N(0,1)\)</span>.</li>
 </ul>
 </div>
 <div id="the-test-statistic-1" class="section level1">
@@ -466,11 +473,13 @@ z_{\alpha}\)</span></td>
 <div id="ci-of-pi_1---pi_2" class="section level1">
 <h1>CI of <span class="math inline">\(\pi_1 - \pi_2\)</span></h1>
 <ul>
-<li><p>If we extract many times two samples of size <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> from two populations with <span class="math inline">\(\pi_1 = \pi_2\)</span> and compute the CI, it will
+<li>If we extract many times two samples of size <span class="math inline">\(n_1\)</span> and <span class="math inline">\(n_2\)</span> from two populations with <span class="math inline">\(\pi_1 = \pi_2\)</span> and compute the CI, it will
 contain the actual value of <span class="math inline">\(\pi_1 -
 \pi_2\)</span> in (<span class="math inline">\(1 - \alpha\)</span>) of
-the experiments.</p></li>
-<li><p>The CI is:</p></li>
+the experiments.</li>
+</ul>
+<ul>
+<li>The CI is:</li>
 </ul>
 <p><span class="math display">\[
 p_1 - p_2 \pm z_{1-\alpha/2} \sqrt{ \frac{p_1 (1-p_1)}{n_1} + \frac{p_2
@@ -479,21 +488,6 @@ p_1 - p_2 \pm z_{1-\alpha/2} \sqrt{ \frac{p_1 (1-p_1)}{n_1} + \frac{p_2
 <ul>
 <li>The CI and the two-tailed test approximate differently the standard
 error and they might sometimes draw inconsistent conclusions.</li>
-</ul>
-</div>
-<div id="esempio-valutare-lefficacia-di-un-farmaco" class="section level1">
-<h1>Esempio: valutare l’efficacia di un farmaco</h1>
-<ul>
-<li>Per valutare l’efficacia di un farmaco si svolge un <em>randomized
-trial</em>.</li>
-</ul>
-<ul>
-<li>In modo casuale ad alcuni pazienti viene somministrato il farmaco;
-ad altri il placebo.</li>
-</ul>
-<ul>
-<li>Alla fine del periodo di cura, è necessario analizzare se c’è una
-differenza statisticamente significativa fra i due gruppi.</li>
 </ul>
 </div>
 <div id="example-assess-the-effect-of-a-process-innovation" class="section level1">
@@ -521,18 +515,19 @@ normal approximation is sound.</li>
 <li>The test is:</li>
 </ul>
 <p><span class="math display">\[\begin{align*}
-H_0 \; : \pi_{\text{farmaco}} \leq \pi_{\text{placebo}}\\
-H_1 \; : \pi_{\text{farmaco}} &gt; \pi_{\text{placebo}}\\
+H_0 \; : \pi_{\text{new}} \leq \pi_{\text{old}}\\
+H_1 \; : \pi_{\text{new}} &gt; \pi_{\text{old}}\\
 \end{align*}\]</span></p>
 <ul>
-<li>and we use <span class="math inline">\(\alpha=0.01\)</span>.</li>
+<li><p>and we use <span class="math inline">\(\alpha=0.01\)</span>.</p></li>
+<li><p>We take as success the board being without any defect.</p></li>
 </ul>
 </div>
 <div id="comparing-the-two-proportions-1" class="section level1">
 <h1>Comparing the two proportions</h1>
 <ul>
-<li>The rejection region contains positive values of <span class="math inline">\(p_{\text{farmaco}} - p_{\text{placebo}}\)</span>
-and thus also of the statistic.</li>
+<li>The rejection region contains positive values of <span class="math inline">\(p_{\text{new}} - p_{\text{old}}\)</span> and thus
+also of the statistic.</li>
 </ul>
 <ul>
 <li>Rejection region: <span class="math inline">\(Z_0 &gt;
@@ -552,22 +547,69 @@ Z &amp; = \frac{p_{\text{new}} - p_{\text{old}}}
 <li>The statistic is in rejection region.</li>
 </ul>
 </div>
-<div id="esercizio" class="section level1">
-<h1>Esercizio</h1>
+<div id="section-1" class="section level1">
+<h1></h1>
+<div id="beauty-and-sex-ratio" class="section level2">
+<h2>Beauty and sex ratio</h2>
+<blockquote>
+<p>Chap. 9.4 of “Regression and other stories”, A. Gelman, J. Hill, A.
+Vehtari</p>
+</blockquote>
 <ul>
-<li>Un processo produce cuscinetti per l’albero motore.</li>
+<li>Book published from Cambridge University Press (2020).</li>
 </ul>
 <ul>
-<li>Si preleva un campione di 85 cuscinetti, che risulta contenere 12
-non-conformi.</li>
+<li>The book is also freely available online.</li>
 </ul>
 <ul>
-<li>Il processo produttivo viene quindi rivisto. Si preleva un nuovo
-campione di 85 cuscinetti, che risulta contenere 8 non-conformi.</li>
+<li>Keep in mind these example, we will re-analyze the data in a later
+lecture using a Bayesian approach.</li>
+</ul>
+</div>
+</div>
+<div id="beauty-and-sex-ratio-1" class="section level1">
+<h1>Beauty and sex ratio</h1>
+<ul>
+<li>Some years ago a researcher analyzed data from a survey of 3000
+Americans and observed a correlation between attractiveness of parents
+and the sex of their children.</li>
 </ul>
 <ul>
-<li>Possiamo concludere con confidenza del 95% che la frazione di
-non-conformi è significativamente decresciuta?</li>
+<li>He considers 3000 couple of parents, among which 300 classified as
+highly attractive.</li>
+</ul>
+<ul>
+<li>The proportion of girls among the children of “standard” parents is
+48% (<span class="math inline">\(X=1296, n=2700\)</span>).</li>
+</ul>
+<ul>
+<li>The proportion of girls among the children of “highly attractive”
+parents is 56% (<span class="math inline">\(X=168, n=300\)</span>).</li>
+</ul>
+</div>
+<div id="is-the-difference-significant" class="section level1">
+<h1>Is the difference significant?</h1>
+<p>The test is: <span class="math display">\[\begin{align*}
+H_0 \; : \pi_{\text{attr}} \leq \pi_{\text{std}}\\
+H_1 \; : \pi_{\text{attr}} &gt; \pi_{\text{std}}\\
+\end{align*}\]</span></p>
+</div>
+<div id="is-the-difference-significant-1" class="section level1">
+<h1>Is the difference significant?</h1>
+<p><span class="math display">\[\begin{align*}
+p_{\text{attr}} &amp; = 0.56 \\
+p_{\text{std}} &amp; = 0.48 \\
+\bar{p} &amp; = \frac{168 + 1296}{300 + 2700} = 0.488\\
+\text{sd err} &amp;=
+\sqrt{ \bar{p} \cdot (1-\bar{p}) \cdot ( \frac{1}{n_1} + \frac{1}{n_2})}
+= 0.03\\
+Z &amp; = \frac{p_{\text{new}} - p_{\text{old}}}
+{\text{sd err}} = 2.63 &gt; 2.33,\\
+\end{align*}\]</span></p>
+<p>where 2.33 is the 99-th quantile (<span class="math inline">\(\alpha\)</span>=0.01).</p>
+<ul>
+<li>The difference in the proportion of girls between the two groups is
+statistically <em>significant</em>.</li>
 </ul>
 </div>
 
