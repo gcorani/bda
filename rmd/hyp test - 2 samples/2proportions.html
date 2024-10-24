@@ -361,11 +361,11 @@ display: none;
 <div id="hypothesis-test-for-two-proportions" class="section level1">
 <h1>Hypothesis test for two proportions</h1>
 <ul>
-<li>We denote by <span class="math inline">\(\pi_1\)</span> e <span class="math inline">\(\pi_2\)</span> the proportion of successes in two
-populations.</li>
+<li>The term success and failure refer to the outcome being 1 or 0.</li>
 </ul>
 <ul>
-<li>The term success and failure refer to the outcome being 1 or 0.</li>
+<li>We denote by <span class="math inline">\(\pi_1\)</span> e <span class="math inline">\(\pi_2\)</span> the proportion of successes in two
+populations.</li>
 </ul>
 <ul>
 <li>We want to check whether <span class="math inline">\(\pi_1\)</span>
@@ -373,16 +373,10 @@ e <span class="math inline">\(\pi_2\)</span> are significantly
 different.</li>
 </ul>
 <ul>
-<li><span class="math inline">\(\pi_1\)</span> e <span class="math inline">\(\pi_2\)</span> cannot be observed. We observe
-instead the <em>sample</em> proportions, <span class="math inline">\(p_1
-= \frac{X_1}{n_1}\)</span> and <span class="math inline">\(p_2 =
-\frac{X_2}{n_2}\)</span>.</li>
+<li><span class="math inline">\(\pi_1\)</span> e <span class="math inline">\(\pi_2\)</span> cannot be observed.</li>
 </ul>
 <ul>
-<li>If both samples contains at least 5 successes and failures, then
-<span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span> are approximately normally
-distributed. We use this approximation in order to define the sampling
-distribution of the statistic.</li>
+<li>We observe instead the <em>sample</em> proportions, <span class="math inline">\(p_1 = \frac{X_1}{n_1}\)</span> and <span class="math inline">\(p_2 = \frac{X_2}{n_2}\)</span>.</li>
 </ul>
 </div>
 <div id="comparing-two-proportions-1" class="section level1">
@@ -409,8 +403,16 @@ Z &amp; = \frac{(p_1 - p_2)}{\sqrt{\bar{p}(1-\bar{p}) \left(
 \bar{p} &amp; = \frac{X_1 + X_2}{n_1 + n_2}\\
 \end{align*}\]</span></p>
 <ul>
-<li>Under <span class="math inline">\(H_0\)</span>, <span class="math inline">\(Z \sim N(0,1)\)</span>.</li>
+<li>If both samples contains at least 5 successes and failures, <span class="math inline">\(p_1 - p_2\)</span> is approximately normal.</li>
 </ul>
+<ul>
+<li>Under <span class="math inline">\(H_0\)</span>, <span class="math inline">\(\pi_1 = \pi_2 = \pi\)</span>.</li>
+</ul>
+<p><span class="math display">\[\begin{align*}
+p_1 - p_2 &amp;\sim N(0,  \sqrt{ \pi (1-\pi) (\frac{1}{n_1} +
+\frac{1}{n_2})})\\
+Z &amp; \sim N(0,1)
+\end{align*}\]</span></p>
 </div>
 <div id="the-test-statistic-1" class="section level1">
 <h1>The test statistic</h1>

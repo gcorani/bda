@@ -126,7 +126,7 @@ H_1 \; &: \mu_1 \neq \mu_2 \\
 
   * $\sigma_1^2= \sigma_2^2 =\sigma^2$.
 
-  *  $n_1$ and $n_2$  \textgreater 10 (to have the normality of $\bar{x}_1$ e $\bar{x}_2$):
+  *  $n_1 > 10$ and $n_2 > 10$, to have the normality of $\bar{x}_1$ e $\bar{x}_2$):
 
  $$ \bar{x}_1 - \bar{x}_2 \sim N \left(  \mu_1 - \mu_2, \sigma^2  \left( \frac{1}{n_1}  +  \frac{1}{n_2}  \right) \right)$$
 
@@ -143,7 +143,7 @@ under $H_0$ we have:
 
 \begin{align*}
  \frac{\bar{x}_1 - \bar{x}_2
--  \overbrace{(\mu_1 - \mu_2)}^{\text{ipotizzato 0 in } H_0}}
+-  \overbrace{(\mu_1 - \mu_2)}^{\text{assumed 0 by } H_0}}
  {\sigma \sqrt{ \left( \frac{1}{n_1}  +  \frac{1}{n_2} \right) }} = 
  \frac{\bar{x}_1 - \bar{x}_2}
  {\sigma \sqrt{ \left( \frac{1}{n_1}  +  \frac{1}{n_2} \right) }} \sim N (0  , 1)
@@ -162,7 +162,7 @@ under $H_0$ we have:
 
 \bigskip
 
-* The  statistic of the  $t$ is:
+* The  statistic of the  $t$-test is:
 
 $$t = \frac{\bar{x}_1-\bar{x}_2} {s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}$$
 
@@ -172,14 +172,14 @@ $$t = \frac{\bar{x}_1-\bar{x}_2} {s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}$$
 
 \bigskip
 
-* $s_p$ replaces $\sigma$.
+* $s_p$ replaces $\sigma$. Thus, the statistic only requires information from the samples.
 
 
 
 # Pooled variance
 
 
-* In order to estimate  $\sigma^2$ we use a weighted average of   $s_1^2$ and $s_2^2$:
+* We estimate  $\sigma^2$ as a weighted average of   $s_1^2$ and $s_2^2$:
 
 \bigskip
 
@@ -191,7 +191,7 @@ s_P &  = \sqrt{s^2_P}
 \bigskip
 
 * $s^2_P$: *pooled* variance:
-  * the weight are almost proportional to the sample sizes (actually, they are proportional to the degrees of freedom).
+  * the weight are \~ proportional to the sample sizes (actually, they are proportional to the degrees of freedom).
   * if $n_1 = n_2$, $s_p^2$ is the simple mean of  $s_1^2$ and  $s_2^2$.
 
 # The test  statistic
@@ -207,7 +207,10 @@ $$t = \frac{\bar{x}_1-\bar{x}_2} {s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}$$
 * $s_P \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}$   is the *standard error* of $\bar{x}_1-\bar{x}_2$,
 i.e., a measure of how the estimate $\bar{x}_1-\bar{x}_2$ is spread around the actual value of $\mu_1 - \mu_2$
 
+\bigskip
 
+* Practical interpretation of the standard error: $\mu_1 - \mu_2$ lies with probability 95% in the interval
+$\bar{x}_1-\bar{x}_2 \pm 2 \text{standard errors}$. 
 
 
 
@@ -217,7 +220,7 @@ i.e., a measure of how the estimate $\bar{x}_1-\bar{x}_2$ is spread around the a
 
 # Example:  comparing mean yields of catalysts 
 
-* Two catalysts are being compared: catalyst 1 is currently in use, but catalyst 2 is acceptable. 
+* Two catalysts are being compared: catalyst 1 is currently in use. 
 
 \bigskip
 
@@ -241,9 +244,11 @@ H_1: \; & \mu_1 \neq \mu_2 \\
 
 \bigskip
 
-* $n_1 = n_2 = 8$
-* $\bar{x}_1$ = 92.25, $s_1$ =2.39
-* $\bar{x}_2$ = 92.73, $s_2$ =2.98
+\begin{align*}
+n_1 &= 8 && n_2 = 8 \\
+\bar{x}_1 &= 92.25 && s_1 =2.39 \\
+\bar{x}_2 &= 92.73 && s_2 =2.98 \\
+\end{align*}
 
 
 * We adopt $\alpha$=0.05.
@@ -323,6 +328,21 @@ ggplot(tDistribution, aes(x,y)) +
 
 ```
 
+# Decision
+
+Recall that the frequentist test can either:
+\bigskip
+
+* reject the null hypothesis (strong decisions)
+
+\bigskip
+* not reject (*fail to reject*) the null hypothesis (weak decisions)
+
+\bigskip
+
+> Failing to reject $H_0$ implies that we have not found sufficient evidence to reject H0, that is, to make a strong statement. Failing to reject H0 does not necessarily mean that there is a high probability that H0 is true. It may simply mean that more data are required to reach a strong conclusion. (Montgomery, 9.1.2)
+
+
 # Confidence interval   (CI) of  $\mu_1 - \mu_2$
 
 * The CI contains the plausible values of $\mu_1-\mu_2$: 
@@ -339,16 +359,15 @@ $$ \bar{x}_1 - \bar{x}_2 \pm t_{1-\alpha/2, n_1+n_2-2} \cdot s_P \sqrt{\frac{1}{
 
 # CI vs hypothesis test
 
+Consider the null hypothesis $\mu_1=\mu_2$.
 
-* If the hypothesis $\mu_1=\mu_2$ is plausible given the data:
-  * the two-tailed test does not reject $H_0$  
-  * the CI contains 0.
+\bigskip
+
+* If the two-tailed test fails to reject $H_0$, the CI contains 0.
   
 \bigskip
 
-* If the hypothesis  $\mu_1=\mu_2$ is *not* plausible:
-  * the two-tailed test *rejects* $H_0$  
-  * the CI does not contain 0.
+* If the two-tailed test *rejects* $H_0$ the CI does *not* contain 0.
 
 # Confidence interval (CI)
 
@@ -357,7 +376,7 @@ $$ \bar{x}_1 - \bar{x}_2 \pm t_{1-\alpha/2, n_1+n_2-2} \cdot s_P \sqrt{\frac{1}{
 \bigskip
 
 \begin{align*}
-\bar{x}_1-\bar{x}_2 & \pm t_{.975,14} \cdot s_p \sqrt{\frac{1}{n_1}+\frac{1}{n_2}} \\
+\bar{x}_1-\bar{x}_2 & \pm t_{.975,14} \cdot \overbrace{s_p \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}^{\text{sd error}} \\
 (92.25 - 92.73) & \pm 2.145 \cdot 2.7 \sqrt{\frac{1}{8}+\frac{1}{8}} =
 (-3.38, 2.42)
 \end{align*}
@@ -442,7 +461,6 @@ s_p     \sqrt{\frac{1}{n_{\text{standard}}} + \frac{1}{n_{\text{doped}}}}} \\
 
 
 
-
 #  Rejection region
 
 
@@ -450,7 +468,7 @@ s_p     \sqrt{\frac{1}{n_{\text{standard}}} + \frac{1}{n_{\text{doped}}}}} \\
 
 \bigskip
 
-* The precise criterion is that we reject   $H_0$ if $t_0 < t_{0.05,23} = -1.71$.
+* Actually we reject   $H_0$ if $t_0 < t_{0.05,23} = -1.71$.
 
 \bigskip
 

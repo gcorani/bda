@@ -3,24 +3,25 @@
 
 # Hypothesis test for two proportions
 
-* We denote by $\pi_1$ e $\pi_2$ the proportion of successes in two populations.
-
-\bigskip 
-
 * The term success and failure refer to the outcome being 1 or 0.
+
+\bigskip
+
+
+* We denote by $\pi_1$ e $\pi_2$ the proportion of successes in two populations.
 
 \bigskip
 
 * We want to check whether $\pi_1$ e $\pi_2$ are significantly different.
 
-\bigskip 
+\bigskip
 
-* $\pi_1$ e $\pi_2$  cannot be observed. We observe instead the *sample* proportions, $p_1 = \frac{X_1}{n_1}$ and  $p_2 = \frac{X_2}{n_2}$.
+* $\pi_1$ e $\pi_2$  cannot be observed.
 
+\bigskip
 
-\bigskip 
+* We observe instead the *sample* proportions, $p_1 = \frac{X_1}{n_1}$ and  $p_2 = \frac{X_2}{n_2}$.
 
-* If both samples contains at least 5 successes and failures, then  $p_1$ and  $p_2$ are approximately normally distributed. We use this approximation in order to define the sampling distribution of the statistic.
 
 
 # Comparing two proportions
@@ -46,18 +47,29 @@ Z & = \frac{(p_1 - p_2)}{\sqrt{\bar{p}(1-\bar{p}) \left( \frac{1}{n_1} + \frac{1
 \bar{p} & = \frac{X_1 + X_2}{n_1 + n_2}\\
 \end{align*}
 
-
-* Under $H_0$,  $Z \sim N(0,1)$.
-
 # The test statistic
 
-* If we extract many times two samples of size $n_1$ and $n_2$ from two populations with
-  $\pi_1 = \pi_2$ and compute the statistic, it will be different every time, following 
-  approximately a  $N(0,1)$ distribution.
+
+* If both samples contains at least 5 successes and failures,   $p_1 - p_2$ is approximately normal.
+ 
+\bigskip
+
+* Under $H_0$, $\pi_1 = \pi_2 = \pi$.
 
 \bigskip
 
-* It the test is one-tailed the statistics remains the same, but the rejection region changes.
+\begin{align*}
+p_1 - p_2 &\sim N(0,  \sqrt{ \pi (1-\pi) (\frac{1}{n_1} + \frac{1}{n_2})})\\
+Z & \sim N(0,1)
+\end{align*}
+
+
+# Sampling distribution of the test statistic
+
+* If we extract many times two samples of size $n_1$ and $n_2$ from two populations with
+  $\pi_1 = \pi_2$ and compute the statistic, it will be different every time, following
+  approximately a  $N(0,1)$ distribution.
+
 
 # Rejection regions
 
@@ -102,6 +114,10 @@ p_1 - p_2 \pm z_{1-\alpha/2} \sqrt{ \frac{p_1 (1-p_1)}{n_1} + \frac{p_2 (1-p_2)}
 
 # Comparing the two proportions
 
+* We take as success the board being without any defect.
+
+\bigskip
+
 * Both samples contain more than 5 successes and 5 failures; the normal approximation is sound.
 
 \bigskip
@@ -115,7 +131,6 @@ H_1 \; : \pi_{\text{new}} > \pi_{\text{old}}\\
 
 * and we use  $\alpha=0.01$.
 
-* We take as success the board being without any defect.
 
 # Comparing the two proportions
 
@@ -153,12 +168,22 @@ Z & = \frac{p_{\text{new}} - p_{\text{old}}}
 
 
 \bigskip
-* The statistic is in rejection region.
+
+* We reject $H_0$. 
+
+\bigskip
+* Frequentist tests do not allow however modelling any prior knowledge.
 
 #
 ## Beauty and sex ratio
 
+* Keep in mind these example, we will re-analyze the data in a later lecture using a Bayesian approach.
+
+\bigskip
+Taken from:
 >  Chap. 9.4 of "Regression and other stories", A. Gelman, J. Hill, A. Vehtari
+
+\bigskip
 
 * Book published from Cambridge University Press (2020).
 
@@ -166,25 +191,23 @@ Z & = \frac{p_{\text{new}} - p_{\text{old}}}
 
 * The book is also freely available online.
 
-\bigskip
-* Keep in mind these example, we will re-analyze the data in a later lecture using a Bayesian approach.
-
 
 # Beauty and sex ratio
 
-* Some years ago a researcher analyzed data from a survey of 3000 Americans and observed a correlation between attractiveness of parents and the sex of their children.
+* A researcher analyzed data from a survey of 3000 Americans and observed a correlation between attractiveness of parents and the sex of their children.
 
 \bigskip
 
-* He considers  3000 couple of parents, among which  300 classified as highly attractive.
-
-\bigskip
-
-* The proportion of girls among the children of "standard" parents is 48% ($X=1296, n=2700$). 
+* Among the  3000 couple of parents,   300 are classified as highly attractive.
 
 \bigskip
 
 * The proportion of girls among the children of "highly attractive" parents is 56% ($X=168, n=300$). 
+
+
+\bigskip
+
+* The proportion of girls among the children of "standard" parents is 48% ($X=1296, n=2700$). 
 
 # Is the difference significant?
 
