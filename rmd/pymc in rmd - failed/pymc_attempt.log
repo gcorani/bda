@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  1 DEC 2023 14:40
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021) (preloaded format=xelatex 2021.4.15)  25 OCT 2024 10:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**tmp.tex
-(./tmp.tex
+**pymc_attempt.tex
+(./pymc_attempt.tex
 LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-02-18> (/usr/local/texlive/2021/texmf-dist/tex/latex
 /beamer/beamer.cls
@@ -1204,21 +1204,6 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2021/01/20 v3.7 verbatim text (tvz,hv)
-\FV@CodeLineNo=\count363
-\FV@InFile=\read3
-\FV@TabBox=\box80
-\c@FancyVerbLine=\count364
-\FV@StepNumber=\count365
-\FV@OutFile=\write5
-) (/usr/local/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip76
-\fb@frw=\dimen305
-\fb@frh=\dimen306
-\FrameRule=\dimen307
-\FrameSep=\dimen308
 ) (./MonashWhite.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/base/inputen
 c.sty
 Package: inputenc 2020/08/01 v1.3d Input encoding file
@@ -1235,24 +1220,24 @@ y) (/usr/local/texlive/2021/texmf-dist/tex/latex/textpos/textpos.sty
 Package: textpos 2020/09/26 v1.10
 Package: textpos 2020/09/26 1.10, absolute positioning of text on the page
 Package textpos Info: choosing support for LaTeX3 on input line 61.
-\TP@textbox=\box81
-\TP@holdbox=\box82
-\TPHorizModule=\dimen309
-\TPVertModule=\dimen310
-\TP@margin=\dimen311
-\TP@absmargin=\dimen312
+\TP@textbox=\box80
+\TP@holdbox=\box81
+\TPHorizModule=\dimen305
+\TPVertModule=\dimen306
+\TP@margin=\dimen307
+\TP@absmargin=\dimen308
 Grid set 16 x 16 = 22.7622pt x 17.07166pt
-\TPboxrulesize=\dimen313
-\TP@ox=\dimen314
-\TP@oy=\dimen315
+\TPboxrulesize=\dimen309
+\TP@ox=\dimen310
+\TP@oy=\dimen311
 \TP@tbargs=\toks51
 TextBlockOrigin set to 0pt x 0pt
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/eukdate/eukdate.sty
 Package: eukdate 2009/03/18 v1.04 UK format date (Hart's Rules) with weekday
-\c@euk@date=\count366
-\c@euk@month=\count367
-\c@euk@century=\count368
-\c@euk@year=\count369
+\c@euk@date=\count363
+\c@euk@month=\count364
+\c@euk@century=\count365
+\c@euk@year=\count366
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/carlito/carlito.sty
 Package: carlito 2014/08/20 (Bob Tennent) Supports Carlito fonts for LaTeX, pdf
 LaTeX, luaLaTeX and xeLaTeX.
@@ -1263,7 +1248,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks52
 \XKV@tempa@toks=\toks53
 )
-\XKV@depth=\count370
+\XKV@depth=\count367
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 Requested font "[Carlito-Regular.ttf]/OT" at 10.94997pt
@@ -1466,23 +1451,23 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 209.
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen316
-\lightrulewidth=\dimen317
-\cmidrulewidth=\dimen318
-\belowrulesep=\dimen319
-\belowbottomsep=\dimen320
-\aboverulesep=\dimen321
-\abovetopsep=\dimen322
-\cmidrulesep=\dimen323
-\cmidrulekern=\dimen324
-\defaultaddspace=\dimen325
-\@cmidla=\count371
-\@cmidlb=\count372
-\@aboverulesep=\dimen326
-\@belowrulesep=\dimen327
-\@thisruleclass=\count373
-\@lastruleclass=\count374
-\@thisrulewidth=\dimen328
+\heavyrulewidth=\dimen312
+\lightrulewidth=\dimen313
+\cmidrulewidth=\dimen314
+\belowrulesep=\dimen315
+\belowbottomsep=\dimen316
+\aboverulesep=\dimen317
+\abovetopsep=\dimen318
+\cmidrulesep=\dimen319
+\cmidrulekern=\dimen320
+\defaultaddspace=\dimen321
+\@cmidla=\count368
+\@cmidlb=\count369
+\@aboverulesep=\dimen322
+\@belowrulesep=\dimen323
+\@thisruleclass=\count370
+\@lastruleclass=\count371
+\@thisrulewidth=\dimen324
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/animate/animate.sty
 Package: animate 2020/10/07 PDF & SVG animations from files and inline graphics
 
@@ -1498,35 +1483,35 @@ Package zref Info: New property list: main on input line 764.
 Package zref Info: New property: default on input line 765.
 Package zref Info: New property: page on input line 766.
 )
-\c@abspage=\count375
+\c@abspage=\count372
 Package zref Info: New property: abspage on input line 66.
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/media9/pdfbase.sty
 Package: pdfbase 2021/03/01 v0.46 driver independent access to low-level PDF fe
 atures
-\g_pbs_page_int=\count376
-\g_pbs_obj_int=\count377
-\g_pbs_oc_int=\count378
+\g_pbs_page_int=\count373
+\g_pbs_obj_int=\count374
+\g_pbs_oc_int=\count375
 ) (/usr/local/texlive/2021/texmf-dist/tex/latex/ocgx2/ocgbase.sty
 Package: ocgbase 2021/01/25 v0.18 support package for ocgx2.sty
-\g_ocgbase_nd_int=\count379
+\g_ocgbase_nd_int=\count376
 )
-\@anim@box=\box83
-\@anim@measbox=\box84
-\@anim@tmpdima=\dimen329
-\@anim@tmpdimb=\dimen330
-\@anim@num=\count380
-\@anim@curframe=\count381
-\@anim@curframe@zb=\count382
-\@anim@resizeflags=\count383
-\@anim@skipfram=\count384
-\@anim@mulframecnt=\count385
-\@anim@@tmlnfile=\read4
-\@anim@tmpcnt=\count386
-\c@@anim@ltxcnt=\count387
-\@anim@curlayer=\count388
-\@anim@lineno=\count389
-\@anim@curfield=\count390
-\@anim@@resizeflags=\count391
+\@anim@box=\box82
+\@anim@measbox=\box83
+\@anim@tmpdima=\dimen325
+\@anim@tmpdimb=\dimen326
+\@anim@num=\count377
+\@anim@curframe=\count378
+\@anim@curframe@zb=\count379
+\@anim@resizeflags=\count380
+\@anim@skipfram=\count381
+\@anim@mulframecnt=\count382
+\@anim@@tmlnfile=\read3
+\@anim@tmpcnt=\count383
+\c@@anim@ltxcnt=\count384
+\@anim@curlayer=\count385
+\@anim@lineno=\count386
+\@anim@curfield=\count387
+\@anim@@resizeflags=\count388
 )
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryshapes.code.tex
@@ -1575,26 +1560,26 @@ File: tikzlibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibrary
 shapes.multipart.code.tex
 File: pgflibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfnodepartlowerbox=\box85
-\pgfnodeparttwobox=\box86
-\pgfnodepartthreebox=\box87
-\pgfnodepartfourbox=\box88
-\pgfnodeparttwentybox=\box89
-\pgfnodepartnineteenbox=\box90
-\pgfnodeparteighteenbox=\box91
-\pgfnodepartseventeenbox=\box92
-\pgfnodepartsixteenbox=\box93
-\pgfnodepartfifteenbox=\box94
-\pgfnodepartfourteenbox=\box95
-\pgfnodepartthirteenbox=\box96
-\pgfnodeparttwelvebox=\box97
-\pgfnodepartelevenbox=\box98
-\pgfnodeparttenbox=\box99
-\pgfnodepartninebox=\box100
-\pgfnodeparteightbox=\box101
-\pgfnodepartsevenbox=\box102
-\pgfnodepartsixbox=\box103
-\pgfnodepartfivebox=\box104
+\pgfnodepartlowerbox=\box84
+\pgfnodeparttwobox=\box85
+\pgfnodepartthreebox=\box86
+\pgfnodepartfourbox=\box87
+\pgfnodeparttwentybox=\box88
+\pgfnodepartnineteenbox=\box89
+\pgfnodeparteighteenbox=\box90
+\pgfnodepartseventeenbox=\box91
+\pgfnodepartsixteenbox=\box92
+\pgfnodepartfifteenbox=\box93
+\pgfnodepartfourteenbox=\box94
+\pgfnodepartthirteenbox=\box95
+\pgfnodeparttwelvebox=\box96
+\pgfnodepartelevenbox=\box97
+\pgfnodeparttenbox=\box98
+\pgfnodepartninebox=\box99
+\pgfnodeparteightbox=\box100
+\pgfnodepartsevenbox=\box101
+\pgfnodepartsixbox=\box102
+\pgfnodepartfivebox=\box103
 )))
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibraryarrows.code.tex
@@ -1603,10 +1588,10 @@ File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.
 code.tex
 File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\arrowsize=\dimen331
+\arrowsize=\dimen327
 ))
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 13.0pt on input line 180.
+(Font)              scaled to size 13.0pt on input line 140.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 13.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -1881,32 +1866,32 @@ nguage=dflt;"
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (/usr/local/texlive/2021/texmf-dist/tex/latex/bookmark/bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2020-11-06 v1.29 bookmark driver for dvipdfm (HO)
-\BKM@id=\count392
+\BKM@id=\count389
 )) (/usr/local/texlive/2021/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2020/12/30 v 0.09a modify URL breaks
-) (./tmp.aux)
-\openout1 = `tmp.aux'.
+) (./pymc_attempt.aux)
+\openout1 = `pymc_attempt.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 202.
-LaTeX Font Info:    ... okay on input line 202.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1941,7 +1926,7 @@ LaTeX Font Info:    ... okay on input line 202.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 202.
+Package hyperref Info: Link coloring OFF on input line 159.
 (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1951,11 +1936,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count393
+\c@section@level=\count390
 )
-LaTeX Info: Redefining \ref on input line 202.
-LaTeX Info: Redefining \pageref on input line 202.
-LaTeX Info: Redefining \nameref on input line 202.
+LaTeX Info: Redefining \ref on input line 159.
+LaTeX Info: Redefining \pageref on input line 159.
+LaTeX Info: Redefining \nameref on input line 159.
 
 (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dicti
 onary-English.dict
@@ -1982,11 +1967,11 @@ tionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 202.
+(Font)                  OT1/lmr/m/n --> TU/lmr/m/n on input line 159.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 202.
+(Font)                  OT1/lmr/m/it --> TU/lmr/m/it on input line 159.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 202.
+(Font)                  OT1/lmr/bx/n --> TU/lmr/bx/n on input line 159.
 Requested font "[latinmodern-math.otf]/OT" at 10.94997pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
@@ -2041,16 +2026,16 @@ Style=MathScript},{Size=-6.57,Font=latinmodern-math.otf,Style=MathScriptScript}
 (fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 202.
+(Font)              `operators' in the math version `normal' on input line 159.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/lmr/m/n --> TU/latinmodern-math.otf(1)/m/n on input
- line 202.
+ line 159.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 202.
+(Font)              `operators' in the math version `bold' on input line 159.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  OT1/lmr/bx/n --> TU/latinmodern-math.otf(1)/b/n on inpu
-t line 202.
+t line 159.
 
 Package fontspec Info: latinmodern-math scale = 1.0001.
 
@@ -2121,15 +2106,15 @@ uage=dflt;"
 (fontspec)             =0pt\relax \fontdimen 21\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `normal' on input line 202.
+(Font)              `symbols' in the math version `normal' on input line 159.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
 (Font)                  OMS/lmsy/m/n --> TU/latinmodern-math.otf(2)/m/n on inpu
-t line 202.
+t line 159.
 LaTeX Font Info:    Encoding `OMS' has changed to `TU' for symbol font
-(Font)              `symbols' in the math version `bold' on input line 202.
+(Font)              `symbols' in the math version `bold' on input line 159.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
 (Font)                  OMS/lmsy/b/n --> TU/latinmodern-math.otf(2)/b/n on inpu
-t line 202.
+t line 159.
 
 Package fontspec Info: latinmodern-math scale = 0.9999.
 
@@ -2182,18 +2167,18 @@ uage=dflt;"
 (fontspec)             =6.56999pt\relax \fontdimen 13\font =0pt\relax 
 
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `normal' on input line 2
-02.
+(Font)              `largesymbols' in the math version `normal' on input line 1
+59.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/m/n on inpu
-t line 202.
+t line 159.
 LaTeX Font Info:    Encoding `OMX' has changed to `TU' for symbol font
-(Font)              `largesymbols' in the math version `bold' on input line 202
+(Font)              `largesymbols' in the math version `bold' on input line 159
 .
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 (Font)                  OMX/lmex/m/n --> TU/latinmodern-math.otf(3)/b/n on inpu
-t line 202.
-LaTeX Info: Redefining \microtypecontext on input line 202.
+t line 159.
+LaTeX Info: Redefining \microtypecontext on input line 159.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: No adjustment of tracking.
@@ -2203,57 +2188,57 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Carlito' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-(./tmp.nav)
+(./pymc_attempt.nav)
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 202.
+(Font)              scaled to size 6.0pt on input line 159.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 6.0pt on input line 202.
+(Font)              scaled to size 6.0pt on input line 159.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 202.
+(Font)              scaled to size 8.0pt on input line 159.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 8.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 20.0pt on input line 203.
+(Font)              scaled to size 20.0pt on input line 160.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 20.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 20.0pt on input line 203.
+(Font)              scaled to size 20.0pt on input line 160.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 20.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 26.0pt on input line 203.
+(Font)              scaled to size 26.0pt on input line 160.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 26.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Regular.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 26.0pt on input line 203.
+(Font)              scaled to size 26.0pt on input line 160.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 26.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 4.0pt on input line 203.
+(Font)              scaled to size 4.0pt on input line 160.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 4.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
 LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 4.0pt on input line 203.
+(Font)              scaled to size 4.0pt on input line 160.
 Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
 mapping=tex-text;" at 4.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
@@ -2261,18 +2246,174 @@ Regular.ttf
 [1
 
 ]
+\openout4 = `pymc_attempt.vrb'.
+
+(./pymc_attempt.vrb
 LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 215.
+(Font)              scaled to size 10.95pt on input line 6.
 Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
 ping=tex-text;" at 10.95pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
 Bold.ttf
-LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 215.
-Requested font "[Carlito-Italic.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;m
-apping=tex-text;" at 10.95pt
+LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
+(Font)              scaled to size 9.30756pt on input line 7.
+Requested font "[SourceCodePro-Regular.otf]/OT:script=latn;language=dflt;" at 9
+.30756pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
+eCodePro-Regular.otf
+LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 10.
+Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
+mapping=tex-text;" at 10.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Italic.ttf
+Regular.ttf
+LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 12.
+Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
+ping=tex-text;" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Bold.ttf
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
+t 7.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
+t 5.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+2.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Requested font "lmmi10" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+Requested font "lmmi7" at 7.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi7.tfm
+Requested font "lmmi5" at 5.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 10.00107pt on input line 12.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.001
+07pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 7.00075pt on input line 12.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
+t 7.00075pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
+(Font)              scaled to size 5.00053pt on input line 12.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
+t 5.00053pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 9.99893pt on input line 12.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 9.9989
+3pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 6.99925pt on input line 12.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
+t 6.99925pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
+(Font)              scaled to size 4.99947pt on input line 12.
+Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
+t 4.99947pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
+n-math.otf
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+Requested font "msam10" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10
+.tfm
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+Requested font "msam7" at 7.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.
+tfm
+Requested font "msam5" at 5.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.
+tfm
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+Requested font "msbm10" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10
+.tfm
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Requested font "msbm7" at 7.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.
+tfm
+Requested font "msbm5" at 5.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.
+tfm
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+2.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Requested font "rm-lmbx10" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
+File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
+ern Roman (RS)
+)
+Requested font "rm-lmbx7" at 7.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx7.tfm
+Requested font "rm-lmbx5" at 5.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
+Requested font "lmmib10" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+Requested font "lmmib7" at 7.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
+Requested font "lmmib5" at 5.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib5.tfm
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+12.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Requested font "lmbsy10" at 10.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+Requested font "lmbsy7" at 7.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
+Requested font "lmbsy5" at 5.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
+)
+LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 178.
+Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
+ping=tex-text;" at 12.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Bold.ttf
+LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 178.
+Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
+mapping=tex-text;" at 12.0pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Regular.ttf
+[2
+
+]
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2281,11 +2422,6 @@ Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-15.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 Requested font "lmmi10" at 10.95pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
 Requested font "lmmi8" at 7.665pt
@@ -2293,87 +2429,61 @@ Requested font "lmmi8" at 7.665pt
 Requested font "lmmi5" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 10.95116pt on input line 215.
+(Font)              scaled to size 10.95116pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.951
 16pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 7.6658pt on input line 215.
+(Font)              scaled to size 7.6658pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.6658pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 5.47559pt on input line 215.
+(Font)              scaled to size 5.47559pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.47559pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 10.94882pt on input line 215.
+(Font)              scaled to size 10.94882pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 10.948
 82pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.66417pt on input line 215.
+(Font)              scaled to size 7.66417pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.66417pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.47441pt on input line 215.
+(Font)              scaled to size 5.47441pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.47441pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
-LaTeX Font Info:    Trying to load font information for U+msa on input line 215
-.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
 Requested font "msam10" at 10.95pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10
 .tfm
-(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
 Requested font "msam7" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.
 tfm
 Requested font "msam5" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.
 tfm
-LaTeX Font Info:    Trying to load font information for U+msb on input line 215
-.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Requested font "msbm10" at 10.95pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10
 .tfm
-(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
 Requested font "msbm7" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.
 tfm
 Requested font "msbm5" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.
 tfm
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
-15.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 Requested font "rm-lmbx10" at 10.95pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
-
-(/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-LatinModernRoman.cfg
-File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
-ern Roman (RS)
-)
 Requested font "rm-lmbx8" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
 Requested font "rm-lmbx5" at 5.475pt
@@ -2384,36 +2494,26 @@ Requested font "lmmib7" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
 Requested font "lmmib5" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmib5.tfm
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-215.
-(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
 Requested font "lmbsy10" at 10.95pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
 Requested font "lmbsy7" at 7.665pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
 Requested font "lmbsy5" at 5.475pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy5.tfm
-File: tmp_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic file (type pdf)
-<use tmp_files/figure-beamer/unnamed-chunk-3-1.pdf>
+LaTeX Font Info:    Font shape `TU/Carlito(0)/m/it' will be
+(Font)              scaled to size 10.95pt on input line 200.
+Requested font "[Carlito-Italic.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;m
+apping=tex-text;" at 10.95pt
+ -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
+Italic.ttf
+File: pymc_attempt_files/figure-beamer/unnamed-chunk-3-1.pdf Graphic file (type
+ pdf)
+<use pymc_attempt_files/figure-beamer/unnamed-chunk-3-1.pdf>
 
-Overfull \hbox (0.1967pt too wide) in paragraph at lines 215--215
+Overfull \hbox (0.1967pt too wide) in paragraph at lines 200--200
  [] 
  []
 
-LaTeX Font Info:    Font shape `TU/Carlito(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 215.
-Requested font "[Carlito-Bold.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;map
-ping=tex-text;" at 12.0pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Bold.ttf
-LaTeX Font Info:    Font shape `TU/Carlito(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 215.
-Requested font "[Carlito-Regular.ttf]/OT:script=latn;language=dflt;+lnum;+tnum;
-mapping=tex-text;" at 12.0pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/truetype/typoland/carlito/Carlito-
-Regular.ttf
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 12.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
@@ -2432,37 +2532,37 @@ Requested font "lmmi8" at 8.0pt
 Requested font "lmmi6" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 12.00128pt on input line 215.
+(Font)              scaled to size 12.00128pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 12.001
 28pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 8.00085pt on input line 215.
+(Font)              scaled to size 8.00085pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 8.00085pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(2)/m/n' will be
-(Font)              scaled to size 6.00064pt on input line 215.
+(Font)              scaled to size 6.00064pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 6.00064pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 11.99872pt on input line 215.
+(Font)              scaled to size 11.99872pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;" at 11.998
 72pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 7.99915pt on input line 215.
+(Font)              scaled to size 7.99915pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=0;" a
 t 7.99915pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
 n-math.otf
 LaTeX Font Info:    Font shape `TU/latinmodern-math.otf(3)/m/n' will be
-(Font)              scaled to size 5.99936pt on input line 215.
+(Font)              scaled to size 5.99936pt on input line 200.
 Requested font "[latinmodern-math.otf]/OT:script=math;language=dflt;+ssty=1;" a
 t 5.99936pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/lm-math/latinmoder
@@ -2503,46 +2603,26 @@ Requested font "lmbsy10" at 8.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
 Requested font "lmbsy7" at 6.0pt
  -> /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
-[2
+[3
 
 ]
-\openout4 = `tmp.vrb'.
+\tf@nav=\write5
+\openout5 = `pymc_attempt.nav'.
 
-(./tmp.vrb
-LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 9.30756pt on input line 4.
-Requested font "[SourceCodePro-Regular.otf]/OT:script=latn;language=dflt;" at 9
-.30756pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
-eCodePro-Regular.otf
-LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/b/n' will be
-(Font)              scaled to size 9.30756pt on input line 5.
-Requested font "[SourceCodePro-Bold.otf]/OT:script=latn;language=dflt;" at 9.30
-756pt
- -> /usr/local/texlive/2021/texmf-dist/fonts/opentype/adobe/sourcecodepro/Sourc
-eCodePro-Bold.otf
-) [3
+\tf@toc=\write6
+\openout6 = `pymc_attempt.toc'.
 
-] [4
+\tf@snm=\write7
+\openout7 = `pymc_attempt.snm'.
 
-]
-\tf@nav=\write6
-\openout6 = `tmp.nav'.
-
-\tf@toc=\write7
-\openout7 = `tmp.toc'.
-
-\tf@snm=\write8
-\openout8 = `tmp.snm'.
-
-(./tmp.aux) ) 
+(./pymc_attempt.aux) ) 
 Here is how much of TeX's memory you used:
- 36507 strings out of 476919
- 762627 string characters out of 5821840
- 1262717 words of memory out of 5000000
- 55633 multiletter control sequences out of 15000+600000
- 431903 words of font info for 152 fonts, out of 8000000 for 9000
+ 36131 strings out of 476919
+ 758646 string characters out of 5821840
+ 1249878 words of memory out of 5000000
+ 55251 multiletter control sequences out of 15000+600000
+ 445618 words of font info for 182 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 131i,14n,174p,1804b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 131i,14n,174p,1813b,886s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tmp.pdf (4 pages).
+Output written on pymc_attempt.pdf (3 pages).

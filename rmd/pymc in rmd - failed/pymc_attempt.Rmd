@@ -23,12 +23,15 @@ editor_options:
 
 ```{r setup, include=FALSE}
 library(reticulate)
+use_condaenv(condaenv = "/Users/giorgio/opt/anaconda3/envs/pymc_env")
+#necessary to run pymc
+reticulate::py_run_string("import pymc as mc")
 ```
+
 
 ```{python, echo=FALSE}
 import numpy as np
 import pandas as pd
-import arviz as az
 import scipy.stats as stats
 from scipy.stats import beta 
 from matplotlib import pyplot as plt
@@ -38,7 +41,6 @@ plt.rcParams.update({
     "text.usetex": True,
     "font.family": "sans-serif",
     "font.sans-serif": ["Helvetica"]})
-az.style.use('arviz-darkgrid')
 ```
 
 
@@ -48,9 +50,22 @@ knitr::opts_chunk$set(cache=TRUE)
 
 
 
-# Uniform distribution: $a = b = 1$
+```{python}
+#necessary to run pymc
+import pymc as pm
+```
 
-*   This a *uniform* distribution: all values in $(0,1)$ are equally probable.
+# The bias $\theta$ of a coin
+
+-   A coin falls heads with probability $\theta \in (0,1)$ \bigskip
+
+-   $\theta$ is the *bias* of the coin
+
+    -   $\theta$ =0: it always lands tails
+    -   $\theta$ =1: it always lands heads \bigskip
+
+-   $\theta \in (0,1)$ is a continuous parameter
+
 
 ```{python, echo=FALSE, fig.height=2, fig.align="center"}
 plt.figure(figsize=(10, 3))
@@ -63,8 +78,24 @@ for ind, (a, b) in enumerate([(1, 1)]):
     plt.legend(fontsize=12)
 ```
 
-# pymc attempt
+
 ```{python}
+import pymc as pm
+import numpy as np
+import scipy.stats as stats
+import pandas as pd
+import matplotlib.pyplot as plt
+import arviz as az
+from scipy.stats import t
+from scipy.stats import norm
+import seaborn as sns
+az.style.use('arviz-darkgrid')
+np.random.seed(44)
+```
+
+```{python}
+#Below  the  66 measurements.
+
 data = np.array([248.28, 248.26, 248.33, 248.24, 248.34, 247.56, 248.27, 248.16,
                   248.4, 247.98, 248.29, 248.22, 248.24, 248.21, 248.25, 248.3,
                   248.23, 248.29, 248.31, 248.19, 248.24, 248.2, 248.36, 248.32,
@@ -74,11 +105,13 @@ data = np.array([248.28, 248.26, 248.33, 248.24, 248.34, 247.56, 248.27, 248.16,
                   248.26, 248.33, 248.26, 248.32, 248.32, 248.24, 248.39, 248.28,
                   248.24, 248.25, 248.32, 248.25, 248.29, 248.27, 248.28, 248.29,
                   248.16, 248.23])
-
 ```
-# pymc attempt
-```{python echo=TRUE, include=FALSE}
-import pymc as pm
+
+
+# the model
+```{python}
+# Implementation with  informative priors 
+
 with pm.Model() as normal_model:
     # Based on prior information, the mean travel time should be within  (120,  360).
     # This information can be represented by a normal distribution with mu = 240, sigma = 60.
@@ -94,4 +127,14 @@ with pm.Model() as normal_model:
     
     trace_normal = pm.sample()
 ```
+
+
+# Showing the posterior
+
+```{python}
+with  normal_model:
+    az.plot_trace(trace_normal);
+```
+
+
 
